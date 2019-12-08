@@ -1,0 +1,69 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[10pt,twoside,openany,twocolumn]{book}
+\usepackage[a5paper]{geometry}
+\usepackage[bg-a4]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.arrows, fadings}
+
+\usepackage{titlesec}
+
+
+%custom commands
+\tikzfading[name=fade right,
+  left color=transparent!0, right color=transparent!100]
+
+\newcommand{\magic}[1]{
+\noindent
+\begin{tikzpicture}
+% Background
+\fill [uppergold,path fading=fade right] (\linewidth,1.6em) rectangle (-0.2,0) ;
+\node[anchor=west,xshift=0, yshift=0.7em,rectangle, inner sep=11pt] {\color{black} \large \textsc{#1}};
+\draw[line width=0.2 mm] (-0.2,0.57) -- (8.5,0.57);
+\end{tikzpicture}
+}
+
+\newcommand{\block}[2]{
+\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker} - #2.}
+%\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}}
+\stepcounter{jumpmarker}
+\label{#1}
+}
+
+% Start document
+\begin{document}
+\fontfamily{ppl}\selectfont % Set text font
+
+% Front page
+\begin{titlepage}
+    \centering
+    \vfill
+    {\bfseries\Large
+        TripleTwenty.net\\
+        B. Groß
+        %\vskip1cm
+        %Version 1.0\\
+    }
+    \vfill
+    \includegraphics[width=\textwidth]{img/cover_title} % also works with logo.pdf
+    \vfill
+    \vfill
+\end{titlepage}
+\newpage
+
+% Your content goes here
+
+\input{content/intro}
+
+\input{content/content}
+
+
+% End document
+\end{document}
