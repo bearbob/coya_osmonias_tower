@@ -30,10 +30,13 @@
 \end{tikzpicture}
 }
 
+\newcounter{jumpmarker} \setcounter{jumpmarker}{0}
+\renewcommand{\thejumpmarker}{\arabic{jumpmarker}}
+
 \newcommand{\block}[2]{
-\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker} - #2.}
-%\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}}
 \stepcounter{jumpmarker}
+\paragraph [\thejumpmarker]{\arabic{jumpmarker} - #2.} % with headline
+%\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}} % without headline
 \label{#1}
 }
 
