@@ -34,8 +34,8 @@
 \renewcommand{\thejumpmarker}{\arabic{jumpmarker}}
 
 \newcommand{\block}[2]{
-\stepcounter{jumpmarker}
-\paragraph [\thejumpmarker]{\arabic{jumpmarker} - #2.} % with headline
+\refstepcounter{jumpmarker}
+\paragraph [\thejumpmarker]{\thejumpmarker\ - #2.} % with headline
 %\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}} % without headline
 \label{#1}
 }
