@@ -2,7 +2,7 @@
 
 \block{startpage}{Unsanftes Erwachen}
 Leise rauscht der warme Herbstwind durch das vielfarbige Blätterdach des Waldes. Viele Bäume haben bereits den Großteil ihrer Blätter abgeworfen und färben so den schmalen Weg in zarte Rot- und Goldtöne.\\
-Das ganze Bild strahl eine tiefe Ruhe aus, die du jedoch nur schwerlich genießen kannst. Du liegst gefesselt und geknebelt auf einem Pferdekarren, gelenkt von zwei muskelbepackten Männern. Ihre breiten Rücken sind dir zugewandt, sodass du ihre Gesichter nicht erkennen kannst. Beide haben schulterlange blonde Haare, die der rechte zu einem kleinen Knoten geformt hat. Scheinbar haben sie noch nicht bemerkt, dass du wieder zu dir gekommen bist, denn sie unterhalten sich angeregt. Leider sind ihre Worte durch die Geräusche des Karrens schwer zu verstehen. Dir ist noch nicht ganz klar, wie du in diese Situation gekommen bist, aber die dröhnenden Kopfschmerzen lassen nichts gutes vermuten.
+Das ganze Bild strahl eine tiefe Ruhe aus, die du jedoch nur schwerlich genießen kannst. Du liegst auf einem Pferdekarren, gelenkt von zwei muskelbepackten Männern. Ihre breiten Rücken sind dir zugewandt, sodass du ihre Gesichter nicht erkennen kannst. Beide haben schulterlange blonde Haare, die der rechte zu einem kleinen Knoten geformt hat. Scheinbar haben sie noch nicht bemerkt, dass du wieder zu dir gekommen bist, denn sie unterhalten sich angeregt. Leider sind ihre Worte durch die Geräusche des Karrens schwer zu verstehen. Dir ist noch nicht ganz klar, wie du in diese Situation gekommen bist, aber die dröhnenden Kopfschmerzen lassen nichts gutes vermuten. Schnell stellst du fest, dass deine Hände hinter dem Rücken zusammengebunden sind und deine Knöchel ebenfalls gefesselt sind. Dein Kiefer schmerzt ein wenig von dem dicken Stoffknebel.
 \\Wenn du dich bemerkbar machen willst, gehe zu [\ref{getAttention}].
 \\Wenn du dich weiter umsehen willst, gehe zu [\ref{lookAtCart}].
 \\Wenn du abwarten möchtest, gehe zu [\ref{waitInCart}].
@@ -20,7 +20,7 @@ Es wird Zeit herauszufinden mit wem du hier eigentlich unterwegs bist. Leider we
 Da dir im Moment nichts besseres einfällt, drehst du dich mit den Beinen zum Kutschbock und trittst beherzt gegen das alte Holz. Wie erwartet sorgt das dumpfe Geräusch dafür, dass sich deine Entführer umdrehen. Die beiden könnten Zwillinge sein, so ähnlich sehen sie sich. Beide haben grobschlächtige Gesichter und breiten Nasen. Kleine Bartstoppeln umrahmen den Mund, der bei beiden ein leichtes Grinsen formt. Trotzdem sind sie leicht zu unterscheiden, denn beim rechten Halunken zieht sich eine große Narbe von der linken Wange über die Nase zur rechten Augenbraue.\\
 ``Sieh dir das an, Torlof, unsere Prinzessin ist aufgewacht!'', sagt er laut mit tiefer Stimme. Torlof antwortet nicht, sondern brummt nur belustigt vor sich hin. Sein Partner fügt hinzu: ``Na, dann tu mal den Rest deiner Reise genießen, ein paar Stunden wird es noch dauern bis wir da sind!''\\
 Dein fragender Blick wird keiner Antwort gewürdigt. Die beiden Männer lachen kurz und drehen sich dann wieder nach vorn.
-\\Wenn du dich umsehen möchtest, gehe zu [\ref{lookAtCart}].
+\\Wenn du dich umsehen möchtest, gehe zu [\ref{lookAtCart2}].
 \\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
 
 \block{waitInCart}{Ich akzeptiere mein Schicksal}
@@ -31,4 +31,38 @@ Ansonsten gehe zu [\ref{arrivalAtTower}].
 
 \block{lookAtCart}{Ich sehe mich um}
 
-Du lässt deinen Blick schweifen und versuchst deine aktuelle Lage besser zu erfassen.
+Du lässt deinen Blick schweifen und versuchst deine aktuelle Lage besser zu erfassen. Der Karren ist aus Holz und hat schon bessere Tage gesehen. Am hinteren Ende befindet sich eine Ladeklappe, die von Metallriegeln auf beiden Seiten gehalten wird. Neben dir befinden sich zwei gefüllte braune Leinensäcke.
+\\Wenn du zur Ladeklappe kriechen willst, gehe zu [\ref{loadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargo}].
+
+\block{loadramp}{Ich krieche zur Ladeklappe}
+
+Es ist ein kleines Kunststück und dauert einige Minuten, aber du schaffst es dich zu drehen und zur Klappe zu kriechen. Die Bretter werden von Nägeln zusammengehalten, denen Wind und Wetter stark zugesetzt haben. Trotzdem glaubst du, dass es kein Kinderspiel wäre die Klappe mit Gewalt zu öffnen - was vor allem an deiner eingeschränkten Bewegungsmöglichkeit liegt.
+\\Wenn du versuchen willst die Klappe aufzutreten, gehe zu [\ref{forceLoadramp}].
+\\Wenn du versuchen willst die Riegel zu öffnen, gehe zu [\ref{unlockLoadramp}].
+\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargo}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
+\block{forceLoadramp}{Ich trete gegen die Ladeklappe}
+
+Es braucht wieder einige Minuten der Vorbereitung, bis du dich auf den Rücken gedreht hast und mit angewinkelten Knien vor der Holzklappe liegst.\\
+Lege eine Stärkeprobe mit DC 16 ab. Wenn du erfolgreich bist, gehe zu [\ref{forceLoadrampsuccess}].
+Wenn du scheiterst, gehe zu [\ref{forceLoadrampfailed}].
+
+\block{forceLoadrampsuccess}{Ich bin stärker als Holz!}
+
+Du konzentrierst dich und sammelst deine Stärke für einen gezielten Tritt gegen die Seite der Holzklappe. Das Glück ist endlich auf deiner Seite, das Material gibt nach und bricht am Metallriegel. Ein nervöser Blick auf deine Entführer zeigt dir, dass sich überhaupt nicht bemerken, was du da treibst. Schnellst sammelst du dich für einen zweiten Tritt auf der anderen Seite und die Klappe fällt nach unten ab. Einige Herzschläge später rollst du seitwärts vom Wagen und fällst auf den steinigen Boden. Du verlierst 2 Lebenspunkte.\\
+Während du versuchst nicht vor Schmerz zu stöhnen, rollt der Wagen weiter den Weg entlang. Die beiden Halunken ahnen nicht einmal, dass du nicht wie ein Lamm auf die Schlachtung wartest. Schnell kriechst du vom Weg zu einem der Bäume, während sich der Wagen Meter um Meter von dir entfernt.
+
+Es dauert einige Stunden, doch irgendwann kannst du deine Fesseln lösen. Du machst dich auf den Rückweg, wobei du darauf achtest dem Weg fern zu bleiben.
+Du wirst zwar nie erfahren, warum du entführt wurdest, aber manche Geheimnisse können auch ungelöst bleiben.
+
+\textbf{Ende.}
+
+\block{lookAtCart2}{Ich sehe mich um}
+% copy of lookAtCart after the hero has seen the kidnappers
+Du lässt deinen Blick schweifen und versuchst deine aktuelle Lage besser zu erfassen. Der Karren ist aus Holz und hat schon bessere Tage gesehen. Am hinteren Ende befindet sich eine Ladeklappe, die von Metallriegeln auf beiden Seiten gehalten wird. Neben dir befinden sich zwei gefüllte braune Leinensäcke. Torlof und sein Kumpane scheinen wieder in ihr Gespräch vertieft zu sein.
+\\Wenn du zur Ladeklappe kriechen willst, gehe zu [\ref{loadramp2}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargo2}].
