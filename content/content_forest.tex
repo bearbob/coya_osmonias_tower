@@ -62,7 +62,7 @@ Du lässt deinen Blick schweifen und versuchst deine aktuelle Lage besser zu erf
 Es ist ein kleines Kunststück und dauert einige Minuten, aber du schaffst es dich zu drehen und zur Klappe zu kriechen. Die Bretter werden von Nägeln zusammengehalten, denen Wind und Wetter stark zugesetzt haben. Trotzdem glaubst du, dass es kein Kinderspiel wäre die Klappe mit Gewalt zu öffnen - was vor allem an deiner eingeschränkten Bewegungsmöglichkeit liegt.
 \\Wenn du versuchen willst die Klappe aufzutreten, gehe zu [\ref{forceLoadramp}].
 \\Wenn du versuchen willst die Riegel zu öffnen, gehe zu [\ref{unlockLoadramp}].
-\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargo}].
+\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargoFromloadramp}].
 \\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
 
 \block{forceLoadramp}{Ich trete gegen die Ladeklappe}
@@ -81,6 +81,39 @@ Du wirst zwar nie erfahren, warum du entführt wurdest, aber manche Geheimnisse 
 
 \textbf{Ende.}
 
+\block{inspectCargoFromloadramp}{Ich wende mich den Säcke zu}
+
+Es ist ein kleines Kunststück und dauert einige Minuten, aber du schaffst es dich wieder zurück zu drehen und zu den Säcken zu kriechen. Es ist nicht gerade einfach herauszufinden was sich in den Säcken befindet, wenn die Hände hinter dem Rücken gefesselt sind. Trotzdem schaffst du es dich so zu positionieren, dass einer der Säcke hinter dir liegt und du ihn berühren kannst. Du spürst einige runde Stellen, die mit ausreichend Druck nachgeben. Wenn dich nicht alles täuscht, sind das Kartoffeln in den Säcken.
+\\Wenn du versuchen willst dir eine der Kartoffeln zu nehmen, gehe zu [\ref{stealPotatoAfterRamp}].
+\\Wenn du zurück zur Ladeklappe kriechen willst, gehe zu [\ref{returnLoadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
+\block{stealPotatoAfterRamp}{Ich benutze meine Finger}
+
+Natürlich sind die Säcke zugeknotet. Normalerweise wäre das vermutlich kein Hindernis, doch leider ist diese Situation nicht ganz normal. Mit dem Rücken zum Knoten versuchst du zu ertasten wo du wie ziehen musst.
+\\Lege eine Fingerfertigkeitsprobe mit DC 15 ab. Wenn du Erfolg hast, gehe zu [\ref{gotPotatoRamp}].
+\\Wenn es dir nicht gelingt, gehe zu [\ref{failedPotatoRamp}].
+
+\block{gotPotatoRamp}{Mein Triumph-Moment}
+
+Ein Gefühl des Stolzes überkommt dich, als du spürst wie sich das Seil lockert und du den Knoten lösen kannst. Du ziehst die Öffnung zu Boden und ein paar Kartoffeln rollen über den Boden. Dir ist bewusst, dass du nur an eine deiner Taschen herankommst und dort nicht mehr als eine Kartoffel hineinpasst. Du suchst dir ein Exemplar heraus, dass sich gut anfühlt und packst es ein.
+\\Du erhälst eine Kartoffel (1)!
+\\Wenn du zurück zur Ladeklappe kriechen willst, gehe zu [\ref{returnLoadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
+\block{failedPotatoRamp}{Vergebene Mühe}
+
+Ein Gefühl der Hilflosigkeit überkommt dich, als du spürst, dass es keinen Sinn hat sich weiter an dem Seil zu versuchen. Solange deine Hände gefesselt sind und du den Knoten nicht sehen kannst, wirst du ihn nicht öffnen können.
+\\Wenn du zurück zur Ladeklappe kriechen willst, gehe zu [\ref{returnLoadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
+\block{returnLoadramp}{Ich krieche zurück zur Ladeklappe}
+
+Du lässt die Kartoffeln Kartoffeln sein und wendest dich wieder den Holzbrettern zu.
+\\Wenn du versuchen willst die Klappe aufzutreten, gehe zu [\ref{forceLoadramp}].
+\\Wenn du versuchen willst die Riegel zu öffnen, gehe zu [\ref{unlockLoadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
 \block{forceLoadrampfailed}{Das Holz hat gewonnen}
 
 Du konzentrierst dich und sammelst deine Kräfte für einen gezielten Tritt gegen die Seite der Holzklappe. Zu deinem Pech rührt sich überhaupt nichts, woran auch ein zweiter und ein dritter Tritt nichts ändern. Als du zum vierten Tritt ansetzt, bemerkst du plötzlich einen Schatten über dir und hörst eine tiefe Stimme ``Na, sowas sehen wir hier aber gar nicht gern!'' brummen, bevor du einen harten Schlag auf den Kopf bekommst und das Bewusstsein verlierst.\\
@@ -92,4 +125,30 @@ Du verlierst 5 Lebenspunkte.
 Du lässt deinen Blick schweifen und versuchst deine aktuelle Lage besser zu erfassen. Der Karren ist aus Holz und hat schon bessere Tage gesehen. Am hinteren Ende befindet sich eine Ladeklappe, die von Metallriegeln auf beiden Seiten gehalten wird. Neben dir befinden sich zwei gefüllte braune Leinensäcke. Torlof und sein Kumpane scheinen wieder in ihr Gespräch vertieft zu sein.
 \\Wenn du zur Ladeklappe kriechen willst, gehe zu [\ref{loadramp}].
 \\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
-\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargo2}].
+\\Wenn du versuchen willst herauszufinden was sich in den Säcken befindet, gehe zu [\ref{inspectCargo}].
+
+\block{inspectCargo}{Ich untersuche die Säcke}
+
+Es ist nicht gerade einfach herauszufinden was sich in den Säcken befindet, wenn die Hände hinter dem Rücken gefesselt sind. Trotzdem schaffst du es dich so zu drehen, dass einer der Säcke hinter dir liegt und du ihn berühren kannst. Du spürst einige runde Stellen, die mit ausreichend Druck nachgeben. Wenn dich nicht alles täuscht, sind das Kartoffeln in den Säcken.
+\\Wenn du versuchen willst dir eine der Kartoffeln zu nehmen, gehe zu [\ref{stealPotato}].
+\\Wenn du zur Ladeklappe kriechen willst, gehe zu [\ref{loadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
+\block{stealPotato}{Ich erprobe mein Fingerspitzengefühl}
+
+Natürlich sind die Säcke zugeknotet. Normalerweise wäre das vermutlich kein Hindernis, doch leider ist diese Situation nicht ganz normal. Mit dem Rücken zum Knoten versuchst du zu ertasten wo du wie ziehen musst.
+\\Lege eine Fingerfertigkeitsprobe mit DC 15 ab. Wenn du Erfolg hast, gehe zu [\ref{gotPotato}].
+\\Wenn es dir nicht gelingt, gehe zu [\ref{failedPotato}].
+
+\block{gotPotato}{Der Knoten löst sich}
+
+Ein Gefühl des Stolzes überkommt dich, als du spürst wie sich das Seil lockert und du den Knoten lösen kannst. Du ziehst die Öffnung zu Boden und ein paar Kartoffeln rollen über den Boden. Dir ist bewusst, dass du nur an eine deiner Taschen herankommst und dort nicht mehr als eine Kartoffel hineinpasst. Du suchst dir ein Exemplar heraus, dass sich gut anfühlt und packst es ein.
+\\Du erhälst eine Kartoffel (1)!
+\\Wenn du zur Ladeklappe kriechen willst, gehe zu [\ref{loadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
+
+\block{failedPotato}{Der Knoten sitzt zu fest}
+
+Ein Gefühl der Hilflosigkeit überkommt dich, als du spürst, dass es keinen Sinn hat sich weiter an dem Seil zu versuchen. Solange deine Hände gefesselt sind und du den Knoten nicht sehen kannst, wirst du ihn nicht öffnen können.
+\\Wenn du zur Ladeklappe kriechen willst, gehe zu [\ref{loadramp}].
+\\Wenn du warten möchtest, gehe zu [\ref{waitInCart}].
