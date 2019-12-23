@@ -1,0 +1,4 @@
+1 - Kartoffel
+2 - Dolch
+3 - Schwert
+4 - Trank der größeren Heilung
