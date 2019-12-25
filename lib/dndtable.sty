@@ -1,21 +1,25 @@
 % Table Header
-\newcommand{\header}[1]{{
-	\par\vspace*{8pt}
-	\noindent
-	\sffamily\bfseries\scshape
-	#1}}
+\newcommand{\header}[1]{%
+  \begingroup%
+  \par\vspace{10pt plus 3 pt minus 3pt}%
+  \noindent%
+  \dnd@TableTitleFont%
+  #1%
+  \endgroup%
+  }
 
 % Centered Column
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 % Table Environment
-\newenvironment{dndtable}[1][XX]{
-	\par\vspace*{8pt}
-	\noindent
-	\fontfamily{lmss}\selectfont %Select font
-	\rowcolors{1}{bgtan}{commentgreen} % Alternate colors
-	\tabularx{\linewidth}{#1}
-	}
-	{\endtabularx\vspace{8pt plus 1pt}\noindent} 
-	
-
+\NewDocumentEnvironment{dndtable}{O{XX} O{tablecolor}}{%
+    \par\vspace{2pt plus 1pt minus 1pt}%
+    \noindent%
+    \dnd@TableBodyFont%
+    \setlength{\extrarowheight}{3pt}%
+    \rowcolors{1}{}{#2}%
+    \tabularx{\linewidth}{#1}%
+  }{%
+    \endtabularx%
+    \par\vspace{10pt plus 3 pt minus 3pt}%
+  }
