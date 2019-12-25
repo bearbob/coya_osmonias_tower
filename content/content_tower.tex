@@ -12,14 +12,17 @@ Ohne anzuhalten fährt der Wagen auf die Tür zu, die wie von Geisterhand und mi
 
 \block{resistCell}{Nicht ohne Widerstand}
 
-Ein Kerker ist selten etwas Gutes. Du fängst an dich heftig zu wehren und schlägst mit den gefesselten Gliedmaßen um dich. Leider nur mit mäßigem Erfolg, doch immerhin bewegst du dich so ungünstig, dass dein Entführer nicht anders kann als dich fallen zu lassen. Du hörst wie er wütend sagt: ``Nun aber genug mit den Spielchen!''. Kurz darauf trifft dich etwas hartes an der Schläfe und du verlierst das Bewusstsein.\\
+Ein Kerker ist selten etwas Gutes. Du fängst an dich heftig zu wehren und schlägst mit den gefesselten Gliedmaßen um dich. Leider nur mit mäßigem Erfolg, doch immerhin bewegst du dich so ungünstig, dass dein Entführer nicht anders kann als dich fallen zu lassen. Du hörst wie er wütend sagt: ``Nun aber genug mit den Spielchen!''. Kurz darauf trifft dich etwas Hartes an der Schläfe und du verlierst das Bewusstsein.
+
 Du verlierst 4 Lebenspunkte.
-\\Gehe zu [\ref{wakeUpInCell}].
+
+Gehe zu [\ref{wakeUpInCell}].
 
 \block{arriveInCell}{Ohne Widerstand}
 
 Du spürst, dass es kühler wird und ihr abwärts geht, vermutlich eine Treppe hinab. Modriger Geruch steigt dir in die Nase und du hörst das Quietschen alter Metallgitter. Wenige Sekunden später wirst du auf den Boden geworfen und der Leinensack wird entfernt.
-\\Gehe zu [\ref{welcomeToTheCell}].
+
+Gehe zu [\ref{welcomeToTheCell}].
 
 \block{arrivalAtTowerSingle}{Die verspätete Ankunft}
 
@@ -133,26 +136,75 @@ Das macht keinen Sinn und du hast im Laufe der Jahre gelernt Situationen zu verm
 
 \block{someMonsterAttacks}{Ich sehe nach oben}
 
-Das Rasseln der Kette lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hing sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
+Das Rasseln der Kette lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hing sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...\\
 
 \textbf{Riesige Wolfsspinne}: Iniative +3;
 AC 14;
 HP 22;
 Reichweite 30;
-Attacke: Biss (+4), 1d8+3 Schaden.
+Attacke: Biss (+4), 1d8+3 Schaden.\\
 
-Die Angriffe der Spinne sind giftig. Wirf einen Konstitutionsrettungswurf mit
+Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
 DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
 Wenn nicht, gehe zu [\ref{poisonedAndOut}].
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{diespiderdie}].
+\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
 
 \block{poisonedAndOut}{Ich spüre meine Finger nicht mehr}
 
 Du schlägst dich wacker gegen die Spinne. Leider scheint sich ihr Gift immer weiter durch deinen Körper auszubreiten. Du verlierst langsam das Gefühl in deinen Fingern und deine Sicht verschwimmt.
 Kurze Zeit später versagen deine Beine ihren Dienst und du kippst hilflos nach vorn. Immerhin musst du nicht miterleben, wie du gefressen wirst, denn du verlierst das Bewusstsein...
 
-Gehe zu [\ref{wakeUpInCell}].
+Du verlierst alle gesammelten Gegenstände.
+
+Gehe zu [\ref{wakeUpInCellAfterSpider}].
+
+\block{wakeUpInCellAfterSpider}{Ich lebe}
+
+Der stechende Schmerz in deinem Nacken verrät dir, dass du nicht gefressen wurdest. Als du langsam wieder zu Sinnen kommst, steigt dir ein modriger Geruch in die Nase. Es ist kalt und feucht und du bist schon wieder gefesselt. Offensichtlich befindest du dich nicht mehr in der Eingangshalle des Turms, denn der Boden ist weicher und riecht nach Erde.
+
+Gehe zu [\ref{welcomeToTheCell}].
 
 \block{wakeUpInCell}{Unsanftes Erwachen}
 
 Als du wieder zu dir kommst, steigt dir ein modriger Geruch in die Nase. Es ist kalt und feucht und du bist noch immer gefesselt. Offensichtlich liegst du nicht mehr auf dem Wagen, denn der Boden ist weicher und riecht nach Erde.
-\\Gehe zu [\ref{welcomeToTheCell}].
+
+Gehe zu [\ref{welcomeToTheCell}].
+
+\block{theSpiderKilledMe}{Ich bin leider köstlich}
+
+Du lieferst dir den Kampf deines Lebens mit der Spinne. Leider ist es auch der letzte Kampf deines Lebens. Du weichst Biss um Biss der Kreatur aus, doch für einen kleinen Moment bist du unaufmerksam. Sofort bohren sich die dicken Zangen der Spinne in deinen Körper. Aus dieser Situation gibt es kein Entkommen.
+
+Keine überraschende Wendung. Kein Happy End. Immerhin nimmt dir das Gift der Spinne langsam die Sinne. Der Schmerz lässt nach und eine tiefe Müdigkeit überkommt dich. Die Götter sind gnädig und lassen dich nicht miterleben, wie du gefressen wirst.
+
+\textbf{Ende.}
+
+\block{diespiderdie}{Ich hasse Spinnen}
+
+Du schaffst es die Spinne zu erschlagen! Mit einem jämmerlichen Quieken weicht das Insekt zurück, doch seine Wunden sind zu schwer. Es zuckt noch ein paar Mal, bevor es die hässlichen, behaarten Beine an den mächtigen Leib zieht und zusammensackt. Dieses Vieh wird niemandem mehr Probleme machen!
+
+Während du schwer atmest siehst du dich im Raum um. Nach einigen Sekunden ist klar, dass du allein bist. Du kannst nur die Holztür gegenüber des Eingangstors erkennen, ansonsten ist der Raum leer. Dein Abenteurerinstinkt sagt dir außerdem, dass du dir keine Hoffnung machen musst bei dem Kadaver irgendetwas wertvolles zu finden.
+
+Wenn du den Turm verlassen und nach Hause gehen möchtest, gehe zu [\ref{spidersmakemequit}].
+\\Wenn du durch die Tür gehen willst, gehe zu [\ref{onwardsThroughTheDoor}].
+
+\block{spidersmakemequit}{Ich bin ziemlich kaputt}
+
+Es ist keine Schande ein Abenteuer abzubrechen. Das unterscheidet einen guten Abenteurer von einem toten Abenteurer. Du hast dich tapfer geschlagen, aber du kennst deine Grenzen. Es wird Zeit nach Hause zu gehen, vielleicht ist das die letzte Chance dafür.
+
+Ohne einen weiteren Gedanken an das Innere des Turms oder den Hexer zu verschwenden gehst du durch das Tor und machst dich auf den Weg zurück nach Greifenheim.
+
+Eine warme Suppe und ein Bett warten auf dich.
+
+\textbf{Ende.}
+
+\block{welcomeToTheCell}{Ich bin eingesperrt}
+
+Es dauert einen Moment, bis sich deine Augen an die schlechten Lichtverhältnisse gewöhnt haben. Du befindest dich in einem kleinen Raum, ohne Fenster. Die Tür besteht aus einem dicken Eisengitter, das zwar alt, aber sehr robust wirkt. Von der Decke tropft Wasser und hat auf dem weichen Erdboden eine kleine Pfütze gebildet. An der Wand findest du einige kleine Knochen, von denen du nicht sagen kannst zu welchem Lebewesen sie vorher gehört hatten.
+
+Wenn du versuchen willst
+%freigraben
+%mit anderen gefangenen reden
+%dolch aus Knochen, Schloss knacken
+% abwarten
