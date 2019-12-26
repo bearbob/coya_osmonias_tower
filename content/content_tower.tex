@@ -137,6 +137,8 @@ Das macht keinen Sinn und du hast im Laufe der Jahre gelernt Situationen zu verm
 
 \block{someMonsterAttacks}{Ich sehe nach oben}
 
+Markiere Ereignis \setEvent{SpiderAttacks}.
+
 Das Rasseln der Kette lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hing sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...\\
 
 \textbf{Riesige Wolfsspinne}: Iniative +3;
@@ -231,5 +233,45 @@ Du setzt dich in die Ecke und wartest geduldig ab. Das langsame Tropfen des Wass
 
 Als du das Quietschen der Tür hörst, schreckst du hoch. Vor der Tür steht ein Mann, für den die Beschreibung ``Hexer'' förmlich erfunden wurde. Das hagere, eingefallene Gesicht ist von tiefen Augenringen gekennzeichnet, die bei der blassen Haut besonders auffallen. Auch die weite Robe kann nicht verbergen, welch knochiger Körper sich unter ihr befindet. Mit langsamen, beinahe etwas wackligen Schritten kommt er auf dich zu. Seine Gestalt und sein Gang stehen im starken Kontrast zu deinem Blick. Die giftgrünen Augen des Hexers scheinen in der Dunkelheit zu leuchten. Du hast das Gefühl, dass er durch dich hindurch sieht, mitten in deine Seele hinein.
 
-``So, so...'', krächzt er, ``...wie ich sehe hast du dich bereits an dein neues Heim gewöhnt. Doch keine Sorge, das soll nicht von Dauer sein.''
-%TODO fortsetzen
+``So, so...'', krächzt er, ``...wie ich sehe hast du dich bereits an dein neues Heim gewöhnt. Doch keine Sorge, das soll nicht von Dauer sein.''. In seiner Hand erkennst du einen kleinen Zauberstab, der anfängt gelblich zu leuchten. Langsam spürst du eine Kraft auf dich einwirken, die deinen Körper bewegen will.
+
+Wirf einen Rettungswurf auf Charisma mit DC 18. Wenn du erfolgreich bist, gehe zu [\ref{youShallNotControlMe}]. Wenn du es nicht schaffst, gehe zu [\ref{yesMasterControlMe}].
+
+\block{youShallNotControlMe}{Ich bin mein eigener Herr}
+
+Keine Fremde Macht soll dich kontrollieren! Angestrengt versuchst du den Angriff auf deinen Geist abzuwehren. Wie in Wellen prallt es auf dich ein und versucht Stück für Stück dir die Sinne zu rauben. Du hast das Gefühl tausende Stimmen zu hören, die direkt in deinem Kopf flüstern und dir befehlen einfach aufzugeben. Zuerst verspürst du ein seltsames Kribbeln in den Fingern, dann verschwimmt für einen Moment deine Sicht. Doch du bist nicht bereit aufzugeben! Endlos scheinende Sekunden drängst du zurück, bis du plötzlich Klarheit verspürst. Das Wispern hört auf. Du bist wieder allein in deinem Kopf.
+
+Der Magier scheint noch nicht bemerkt zu haben, dass sein Zauber fehlgeschlagen ist. Das könnte deine große Chance sein.
+
+Wenn du \getItem{boneDagger} hast, kannst du zu [\ref{iGotMeinDagger}] gehen.
+\\Wenn du so tun willst als hätte der Zauber Erfolg gehabt, gehe zu [\ref{yesMasterControlMeButInTruthYouDont}].
+\\Wenn du den Hexer angreifen willst, gehe zu [\ref{fightMeWarlock}].
+
+\block{iGotMeinDagger}{Man sieht den Knochen}
+
+Du siehst die Überraschung in den Augen des Hexers, als ihm klar wird, dass du seinem Zauber widerstanden hast. Innerhalb eines Wimpernschlags hast du nach deinem improvisierten Knochendolch gegriffen und stichst mit aller Kraft zu. Aus dem überraschten Ausdruck deines Feindes ist eine Fratze der Angst geworden.
+Wirf eine Angriffsprobe gegen AC 12. Wenn du erfolgreich bist, gehe zu [\ref{dieWarlockDie}]. Wenn du verfehlst, gehe zu [\ref{iMissedTheWarlock}].
+
+\block{dieWarlockDie}{Herzschmerz}
+
+Der Hexer öffnet den Mund um zu schreien, doch es ist zu spät. Mit aller Gewalt rammst du ihm den Knochen in die Brust. Deine Waffe splittert dabei, doch das atemlose Ächzen deines Feindes sagt dir, dass du nicht verfehlt hast. Ungläubig starrt der Mann auf die Waffe hinunter und hebt zitternd die Hände, um sie zu entfernen. Doch so weit kommt er nicht. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht im feuchten Erdboden aufschlägt hört er auf zu zucken und bleibt reglos liegen. Er ist tot.
+
+Die Stille in der Zelle wird nur das Tropfen des Wassers von der Decke durchbrochen. Wenn du den Kerker auf schnellstem Weg verlassen willst, gehe zu [\ref{letsLeaveTheDungeon}].
+\\Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlock}].
+\\Wenn du dich im Kerker umsehen willst, gehe zu [\ref{inspectTheDungeon}].
+
+\block{iMissedTheWarlock}{Ich verfehle mein Ziel}
+
+Kurz bevor du dem Schurken den Knochen in die Brust rammen kannst, stolpert dieser und fällt ein Stück nach hinten. Es sind nur wenige Zentimeter, doch sie reichen aus, um deinem Angriff zu entgehen. Gehe zu [\ref{fightMeWarlock}].
+
+\block{letsLeaveTheDungeon}{Ich gehe so schnell es geht}
+
+Du verschwendest keinen zweiten Gedanken an den Hexer und rennst aus deiner Zelle, vorbei an einigen anderen Zellen, die du dir nicht ansiehst. Es ist nicht schwer die Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
+
+Wenn du der Treppe folgen willst, gehe zu [\ref{upTheStairs}].
+\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+
+\block{doorToLobby}{Ich nehme die Tür}
+
+Ohne zu Zögern gehst du zur Holztür und öffnest sie. Vor dir liegt die Eingangshalle des Turms, direkt gegenüber befindet sich das große Eingangstor, das geschlossen ist. Wenn Ereignis \getEvent{SpiderAttacks} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpider}].
+Wenn nicht, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].

@@ -36,24 +36,32 @@
 \renewcommand{\thejumpmarker}{\arabic{jumpmarker}}
 
 \newcommand{\block}[2]{
-\refstepcounter{jumpmarker}
-\paragraph [\thejumpmarker]{\thejumpmarker\ - #2.} % with headline
-%\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}} % without headline
-\label{#1}
+  \refstepcounter{jumpmarker}
+  \paragraph [\thejumpmarker]{\thejumpmarker\ - #2.} % with headline
+  %\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}} % without headline
+  \label{#1}
 }
 
 \newcounter{itemmarker} \setcounter{itemmarker}{0}
 \renewcommand{\theitemmarker}{\arabic{itemmarker}}
 
 \newcommand{\inventory}[1]{
-\refstepcounter{itemmarker}
-\theitemmarker
-\label{#1}
+  \refstepcounter{itemmarker}
+  \theitemmarker
+  \label{#1}
 }
 
-\newcommand{\getItem}[1]{
-(\ref{#1})
+\newcommand{\getItem}[1]{(\ref{#1})}
+
+\newcounter{eventmarker} \setcounter{eventmarker}{0}
+\renewcommand{\theeventmarker}{\Alph{eventmarker}}
+\newcommand{\setEvent}[1]{
+  \refstepcounter{eventmarker}
+  (\theeventmarker)
+  \label{#1}
 }
+
+\newcommand{\getEvent}[1]{(\ref{#1})}
 
 % Start document
 \begin{document}
