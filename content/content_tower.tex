@@ -185,7 +185,7 @@ Keine überraschende Wendung. Kein Happy End. Immerhin nimmt dir das Gift der Sp
 
 \block{diespiderdie}{Ich hasse Spinnen}
 
-Du schaffst es die Spinne zu erschlagen! Mit einem jämmerlichen Quieken weicht das Insekt zurück, doch seine Wunden sind zu schwer. Es zuckt noch ein paar Mal, bevor es die hässlichen, behaarten Beine an den mächtigen Leib zieht und zusammensackt. Dieses Vieh wird niemandem mehr Probleme machen!
+Du schaffst es die Spinne zu erschlagen! Mit einem jämmerlichen Quieken weicht das Tier zurück, doch seine Wunden sind zu schwer. Es zuckt noch ein paar Mal, bevor es die hässlichen, behaarten Beine an den mächtigen Leib zieht und zusammensackt. Dieses Vieh wird niemandem mehr Probleme machen!
 
 Während du schwer atmest siehst du dich im Raum um. Nach einigen Sekunden ist klar, dass du allein bist. Du kannst nur die Holztür gegenüber des Eingangstors erkennen, ansonsten ist der Raum leer. Dein Abenteurerinstinkt sagt dir außerdem, dass du dir keine Hoffnung machen musst bei dem Kadaver irgendetwas wertvolles zu finden.
 
@@ -275,3 +275,52 @@ Wenn du der Treppe folgen willst, gehe zu [\ref{upTheStairs}].
 
 Ohne zu Zögern gehst du zur Holztür und öffnest sie. Vor dir liegt die Eingangshalle des Turms, direkt gegenüber befindet sich das große Eingangstor, das geschlossen ist. Wenn Ereignis \getEvent{SpiderAttacks} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpider}].
 Wenn nicht, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
+
+\block{iKnowAboutTheSpider}{Mein Spinnensinn meldet sich}
+
+Natürlich hast du die riesige Spinne noch nicht vergessen. Doch du kannst kein Zeichen des riesigen Monsters an der spinnwebenverhangenen Decke erkennen. Vorsichtig versuchst du am Rand des Raums entlang zu schleichen, um einer zweiten Konfrontation aus dem Weg zu gehen. Wirf eine Schleichenprobe mit DC 16. Wenn du erfolgreich bist, gehe zu [\ref{stealthToTheMainDoor}].
+Wenn du es nicht schaffst, gehe zu [\ref{theSpiderKnowsWhereIAm}].
+
+\block{theSpiderKnowsWhereIAm}{Erschütternde Neuigkeiten}
+
+Behutsam bewegst du dich Zentimeter um Zentimeter zur Tür, die Decke des Raums immer im Blick. Dabei übersiehst du leider einen kleinen Kieselstein, auf den du trittst. Das entstehende Schleifgeräusch ist alles andere als laut. Trotzdem sackt dir für einen Moment das Herz zusammen, als du Bewegung im Spinnennetz erkennst. Du wurdest entdeckt!
+
+Wenn du rennen willst, gehe zu [\ref{sprintToTheMainDoor}]!
+Wenn du dich dem Kampf stellen willst, gehe zu [\ref{comeAtMeSpiderling}].
+
+\block{comeAtMeSpiderling}{Nur über deine Leiche}
+
+Du erkennst sofort, dass es keinen Sinn macht zur Tür zu rennen und dem Biest den Rücken zuzuwenden. Nein, nur einer von euch wird diesen Raum lebend verlassen!
+
+Einen Augenblick später trifft der schwere Leib des Untiers auf dem harten Boden auf. Mit erhobenen Greifarmen stürmt es kreischend auf dich zu!\\
+
+\textbf{Riesige Wolfsspinne}: Iniative +3;
+AC 14;
+HP: letzte Lebenspunkte +2, max 22;
+Reichweite 30;
+Attacke: Biss (+4), 1d8+3 Schaden.\\
+
+Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
+DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
+Wenn nicht, gehe zu [\ref{poisonedAndDying}].
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
+\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+
+\block{poisonedAndDying}{Sechs Arme zu viel}
+
+Du lieferst dir den Kampf deines Lebens mit der Spinne. Du weichst Biss um Biss der Kreatur aus, doch langsam gewinnt die Spinne die Oberhand. Du hast nur einen einzigen unachtsamen Augenblick. Sofort bohren sich die dicken Zangen der Spinne in deinen Körper. Aus dieser Situation gibt es kein Entkommen. Langsam sackst du auf die Knie. Das Untier tänzelt vor dir hin und her, wohl wissend, dass das Gift wirkt. Als du das Gefühl in deinen Fingern verlierst, siehst du wie sich der riesige Spinnenleib über dich schiebt. Du wirst hochgehoben und in eine klebrige weiße Flüssigkeit gewickelt. Du wirst konserviert, zweifelsohne als spätere Mahlzeit.
+
+Keine überraschende Wendung. Kein Happy End. Immerhin nimmt dir das Gift der Spinne langsam die Sinne. Der Schmerz lässt nach und eine tiefe Müdigkeit überkommt dich.
+
+\textbf{Ende.}
+
+\block{ikilledthedamnspider}{Spinnenfreie Zone}
+
+Du lieferst dir den Kampf deines Lebens mit der Spinne. Du weichst Biss um Biss der Kreatur aus, doch langsam gewinnt die Spinne die Oberhand. Plötzlich erkennst du einen unachtsamen Moment, den du sofort ausnutzt. Du triffst die Spinne schwer und sie taumelt wie benommen zurück. Die haarigen Beine zittern, als sie versucht vor dir zurückzuweichen, doch ihre Kraft reicht nicht mehr aus um die Decke emporzusteigen. Mit einem letzten Kreischen sackt der schwere Leib auf den Boden und die Beine werden angezogen. Dann Ruhe und Regungslosigkeit. Du hast die Spinne getötet.
+
+Du wartest nicht lang, um zu sehen, was der Turm noch für dich bereit hält. Nein, dieses Abenteuer muss ein Ende finden. Mit letzter Kraft ziehst du die schwere Tür auf und rennst in den Wald.
+
+Du hast vielleicht nicht viel gewonnen, aber das wichtigste ist, dass du auch nicht viel verloren hast. Du bist am Leben, nur das zählt. Du machst dich auf den beschwerlichen Fußmarsch zurück nach Greifenheim. Ein gemütliches Bett und eine warme Mahlzeit warten auf dich. Du hast dir Ruhe und Erholung verdient.
+
+\textbf{Ende.}
