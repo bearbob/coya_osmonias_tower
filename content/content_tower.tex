@@ -60,7 +60,7 @@ Wenn du versuchen willst die Tür aufzuziehen, gehe zu [\ref{strengthTestDoor}].
 
 Du beschließt, dass Anklopfen keine Option ist. Nein, dieses Tor muss mit Gewalt geöffnet werden! Du drückst deine Schulter gegen das Holz und drückst mit aller Kraft!
 
-Lege eine Athletikprobe mit DC 20 ab. Wenn du Erfolg hast, gehe zu [\ref{forceOpenDoor}].
+Lege eine Athletikprobe mit DC 18 ab. Wenn du Erfolg hast, gehe zu [\ref{forceOpenDoor}].
 Wenn nicht, gehe zu [\ref{doorStaysShut}].
 
 \block{doorStaysShut}{Das Tor gewinnt}
@@ -281,12 +281,49 @@ Wenn nicht, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
 Natürlich hast du die riesige Spinne noch nicht vergessen. Doch du kannst kein Zeichen des riesigen Monsters an der spinnwebenverhangenen Decke erkennen. Vorsichtig versuchst du am Rand des Raums entlang zu schleichen, um einer zweiten Konfrontation aus dem Weg zu gehen. Wirf eine Schleichenprobe mit DC 16. Wenn du erfolgreich bist, gehe zu [\ref{stealthToTheMainDoor}].
 Wenn du es nicht schaffst, gehe zu [\ref{theSpiderKnowsWhereIAm}].
 
+\block{stealthToTheMainDoor}{Ich schwebe über den Boden}
+
+Behutsam bewegst du dich Zentimeter um Zentimeter zur Tür, die Decke des Raums immer im Blick. Dabei übersiehst du fast einen kleinen Kieselstein, kannst aber gerade noch rechtzeitig anhalten. Nervös wandert dein Blick zu den Spinnennetzen, doch du kannst keinerlei Bewegung erkennen.
+Du setzt deinen Weg fort und bist wenig später am Tor angekommen.
+
+Um die Tür zu öffnen wirst du kräftig ziehen müssen. Dir ist klar, dass das Geräusche machen wird. Wirf eine Athletikprobe mit DC 15. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpider}].
+
 \block{theSpiderKnowsWhereIAm}{Erschütternde Neuigkeiten}
 
 Behutsam bewegst du dich Zentimeter um Zentimeter zur Tür, die Decke des Raums immer im Blick. Dabei übersiehst du leider einen kleinen Kieselstein, auf den du trittst. Das entstehende Schleifgeräusch ist alles andere als laut. Trotzdem sackt dir für einen Moment das Herz zusammen, als du Bewegung im Spinnennetz erkennst. Du wurdest entdeckt!
 
-Wenn du rennen willst, gehe zu [\ref{sprintToTheMainDoor}]!
+Wenn du zum Tor rennen willst, gehe zu [\ref{sprintToTheMainDoor}]!
 Wenn du dich dem Kampf stellen willst, gehe zu [\ref{comeAtMeSpiderling}].
+
+\block{sprintToTheMainDoor}{Ich renne zum Tor}
+
+Du handelst sofort und rennst zum Tor. Hinter dir hörst du ein dumpfes Geräusch. Mit Sicherheit ist die Spinne gerade auf dem Boden aufgekommen. Eilig! Du ziehst mit aller Kraft an der schweren Holztür, das Geräusch der Spinnenbeine auf dem Steinboden hinter dir.
+
+Wirf eine Athletikprobe mit DC 17. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpider}].
+
+\block{noEscapeFromSpider}{Nur über meine Leiche}
+
+Du mobilisierst alle Kraftreserven, die dir noch bleiben und die Tür öffnet sich knarzend Milimeter um Milimeter. Leider ist das zu langsam, die Spinne fällt dir in den Rücken und greift dich an!\\
+
+\textbf{Riesige Wolfsspinne}: Iniative: +3;
+AC 14;
+HP: letzte Lebenspunkte +2, max 22;
+Reichweite 30;
+Attacke: Biss (+4), 1d8+3 Schaden.
+Die Spinne darf zuerst angreifen und hat beim ersten Angriff Vorteil, da sie dir in den Rücken fällt.\\
+
+Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
+DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
+Wenn nicht, gehe zu [\ref{poisonedAndDying}].
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
+\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+
+\block{escapeTroughTheMainDoor}{Das muss reichen}
+
+Du mobilisierst alle Kraftreserven, die dir noch bleiben und die Tür öffnet sich Zentimeter um Zentimeter. Hinter dir hörst du das Kreischen der schrecklichen Kreatur, die auf dich zurast! Gerade noch rechtzeitig ist der Spalt der Tür groß genug um hindurchzuschlüpfen. Du drückst dich durch die Öffnung und stehst vor dem Tor, als die Spinne mit voller Wucht gegen das Holz rennt und das Tor wieder schließt. Gedämpft hörst du das Kreischen des Monsters, das mit seinen haarigen Beinen gegen das Holz kratzt. Dein Herz hämmert, doch du hast es geschafft - du bist in Sicherheit.
+
+Gehe zu [\ref{longRoadHome}].
 
 \block{comeAtMeSpiderling}{Nur über deine Leiche}
 
@@ -321,6 +358,12 @@ Du lieferst dir den Kampf deines Lebens mit der Spinne. Du weichst Biss um Biss 
 
 Du wartest nicht lang, um zu sehen, was der Turm noch für dich bereit hält. Nein, dieses Abenteuer muss ein Ende finden. Mit letzter Kraft ziehst du die schwere Tür auf und rennst in den Wald.
 
-Du hast vielleicht nicht viel gewonnen, aber das wichtigste ist, dass du auch nicht viel verloren hast. Du bist am Leben, nur das zählt. Du machst dich auf den beschwerlichen Fußmarsch zurück nach Greifenheim. Ein gemütliches Bett und eine warme Mahlzeit warten auf dich. Du hast dir Ruhe und Erholung verdient.
+Gehe zu [\ref{longRoadHome}].
+
+\block{longRoadHome}{Der Weg nach Greifenheim}
+
+Du hast bei diesem Abenteuer vielleicht nicht viel gewonnen, aber das wichtigste ist, dass du auch nicht viel verloren hast. Du bist am Leben, nur das zählt. Nachdem du ein paar Meter gelaufen bist, siehst du dich noch einmal um. Noch immer ragt der Turm bedrohlich in den Himmel, doch du wirst ihn nicht mehr betreten.
+
+Vor dir liegt ein beschwerlicher Fußmarsch zurück nach Greifenheim. Doch angetrieben vom Gedanken an ein gemütliches Bett und eine warme Mahlzeit machst du dich auf den Weg. Du hast dir Ruhe und Erholung verdient.
 
 \textbf{Ende.}
