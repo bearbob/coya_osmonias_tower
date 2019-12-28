@@ -260,11 +260,44 @@ Die Stille in der Zelle wird nur das Tropfen des Wassers von der Decke durchbroc
 \\Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlock}].
 \\Wenn du dich im Kerker umsehen willst, gehe zu [\ref{inspectTheDungeon}].
 
+\block{lootTheWarlock}{Was dein war ist mein}
+
+Du zögerst keine Sekunde und durchsuchst den Toten nach Dingen, die dir helfen könnten.
+Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen geschwungenden Dolch \getItem{warlocksDagger}, einen kleinen Kupferschlüssel \getItem{warlocksKey} und einen goldenen Ring \getItem{goldenWarlockRing} dein Eigen nennen.
+
+Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
+
+Wenn du den Kerker auf schnellstem Weg verlassen willst, gehe zu [\ref{letsLeaveTheDungeon}].
+\\Wenn du dich weiter im Kerker umsehen willst, gehe zu [\ref{inspectTheDungeon}].
+
 \block{iMissedTheWarlock}{Ich verfehle mein Ziel}
 
 Kurz bevor du dem Schurken den Knochen in die Brust rammen kannst, stolpert dieser und fällt ein Stück nach hinten. Es sind nur wenige Zentimeter, doch sie reichen aus, um deinem Angriff zu entgehen. Gehe zu [\ref{fightMeWarlock}].
 
-\block{letsLeaveTheDungeon}{Ich gehe so schnell es geht}
+\block{fightMeWarlock}{Ich gebe nicht auf}
+
+Der Hexer mag deinem Angriff entgangen sein, doch das heißt nicht, dass du verloren hast! Sofort setzt du zum nächsten Angriff an. Leider ist dein Gegner nun gewarnt. In der kleinen Zelle kann keiner von euch beiden wegrennen und sein wütender Blick verrät dir, dass das auch ihm klar ist. Mit der freien Hand zieht er einen Dolch. Nur einer von euch beiden wird diesen Raum lebend verlassen.\\
+
+\textbf{Der Hexer}: Iniative +1;
+AC 12;
+HP 29;
+Reichweite 30;
+Attacken: Dolch (+4), 1d6 Schaden. Eldritch Blast (+6), 2d10 Schaden.\\
+
+Der Hexer wirft zu Beginn seiner Runde 1d6 um zu entscheiden welchen Angriff er benutzt. Bei einer ungeraden Ziffer greift er mit seinem Dolch an, bei einer geraden Ziffer zaubert er.
+
+Wenn du den Hexer umbringen kannst, gehe zu [\ref{dieWarlockDie}].
+Wenn du den Kampf verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+
+\block{anEvilWarlockKilledMe}{Ich habe keine Chance}
+
+Du gibst alles, doch das reicht nicht. Als dir der Hexer seinen Dolch in die Rippen rammt, taumelst du etwas benommen zurück. Deine Hände packen die Klinge, um sie herauszuziehen, doch der stechende Schmerz lähmt deine Bewegung. Als du nach oben siehst, kannst du das verächtliche Grinsen des Hexers sehen, der seinen Zauberstab vor deine Augen hält. Während die Spitze anfängt in einem giftgrünen Licht zu erstrahlen, hörst du ihn sagen: ``Du unwürdiger Wurm...''
+
+Als das grüne Licht durch deinen Körper fährt, verkrampfen deine Muskeln und ein unbeschreiblicher Schmerz schmettert in deinen Kopf. Dann wird alles um dich dunkel.
+
+\textbf{Ende.}
+
+\block{letsLeaveTheDungeon}{Ich verschwinde so schnell es geht}
 
 Du verschwendest keinen zweiten Gedanken an den Hexer und rennst aus deiner Zelle, vorbei an einigen anderen Zellen, die du dir nicht ansiehst. Es ist nicht schwer die Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
 
@@ -276,6 +309,24 @@ Wenn du der Treppe folgen willst, gehe zu [\ref{upTheStairs}].
 Ohne zu Zögern gehst du zur Holztür und öffnest sie. Vor dir liegt die Eingangshalle des Turms, direkt gegenüber befindet sich das große Eingangstor, das geschlossen ist. Wenn Ereignis \getEvent{SpiderAttacks} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpider}].
 Wenn nicht, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
 
+\block{iHaveNoIdeaAboutTheSpider}{Ich gehe zum Tor}
+
+Mit eiligen Schritten durchquerst du den Raum, um zum Tor zu gelangen. Plötzlich hörst du über dir ein lautes Knacken und das Rasseln einer Metallkette.
+Das Geräusch lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hängt sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...\\
+
+\textbf{Riesige Wolfsspinne}: Iniative +3;
+AC 14;
+HP 22;
+Reichweite 30;
+Attacke: Biss (+4), 1d8+3 Schaden.\\
+
+Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
+DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
+Wenn nicht, gehe zu [\ref{poisonedAndDying}].
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
+\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+
 \block{iKnowAboutTheSpider}{Mein Spinnensinn meldet sich}
 
 Natürlich hast du die riesige Spinne noch nicht vergessen. Doch du kannst kein Zeichen des riesigen Monsters an der spinnwebenverhangenen Decke erkennen. Vorsichtig versuchst du am Rand des Raums entlang zu schleichen, um einer zweiten Konfrontation aus dem Weg zu gehen. Wirf eine Schleichenprobe mit DC 16. Wenn du erfolgreich bist, gehe zu [\ref{stealthToTheMainDoor}].
@@ -286,7 +337,16 @@ Wenn du es nicht schaffst, gehe zu [\ref{theSpiderKnowsWhereIAm}].
 Behutsam bewegst du dich Zentimeter um Zentimeter zur Tür, die Decke des Raums immer im Blick. Dabei übersiehst du fast einen kleinen Kieselstein, kannst aber gerade noch rechtzeitig anhalten. Nervös wandert dein Blick zu den Spinnennetzen, doch du kannst keinerlei Bewegung erkennen.
 Du setzt deinen Weg fort und bist wenig später am Tor angekommen.
 
-Um die Tür zu öffnen wirst du kräftig ziehen müssen. Dir ist klar, dass das Geräusche machen wird. Wirf eine Athletikprobe mit DC 15. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpider}].
+Um die Tür zu öffnen wirst du kräftig ziehen müssen. Dir ist klar, dass das Geräusche machen wird. Wirf eine Athletikprobe mit DC 14. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpiderEvenWithStealth}].
+
+\block{noEscapeFromSpiderEvenWithStealth}{Ich bin nicht schnell genug}
+
+Du mobilisierst alle Kraftreserven, die dir noch bleiben und die Tür öffnet sich knarzend Milimeter um Milimeter. Das entstehende Schleifgeräusch ist alles andere als laut. Trotzdem sackt dir für einen Moment das Herz zusammen, als ein Rascheln von der Decke hörst. Du wurdest entdeckt! Hinter dir hörst du ein dumpfes Geräusch. Mit Sicherheit ist die Spinne gerade auf dem Boden aufgekommen.
+
+Die Adern an deinem Hals treten hervor, als du versuchst die Tür schneller zu öffnen.
+Leider bist du trotzdem zu langsam, die Spinne fällt dir in den Rücken und greift dich an!
+
+Gehe zu [\ref{theSpiderAgain}].
 
 \block{theSpiderKnowsWhereIAm}{Erschütternde Neuigkeiten}
 
@@ -301,16 +361,22 @@ Du handelst sofort und rennst zum Tor. Hinter dir hörst du ein dumpfes Geräusc
 
 Wirf eine Athletikprobe mit DC 17. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpider}].
 
-\block{noEscapeFromSpider}{Nur über meine Leiche}
+\block{noEscapeFromSpider}{Ich schaffe es nicht rechtzeitig}
 
-Du mobilisierst alle Kraftreserven, die dir noch bleiben und die Tür öffnet sich knarzend Milimeter um Milimeter. Leider ist das zu langsam, die Spinne fällt dir in den Rücken und greift dich an!\\
+Du mobilisierst alle Kraftreserven, die dir noch bleiben und die Tür öffnet sich knarzend Milimeter um Milimeter. Leider ist das zu langsam, die Spinne fällt dir in den Rücken und greift dich an!
+
+Gehe zu [\ref{theSpiderAgain}].
+
+\block{theSpiderAgain}{Nur über meine Leiche}
+
+Noch bevor du dich umdrehen kannst hörst du die Greifarme des Ungetüms hinter dir zuschnappen.
+Unabhängig von der Iniative darf die Spinne zuerst angreifen und hat beim ersten Angriff Vorteil, da sie dir in den Rücken fällt.
 
 \textbf{Riesige Wolfsspinne}: Iniative: +3;
 AC 14;
 HP: letzte Lebenspunkte +2, max 22;
 Reichweite 30;
-Attacke: Biss (+4), 1d8+3 Schaden.
-Die Spinne darf zuerst angreifen und hat beim ersten Angriff Vorteil, da sie dir in den Rücken fällt.\\
+Attacke: Biss (+4), 1d8+3 Schaden.\\
 
 Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
 DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
