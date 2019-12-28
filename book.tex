@@ -4,7 +4,7 @@
 % Note that the article class does not have chapters.
 \documentclass[10pt,twoside,openany,twocolumn]{book}
 \usepackage[a5paper]{geometry}
-\usepackage[bg-a4]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage[layout=true]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
@@ -14,8 +14,9 @@
 \usepackage{tikz}
 \usepackage[bottom]{footmisc}
 \usetikzlibrary{shapes.arrows, fadings}
-
 \usepackage{titlesec}
+
+\setlength{\parskip}{1em}
 
 
 %custom commands
@@ -37,7 +38,7 @@
 
 \newcommand{\block}[2]{
   \refstepcounter{jumpmarker}
-  \paragraph [\thejumpmarker]{\thejumpmarker\ - #2.} % with headline
+  \paragraph [\thejumpmarker]{\thejumpmarker\ - #2} % with headline
   %\paragraph [\arabic{jumpmarker}]{\arabic{jumpmarker}} % without headline
   \label{#1}
 }

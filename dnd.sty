@@ -3,139 +3,147 @@
 % Modified by Christopher Liu December 2015
 % Modified by Yannic Meyer Feb 2016
 
-\ProvidesPackage{dnd}[2016/03/13]
+\ProvidesPackage{dnd}[2019/07/18 v0.7.1 Template for DnD 5e material]
 
 %
 % Prerequisite Packages
 %
 
-\RequirePackage{titlesec}         % Used to adjust (sub)section colors and fonts
-\RequirePackage{lipsum}           % Filler text
-\RequirePackage[cm]{fullpage}     % Small margins
-\RequirePackage{bookman}          % Closest built-in font I could find
-\RequirePackage[T1]{fontenc}
-\RequirePackage[table]{xcolor}
+\PassOptionsToPackage{table}{xcolor} % Helps prevent option clash with other packages that include xcolor
+
 \RequirePackage{array}
-\RequirePackage{tabularx}
-\RequirePackage{tikz}
+\RequirePackage{calc}
+\RequirePackage{colortbl}
+\RequirePackage{enumitem}
+\RequirePackage{etoolbox}
+\RequirePackage{geometry}
+\RequirePackage{hang}
+\RequirePackage{ifluatex}
 \RequirePackage{keycommand}
-\RequirePackage{fancyhdr} 			  % Adaptation of the footers
-\RequirePackage[most]{tcolorbox}  % used for some boxes
+\RequirePackage[autolanguage]{numprint}
+\RequirePackage{tabularx}
+\RequirePackage[breakable,skins,xparse]{tcolorbox}
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{xkeyval}
+\RequirePackage{xparse}
 
-% Load other modules of this package
-\usepackage{lib/dndmonster}
-\usepackage{lib/dndsections}
-\usepackage{lib/dndcomment}
-\usepackage{lib/dnditemtable}
-\usepackage{lib/dndtable}
-\usepackage{lib/dndquote}
-\usepackage{lib/dndpaperbox}
+\ifluatex
+  \RequirePackage{luacolor}
+\fi
 
+
+% \dnd@deprecate{<command or environment>}{<version>}[<suggestion>]
+\DeclareDocumentCommand{\dnd@deprecate}{m m o}{%
+  \PackageWarning{dnd}{#1 is deprecated and will be removed in version #2.\IfNoValueF{#3}{ #3}}
+}
 
 %
 % Options
 %
+\newtoggle{bool-bg}
+\newtoggle{bool-footer-scroll}
+\DeclareOptionX{bg}[full]{%
+  % This macro call looks complicated, but simply sets up a case environment
+  % to process choices. Refer to the xkeyval documentation for details.
+  \XKV@cc*+[\val\index]{#1}{full,none,print}{%
+    \ifcase\index\relax
+    % full
+    \toggletrue{bool-bg}
+    \toggletrue{bool-footer-scroll}
+    \or
+    % none
+    \togglefalse{bool-bg}
+    \togglefalse{bool-footer-scroll}
+    \or
+    % print
+    \togglefalse{bool-bg}
+    \toggletrue{bool-footer-scroll}
+    \fi
+  }{%
+    \PackageWarning{dnd}{\val\ is not a valid choice for bg and was ignored}
+  }
+}
 
-% 'bg-letter-img','bg-letter-print' and 'bg-none' options
-\newtoggle{bool-bg-a6}
-\newtoggle{bool-bg-a4}
-\newtoggle{bool-bg-print}
-\newtoggle{bool-bg-none}
-\DeclareOption{bg-none}{\toggletrue{bool-bg-none}}
-\DeclareOption{bg-a4}{\toggletrue{bool-bg-a4}}
-\DeclareOption{bg-a6}{\toggletrue{bool-bg-a6}}
-\DeclareOption{bg-letter}{\togglefalse{bool-bg-a4}}
-\DeclareOption{bg-print}{\toggletrue{bool-bg-print}}
-\DeclareOption{bg-full}{\togglefalse{bool-bg-print}}
+% Legacy bg option variants.
+\DeclareOptionX{bg-full}{%
+  \dnd@deprecate{bg-full}{0.8}[Use bg=full instead.]
+  \toggletrue{bool-bg}
+  \toggletrue{bool-footer-scroll}
+}
+\DeclareOptionX{bg-none}{%
+  \dnd@deprecate{bg-none}{0.8}[Use bg=none instead.]
+  \togglefalse{bool-bg}
+  \togglefalse{bool-footer-scroll}
+}
+\DeclareOptionX{bg-print}{%
+  \dnd@deprecate{bg-print}{0.8}[Use bg=print instead.]
+  \togglefalse{bool-bg}
+  \toggletrue{bool-footer-scroll}
+}
+
+% Toggle justification (official books are flush left).
+\newtoggle{justified}
+\DeclareOptionX{justified}{\toggletrue{justified}}
+
+% Toggle multitoc.
+\newtoggle{multitoc}
+\settoggle{multitoc}{true}
+\DeclareOptionX{nomultitoc}{\togglefalse{multitoc}}
+
+% Adds boolean `layout` package option and \ifpkglayout if command.
+\define@boolkey{dnd.sty}[pkg]{layout}[true]{}
 
 % Default Settings
-\ExecuteOptions{bg-letter, bg-full}
-\ProcessOptions\relax
+\ExecuteOptionsX{bg=full, layout=true}
+\ProcessOptionsX\relax
 
-\nottoggle{bool-bg-none}{
-  % Determine background image
-  \iftoggle{bool-bg-a4}{%		% Check if A4 option is selected
-    \iftoggle{bool-bg-print}{%	% Check if print option is selected
-      \RequirePackage[a4,print]{lib/dndbackgroundimg}
-		}{%
-      \RequirePackage[a4,full]{lib/dndbackgroundimg}
-		}
-	}{%
-    	\iftoggle{bool-bg-a6}{%		% Check if A4 option is selected
-    		\iftoggle{bool-bg-print}{%	% Check if print option is selected
-      			\RequirePackage[a6,print]{lib/dndbackgroundimg}
-		}{%
-      			\RequirePackage[a6,full]{lib/dndbackgroundimg}
-		}
-	}{%
-    	\iftoggle{bool-bg-print}{%	% Check if print option is selected
-      			\RequirePackage[letter,print]{lib/dndbackgroundimg}
-		}{%
-     	 		\RequirePackage[letter,full]{lib/dndbackgroundimg}
-		}
-	}
-    }
+\ifpkglayout
+
+\RequirePackage{microtype}        % Improve ragged2e hyphenation and overfull boxes
+\RequirePackage{ragged2e}
+
+% Set page geometry.
+\geometry{%
+  hmargin=.75in,   % Left and right margins
+  top=.46in,       % Top of text area to top of page
+  bottom=.8in,     % Bottom of text area to bottom of page
+  footskip=.32in,  % Bottom of text area to bottom of footer text
+  columnsep=.33in, % Space between columns
 }
+
+% Set paragraph and line spacing
+\setlength{\parindent}{1em}
+\setlength{\RaggedRightRightskip}{0pt plus 1em}
+\setlength{\RaggedRightParindent}{\parindent}
+\hyphenpenalty=1000  % Fewer hyphens
+
+% Set left justification if not justified
+\nottoggle{justified}{\RaggedRight}
 
 %
 % Style Parameters
 %
 
-% Font environment
-\newenvironment{lmss}{\fontfamily{lmss}\selectfont}{}
+% Customize itemize environment.
+\setlist{leftmargin=1em}
+\setitemize{noitemsep,topsep=0.5ex}
+\renewcommand{\labelitemi}{\raisebox{0.25ex}{\tiny{\( \bullet \)}}}
 
-% Columns setup
-\setlength{\columnsep}{1cm}
+\fi % \ifpkglayout
 
-% Define colors, sampled from the books.
-\usepackage{color}
-\definecolor{bgtan}{HTML}{F7F2E5}		% e.g. used for background and quotebox
-\definecolor{titlered}{HTML}{58180D}	% e.g. used for titles
-\definecolor{undergold}{HTML}{C9AD6A}	% e.g. used for titlerules
-\definecolor{uppergold}{HTML}{B89A67}	%e.g. used for pagenumbers and footer
-\definecolor{puregold}{HTML}{E69A28}	%e.g. used for top line in newer monsterbox
-\definecolor{monstertan}{HTML}{FDF1DC}	%e.g. used for newer monsterblock
-\definecolor{monstertandark}{HTML}{F0DBB5}	%e.g. used for older monsterbox
-\definecolor{commentgreen}{HTML}{E0E5C1} % e.g. used in table and green commentbox
-\definecolor{itemtablepink}{HTML}{E9CDC2} % e.g. used in item tables instead of the green
-\definecolor{rulered}{HTML}{9C2B1B}		%e.g. used for triangular rule in statsblock
-
-% Setup for custom footer
-\pagestyle{fancy}
-
-\footskip = 48pt %push the footer down so it fits with the decal from the bg-img
-\fancyhfoffset[LE]{28pt} % push the footer left on even pages so it fits the decal
-\fancyhfoffset[RO]{30pt} % push the footer right on odd pages so it fits the decalbg-img
-\renewcommand{\headrulewidth}{0.0pt} %no rule for header
-\renewcommand{\footrulewidth}{0.0pt} %no rule for footer
-
-\fancyhead{} % clear all header fields
-\fancyfoot{} % clear all footer fields
-
-\fancyfoot[LE]{
-	\textcolor{uppergold}{\thepage}
-	\hspace*{0.9cm}
-	\raisebox{12pt}{\textsc{\textcolor{uppergold}{\nouppercase\leftmark}}}
-	}
-
-\fancyfoot[RO]{
-	\raisebox{12pt}{\textsc{\textcolor{uppergold}{\nouppercase\leftmark}}}
-	\hspace*{1cm}
-	\textcolor{uppergold}{\thepage}
-	}
-
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}} % Don not write word "chapter"
-
-\fancypagestyle{plain}{}
-
-% Fancy DnD 5e-style hline
-\renewcommand{\hline}{
-\noindent
+% Fancy DnD 5e stat block rule
+\newcommand{\dndline}{%
+  \noindent
   \begin{tikzpicture}[]
-    \draw [rulered, fill=rulered] (0, 0) --(0,0.1) -- (\textwidth, 0.08);
-  \end{tikzpicture}
+    \draw [rulered, fill=rulered] (0, 0) --(0,0.1) -- (\textwidth, 0.05);
+  \end{tikzpicture}%
+  \par%
 }
-
+\renewcommand{\hline}{%
+  \dnd@deprecate{redefined \noexpand\hline}{0.8}[Use \noexpand\dndline for stat block rules.]%
+  \dndline%
+}
 
 % Either hilariously, or infuriatingly, the \ifcommandkey
 % implementation is buggy. Here is a re-implementation
@@ -151,4 +159,19 @@
         \expandafter \expandafter \expandafter  \expandafter
         \kcmd@nbk \commandkey {#1}//{first}{second}//oftwo\endcsname
       }
-   }
+  }
+
+% Load other modules of this package after all dependencies to avoid load order
+% conflicts (e.g., package options).
+\RequirePackage{lib/compat}       % compatibility definitions
+\RequirePackage{lib/dndcolors}    % color definitions
+\RequirePackage{lib/dndfonts}     % font definitions
+\RequirePackage{lib/dndcomment}   % \commentbox definition
+\RequirePackage{lib/dndheader}    % fancy headers and footers
+\RequirePackage{lib/dndmonster}   % \monsterbox definition
+\RequirePackage{lib/dndpaperbox}  % \paperbox definition
+\RequirePackage{lib/dndquote}     % \quotebox definition
+\RequirePackage{lib/dndsections}  % section styling
+\RequirePackage{lib/dndspell}     % \spell definition
+\RequirePackage{lib/dndstrings}   % Load document strings
+\RequirePackage{lib/dndtable}     % \dndtable definition
