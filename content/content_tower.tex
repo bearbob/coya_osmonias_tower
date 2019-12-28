@@ -137,19 +137,9 @@ Das macht keinen Sinn und du hast im Laufe der Jahre gelernt Situationen zu verm
 
 \block{someMonsterAttacks}{Ich sehe nach oben}
 
-Markiere Ereignis \setEvent{SpiderAttacks}.
+Markiere Ereignis \setEvent{SpiderAttacks}. \\Das Rasseln der Kette lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hing sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
 
-Das Rasseln der Kette lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hing sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
-
-\textbf{Riesige Wolfsspinne}: Iniative +3;
-AC 14;
-HP 22;
-Reichweite 30;
-Attacke: Biss (+4), 1d8+3 Schaden.\\
-
-Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
-DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
-Wenn nicht, gehe zu [\ref{poisonedAndOut}].
+\monsterSpider{26}{poisonedAndOut}
 
 Wenn du die Spinne getötet hast, gehe zu [\ref{diespiderdie}].
 \\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
@@ -272,13 +262,11 @@ Die Stille in der Zelle wird nur das Tropfen des Wassers von der Decke durchbroc
 
 \block{yesMasterControlMeButInTruthYouDont}{Ich bin euch zu Diensten}
 
-Markiere Ereignis \setEvent{deceivedTheWarlock}.
-
 Deine Muskeln entspannen sich. Du überlegst kurz, was für eine Art Zauber der Hexer wohl auf dich angewandt hast und was du tun sollst. Als du jedoch das zufriedene Gesicht des Mannes siehst, bist du dir sicher, dass du ihn täuschen konntest. Er dreht sich um und sagt ``Folge mir.''. Du beschließt das Spiel weiter mitzuspielen. Schweigend setzt du einen Fuß vor den anderen und folgst den Hexer.
 
 Ihr verlasst die Zelle und nehmt eine Treppe um den Kerker zu verlassen. Einige Stufen später kommt ihr an einer Tür vorbei, die der Hexer jedoch ignoriert und die Treppe weiter emportsteigt. Du folgst ihm weiter, Stufe um Stufe.
 
-Gehe zu [\ref{theUpperLevelWithWarlock}].
+Markiere Ereignis \setEvent{deceivedTheWarlock}. Gehe zu [\ref{theUpperLevelWithWarlock}].
 
 \block{lootTheWarlock}{Was dein war ist mein}
 
@@ -298,13 +286,7 @@ Kurz bevor du dem Schurken den Knochen in die Brust rammen kannst, stolpert dies
 
 Der Hexer mag deinem Angriff entgangen sein, doch das heißt nicht, dass du verloren hast! Sofort setzt du zum nächsten Angriff an. Leider ist dein Gegner nun gewarnt. In der kleinen Zelle kann keiner von euch beiden wegrennen und sein wütender Blick verrät dir, dass das auch ihm klar ist. Mit der freien Hand zieht er einen Dolch. Nur einer von euch beiden wird diesen Raum lebend verlassen.
 
-\textbf{Der Hexer}: Iniative +1;
-AC 12;
-HP 29;
-Reichweite 30;
-Attacken: Dolch (+4), 1d6 Schaden. Eldritch Blast (+6), 2d10 Schaden.\\
-
-Der Hexer wirft zu Beginn seiner Runde 1d6 um zu entscheiden welchen Angriff er benutzt. Bei einer ungeraden Ziffer greift er mit seinem Dolch an, bei einer geraden Ziffer zaubert er.
+\monsterWarlock
 
 Wenn du den Hexer umbringen kannst, gehe zu [\ref{dieWarlockDie}].
 Wenn du den Kampf verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
@@ -332,17 +314,9 @@ Wenn nicht, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
 \block{iHaveNoIdeaAboutTheSpider}{Ich gehe zum Tor}
 
 Mit eiligen Schritten durchquerst du den Raum, um zum Tor zu gelangen. Plötzlich hörst du über dir ein lautes Knacken und das Rasseln einer Metallkette.
-Das Geräusch lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hängt sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...\\
+Das Geräusch lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hängt sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
 
-\textbf{Riesige Wolfsspinne}: Iniative +3;
-AC 14;
-HP 22;
-Reichweite 30;
-Attacke: Biss (+4), 1d8+3 Schaden.\\
-
-Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
-DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
-Wenn nicht, gehe zu [\ref{poisonedAndDying}].
+\monsterSpider{26}{poisonedAndDying}
 
 Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
 \\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
@@ -391,16 +365,7 @@ Gehe zu [\ref{theSpiderAgain}].
 
 Noch bevor du dich umdrehen kannst hörst du die Greifarme des Ungetüms hinter dir zuschnappen.
 Unabhängig von der Iniative darf die Spinne zuerst angreifen und hat beim ersten Angriff Vorteil, da sie dir in den Rücken fällt.
-
-\textbf{Riesige Wolfsspinne}: Iniative: +3;
-AC 14;
-HP: letzte Lebenspunkte +2, max 22;
-Reichweite 30;
-Attacke: Biss (+4), 1d8+3 Schaden.\\
-
-Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
-DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
-Wenn nicht, gehe zu [\ref{poisonedAndDying}].
+\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
 
 Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
 \\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
@@ -415,24 +380,18 @@ Gehe zu [\ref{longRoadHome}].
 
 Du erkennst sofort, dass es keinen Sinn macht zur Tür zu rennen und dem Biest den Rücken zuzuwenden. Nein, nur einer von euch wird diesen Raum lebend verlassen!
 
-Einen Augenblick später trifft der schwere Leib des Untiers auf dem harten Boden auf. Mit erhobenen Greifarmen stürmt es kreischend auf dich zu!\\
+Einen Augenblick später trifft der schwere Leib des Untiers auf dem harten Boden auf. Mit erhobenen Greifarmen stürmt es kreischend auf dich zu!
 
-\textbf{Riesige Wolfsspinne}: Iniative +3;
-AC 14;
-HP: letzte Lebenspunkte +2, max 22;
-Reichweite 30;
-Attacke: Biss (+4), 1d8+3 Schaden.\\
-
-Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
-DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
-Wenn nicht, gehe zu [\ref{poisonedAndDying}].
+\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
 
 Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
 \\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
 
 \block{poisonedAndDying}{Sechs Arme zu viel}
 
-Du lieferst dir den Kampf deines Lebens mit der Spinne. Du weichst Biss um Biss der Kreatur aus, doch langsam gewinnt die Spinne die Oberhand. Du hast nur einen einzigen unachtsamen Augenblick. Sofort bohren sich die dicken Zangen der Spinne in deinen Körper. Aus dieser Situation gibt es kein Entkommen. Langsam sackst du auf die Knie. Das Untier tänzelt vor dir hin und her, wohl wissend, dass das Gift wirkt. Als du das Gefühl in deinen Fingern verlierst, siehst du wie sich der riesige Spinnenleib über dich schiebt. Du wirst hochgehoben und in eine klebrige weiße Flüssigkeit gewickelt. Du wirst konserviert, zweifelsohne als spätere Mahlzeit.
+Du lieferst dir den Kampf deines Lebens mit der Spinne. Du weichst Biss um Biss der Kreatur aus, doch langsam gewinnt die Spinne die Oberhand. Du hast nur einen einzigen unachtsamen Augenblick. Sofort bohren sich die dicken Zangen der Spinne in deinen Körper. Aus dieser Situation gibt es kein Entkommen.
+
+Langsam sackst du auf die Knie. Das Untier tänzelt vor dir hin und her, wohl wissend, dass das Gift wirkt. Als du das Gefühl in deinen Fingern verlierst, siehst du wie sich der riesige Spinnenleib über dich schiebt. Du wirst hochgehoben und in eine klebrige weiße Flüssigkeit gewickelt. Du wirst konserviert, zweifelsohne als spätere Mahlzeit.
 
 Keine überraschende Wendung. Kein Happy End. Immerhin nimmt dir das Gift der Spinne langsam die Sinne. Der Schmerz lässt nach und eine tiefe Müdigkeit überkommt dich.
 

@@ -1,0 +1,104 @@
+\newcommand{\monsterSpider}[2]{
+  \setlength{\parskip}{0em}
+  \begin{monsterbox}{Riesige Wolfsspinne}
+    \begin{hangingpar}
+      \textit{Initiative +3}
+    \end{hangingpar}
+    \dndline%
+    \basics[%
+    armorclass = 14,
+    hitpoints  = #1,
+    speed      = {30 ft.}
+    ]
+    \dndline\stats[
+      STR = \stat{14}, % This stat command will autocomplete the modifier for you
+      DEX = \stat{16},
+      CON = \stat{12},
+      INT = \stat{2},
+      WIS = \stat{11},
+      CHA = \stat{4},
+    ]
+    \dndline%
+    \monsterattack[
+      name=Biss,
+      type={melee},
+      mod=+3,%mod=+0,
+      %reach=5,
+      %range=20/60,
+      %targets=one target,
+      dmg=\dice{1d8+3},
+      dmgtype=piercing,
+      %plusdmg=,
+      %plusdmgtype=,
+      %ordmg=,
+      %ordmgwhen=,
+      %extra=,
+    ]
+    \dndline
+    \begin{monsteraction}[Giftig]
+      Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
+      DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
+      Wenn nicht, gehe zu [\ref{#2}].
+    \end{monsteraction}
+  \end{monsterbox}
+  \setlength{\parskip}{1em}
+}
+
+\newcommand{\monsterWarlock}{
+  \setlength{\parskip}{0em}
+  \begin{monsterbox}{Der Hexer}
+    \begin{hangingpar}
+      \textit{Initiative +1}
+    \end{hangingpar}
+    \dndline%
+    \basics[%
+    armorclass = 12,
+    hitpoints  = 29,
+    speed      = {30 ft.}
+    ]
+    \dndline\stats[
+      STR = \stat{9}, % This stat command will autocomplete the modifier for you
+      DEX = \stat{9},
+      CON = \stat{11},
+      INT = \stat{14},
+      WIS = \stat{12},
+      CHA = \stat{17},
+    ]
+    \dndline%
+    \monsterattack[
+      name=Dolch,
+      type={melee},
+      mod=+4,%mod=+0,
+      %reach=5,
+      %range=20/60,
+      %targets=one target,
+      dmg=\dice{1d6},
+      dmgtype=piercing,
+      %plusdmg=,
+      %plusdmgtype=,
+      %ordmg=,
+      %ordmgwhen=,
+      %extra=,
+    ]
+    \monsterattack[
+      name=Eldritch Blast,
+      type={ranged},
+      mod=+6,%mod=+0,
+      %reach=5,
+      %range=20/60,
+      %targets=one target,
+      dmg=\dice{2d10},
+      dmgtype=necrotic,
+      %plusdmg=,
+      %plusdmgtype=,
+      %ordmg=,
+      %ordmgwhen=,
+      %extra=,
+    ]
+    \dndline
+    \begin{monsteraction}[Unentschlossen]
+      Der Hexer wirft zu Beginn seiner Runde 1d6 um zu entscheiden welchen Angriff er benutzt. Bei einer ungeraden Ziffer greift er mit seinem Dolch an, bei einer geraden Ziffer zaubert er.
+    \end{monsteraction}
+  \end{monsterbox}
+  \setlength{\parskip}{1em}
+}

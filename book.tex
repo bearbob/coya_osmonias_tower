@@ -3,8 +3,8 @@
 %
 % Note that the article class does not have chapters.
 \documentclass[10pt,twoside,openany,twocolumn]{book}
-\usepackage[a5paper]{geometry}
-\usepackage[layout=true]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage[a4paper]{geometry} % was a5paper before
+\usepackage[layout=true]{dnd}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
@@ -85,7 +85,7 @@
 \end{titlepage}
 \newpage
 
-% Your content goes here
+\input{content/bestarium}
 
 \input{content/intro}
 
@@ -93,6 +93,7 @@
 \input{content/content_tower}
 \input{content/content_machine}
 
+\onecolumn
 \input{content/appendix}
 
 % End document
