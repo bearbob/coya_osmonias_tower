@@ -2,12 +2,13 @@
 % rather than alternate every other.
 %
 % Note that the article class does not have chapters.
-\documentclass[10pt,twoside,openany,twocolumn]{book}
+\documentclass[12pt,twoside,openany,twocolumn]{book}
 \usepackage[a4paper]{geometry} % was a5paper before
 \usepackage[layout=true]{dnd}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{pdfpages}
 \usepackage{nameref}
 \usepackage{graphicx}
 \usepackage{tabularx}
@@ -95,6 +96,9 @@
 
 \onecolumn
 \input{content/appendix}
+
+%add the default character sheet
+%\includepdf[pages=-]{content/silvana.pdf} 
 
 % End document
 \end{document}

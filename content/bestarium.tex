@@ -1,5 +1,14 @@
-\newcommand{\monsterSpider}[2]{
+\newcommand{\setMonsterText}{
   \setlength{\parskip}{0em}
+  \scriptsize
+}
+\newcommand{\resetMonsterText}{
+  \setlength{\parskip}{1em}
+  \large
+}
+
+\newcommand{\monsterSpider}[2]{
+  \setMonsterText
   \begin{monsterbox}{Riesige Wolfsspinne}
     \begin{hangingpar}
       \textit{Initiative +3}
@@ -41,11 +50,11 @@
       Wenn nicht, gehe zu [\ref{#2}].
     \end{monsteraction}
   \end{monsterbox}
-  \setlength{\parskip}{1em}
+  \resetMonsterText
 }
 
 \newcommand{\monsterWarlock}{
-  \setlength{\parskip}{0em}
+  \setMonsterText
   \begin{monsterbox}{Der Hexer}
     \begin{hangingpar}
       \textit{Initiative +1}
@@ -100,5 +109,5 @@
       Der Hexer wirft zu Beginn seiner Runde 1d6 um zu entscheiden welchen Angriff er benutzt. Bei einer ungeraden Ziffer greift er mit seinem Dolch an, bei einer geraden Ziffer zaubert er.
     \end{monsteraction}
   \end{monsterbox}
-  \setlength{\parskip}{1em}
+  \resetMonsterText
 }
