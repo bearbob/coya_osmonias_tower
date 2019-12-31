@@ -96,11 +96,33 @@ Du nimmst den Eisenring und hämmerst ihn dreimal fest gegen das Tor. Der Hall d
 Lege einen Rettungswurf auf Konstitution mit DC 18 ab. Wenn du erfolgreich bist, gehe zu [\ref{noSleepTillBrooklyn}].
 \\Wenn du es nicht schaffst, gehe zu [\ref{mamaIwillSleep}].
 
+\block{stealthilyGifford}{Ich schleiche zur Tür}
+
+Ein leerer Raum und viele Spinnweben an der Decke? Keine Wachen? Das riecht förmlich nach einer Falle. Trotzdem willst du wissen, was sich hinter Tür Nummer Zwei verbirgt. Vorsichtig schleichst du durch den Raum.
+
+Wirf eine Probe auf Schleichen mit DC 16. Wenn du Erfolg hast, gehe zu [\ref{stealthedThroughTheLobby}]. Wenn du es nicht schaffst, gehe zu [\ref{nopeNotSilentEnough}].
+
+\block{nopeNotSilentEnough}{Ich habe etwas übersehen}
+
+Behutsam tastest du dich Zentimeter um Zentimeter vorwärts. Leider übersiehst du einen kleinen Kieselstein, auf den du trittst. Das entstehende Schleifgeräusch ist alles andere als laut. Trotzdem sackt dir für einen Moment das Herz zusammen, als du plötzlich über dir ein tiefes Brüllen und das Rasseln einer Metallkette hörst.
+
+Gehe zu [\ref{someMonsterAttacks}].
+
 \block{walkTowardsTheNextDoor}{Ich gehe zur Tür}
 
 Du betrittst den Raum und läufst zur gegenüber liegenden Tür. Plötzlich hörst du über dir ein tiefes Brüllen und das Rasseln einer Metallkette.
 
-Gehe zu [\ref{someMonsterAttacks}].
+\block{stealthedThroughTheLobby}{Ich erreiche die Tür}
+
+Behutsam tastest du dich Zentimeter um Zentimeter vorwärts. Als du kurz ein Rascheln über dir hörst, hälst du inne und siehst vorsichtig zur Decke. Minutenlang harrst du so aus. Nachdem nichts passiert, setzt du vorsichtig deinen Weg fort und erreichst wenig später die Tür. Sie lässt sich problemlos und ohne Geräusche öffnen. Du kommst in einen kleinen Raum, von dem zwei Treppen abgehen. Eine nach unten und eine in die oberen Stockwerke.
+
+Wenn du der Treppe nach unten folgen willst, gehe zu [\ref{stairsToTheDungeon}]. Wenn du die oberen Stockwerke betreten willst, gehe zu [\ref{stairsToTheUpperLevels}].
+
+\block{goToCrossroom}{Richtungswechsel}
+
+Da du keinen Weg siehst die verschlossene Tür zu öffnen, läufst du die Treppe wieder hinunter. Du kommst wieder in den kleinen Zwischenraum neben der Eingangshalle.
+
+Wenn du in die unteren Stockwerke gehen möchtest, gehe zu [\ref{stairsToTheDungeon}]. Wenn du zurück in die Eingangshalle willst, um den Turm zu verlassen, gehe zu [\ref{doorToLobby}].
 
 \block{mamaIwillSleep}{Ich bin sehr erschöpft}
 
@@ -126,6 +148,26 @@ Es wird sicher kein Kinderspiel diese Wand zu erklimmen, aber es sieht auch nich
 
 Wenn du hindurchkriechen willst, gehe zu [\ref{dornyBushes}].
 \\Wenn du \getItem{itemShortSword} hast, kannst du zu [\ref{dornyBushesWithSword}] gehen.
+
+\block{dornyBushes}{Meine Haut ist wie Leder}
+
+Du fürchtest dich doch nicht vor ein paar Kratzern. Natürlich kannst du nicht einfach durch die Büsche laufen, aber am Boden sieht es einfacher aus.
+
+Wenige Sekunden später steckst du tief in den Dornenbüschen. Es ist nicht mehr weit bis zur Wand, doch deine Haut leidet deutlich mehr als du gedacht hättest. Durch die ganzen Kratzer und Schnitte verlierst du 2 Lebenspunkte. Aber du kommst an der Außenwand des Turms an.
+
+Gehe zu [\ref{climbTheWall}].
+
+\block{dornyBushesWithSword}{Ich schneide mich durch}
+
+Du fürchtest dich nicht vor ein paar Kratzern. Aber warum sollst du auf dem Boden kriechen, wenn du ein Schwert zur Hand hast? Schlag um Schlag kämpfst du dich durch den Busch und schneidest dir deinen Weg frei. Schließlich kommst du an der Außenwand des Turms an.
+
+Gehe zu [\ref{climbTheWall}].
+
+\block{climbTheWall}{Ich habe eine Wand vor mir}
+
+Wie du vermutet hattest, weist die Wand größere Sprünge und abgebrochene Stellen auf. Das ist gut für dich. Prüfend legst du deine Hand auf einen der Vorsprünge und ziehst dich ein Stück aufwärts. Die Steine tragen dein Gewicht, nun gilt es nur noch einen guten Pfad zum Fenster zu finden.
+
+Wirf eine Akrobatikprobe mit DC 14. Wenn du erfolgreich bist, gehe zu [\ref{reachingTheWindow}]. Wenn du es nicht schaffst, gehe zu [\ref{fallingFromTheWall}].
 
 \block{letsquitnow}{Ich habe es mir anders überlegt}
 
@@ -303,7 +345,7 @@ Als das grüne Licht durch deinen Körper fährt, verkrampfen deine Muskeln und 
 
 Du verschwendest keinen zweiten Gedanken an den Hexer und rennst aus deiner Zelle, vorbei an einigen anderen Zellen, die du dir nicht ansiehst. Es ist nicht schwer die Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
 
-Wenn du der Treppe folgen willst, gehe zu [\ref{upTheStairs}].
+Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
 \\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
 
 \block{doorToLobby}{Ich nehme die Tür}
