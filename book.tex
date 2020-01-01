@@ -58,8 +58,7 @@
 \newcounter{eventmarker} \setcounter{eventmarker}{0}
 \renewcommand{\theeventmarker}{\Alph{eventmarker}}
 \newcommand{\setEvent}[1]{
-  \refstepcounter{eventmarker}
-  (\theeventmarker)
+  \refstepcounter{eventmarker}(\theeventmarker)
   \label{#1}
 }
 
