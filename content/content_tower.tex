@@ -122,16 +122,9 @@ Gehe zu [\ref{TheCrossroom}].
 
 \block{TheCrossroom}{Ich sehe Treppen}
 
-Du kommst in einen kleinen Raum, von dem zwei Treppen abgehen. Eine nach unten und eine in die oberen Stockwerke.
-%TODO more description
+Du betrittst einen kleinen, kreisrunden Raum, von dem zwei Treppen abgehen. Die rechte Treppe führt nach unten und die linke in die oberen Stockwerke. An der Decke hängt eine kleine Öllampe, die den sonst so kargen Raum spärlich beleuchtet.
 
 Wenn du der Treppe nach unten folgen willst, gehe zu [\ref{stairsToTheDungeon}]. Wenn du die oberen Stockwerke betreten willst, gehe zu [\ref{stairsToTheUpperLevels}].
-
-\block{goToCrossroom}{Richtungswechsel}
-
-Da du keinen Weg siehst die verschlossene Tür zu öffnen, läufst du die Treppe wieder hinunter. Du kommst wieder in den kleinen Zwischenraum neben der Eingangshalle.
-
-Wenn du in die unteren Stockwerke gehen möchtest, gehe zu [\ref{stairsToTheDungeon}]. Wenn du zurück in die Eingangshalle willst, um den Turm zu verlassen, gehe zu [\ref{doorToLobby}].
 
 \block{mamaIwillSleep}{Ich bin sehr erschöpft}
 
@@ -142,6 +135,12 @@ Wenn du \getItem{itemSimpleDagger}, \getItem{itemShortSword} und \getItem{Greate
 Als du wieder zu dir kommst, steigt dir ein modriger Geruch in die Nase. Es ist kalt und feucht und du bist wieder gefesselt. Du merkst sofort, dass du dich nicht mehr in der Eingangshalle befindest, denn der Boden ist weicher und es riecht nach Erde.
 
 Gehe zu [\ref{welcomeToTheCell}].
+
+\block{goToCrossroom}{Richtungswechsel}
+
+Da du keinen Weg siehst die verschlossene Tür zu öffnen, läufst du die Treppe wieder hinunter. Du kommst wieder in den kleinen Zwischenraum neben der Eingangshalle.
+
+Wenn du in die unteren Stockwerke gehen möchtest, gehe zu [\ref{stairsToTheDungeon}]. Wenn du zurück in die Eingangshalle willst, um den Turm zu verlassen, gehe zu [\ref{doorToLobby}].
 
 \block{noSleepTillBrooklyn}{Keine Zeit für Schlaf}
 
@@ -177,6 +176,50 @@ Gehe zu [\ref{climbTheWall}].
 Wie du vermutet hattest, weist die Wand größere Sprünge und abgebrochene Stellen auf. Das ist gut für dich. Prüfend legst du deine Hand auf einen der Vorsprünge und ziehst dich ein Stück aufwärts. Die Steine tragen dein Gewicht, nun gilt es nur noch einen guten Pfad zum Fenster zu finden.
 
 Wirf eine Akrobatikprobe mit DC 14. Wenn du erfolgreich bist, gehe zu [\ref{reachingTheWindow}]. Wenn du es nicht schaffst, gehe zu [\ref{fallingFromTheWall}].
+
+\block{fallingFromTheWall}{Die Schwerkraft ist gegen mich}
+
+Du kommst dem Fenster immer näher. Ein kurzer Kontrollblick zeigt dir, dass du dich bereits einige Meter über dem Boden befindest, als du plötzlich ein seltsames Gefühl im Finger hast. Gerade noch rechtzeitig kannst du dein Gewicht zur anderen Hand verlagern, als ein Teil des Steins, an dem du dich gehalten hast, aus der Wand bricht. Du kannst dich halten, aber dein gedachter einfacher Kletterpfad zum Fenster ist damit Geschichte. Verzweifelt siehst du dich nach einer Alternative um. Und entdeckst sie.
+
+Wenn du weiterklettern willst, gehe zu [\ref{dontStopMeNow}]. Wenn dir das Risiko zu groß ist und du dich lieber an den Abstieg machen willst, gehe zu [\ref{returnFromTheWall}].
+
+\block{dontStopMeNow}{Ich bin kurz vor dem Ziel}
+
+Du kannst schon fast nach dem Fenstersims greifen, warum solltest du jetzt aufgeben? Am Ende rutschst du beim Abstieg ab. Nein, für dich geht es weiter aufwärts!
+
+Du schaffst die fehlenden Meter und hast deine Hand am Fenster, als dein rechter Fuß unerwartet den Halt verliert. An einem Arm hängend suchst du verzweifelt nach einem anderen Griff, doch die Zeit reicht nicht. Deine Finger verkrampfen und du wirst Richtung Erdboden gerissen. Dein Aufprall ist unfassbar schmerzhaft, es hilft auch nicht, dass die Dornenbüsche die Wucht etwas abmildern. Du verlierst 19 Lebenspunkte.
+
+Stöhnend windest du dich aus dem Gestrüpp. Deine Gelenke schmerzen und dein Rückrat ist heftig getroffen. Du hast dir vermutlich einige Rippen und wer weiß was noch gebrochen. Du kannst auf keinen Fall nochmal versuchen zum Fenster zu klettern.
+
+Wenn du zum Tor gehen willst, gehe zu [\ref{invadeTheDoor}].
+Wenn du deine Reise abbrechen und aufgeben willst, gehe zu [\ref{letsquitnowiamhurt}].
+
+\block{returnFromTheWall}{Mein Leben ist das Risiko nicht wert}
+
+Du entschließt dich das Schicksal an dieser Stelle nicht weiter herauszufordern. Dass du dich eben noch halten konntest war ein Zeichen. Behutsam machst du dich an den Abstieg und bist wenige Minuten später wieder auf sicherem Boden. Erschöpft, aber unverletzt.
+
+Wenn du \getItem{itemShortSword} hast, kannst du zu [\ref{icutthedornyBushesWithSword}] gehen. Wenn nicht, gehe zu [\ref{dornyBushesAgain}].
+
+\block{letsquitnowiamhurt}{Ich kann so nicht weitermachen}
+
+In deiner aktuellen Verfassung wäre es blanker Selbstmord an eine Fortsetzung des Abenteuers zu denken. Du bist verletzt, besitzt keine richtige Ausrüstung und bist eigentlich auch nicht vorbereitet. Warum solltest du ein solches Risiko eingehen?
+
+Das macht keinen Sinn und du hast im Laufe der Jahre gelernt Situationen zu vermeiden, die keinen Sinn machen. Nein, es wird Zeit nach Hause zu gehen. Humpelnd kehrst du zurück in den Wald und machst dich auf den qualvollen Heimweg. Eine warme Suppe, ein Bett und ein Besuch bei einem Heiler warten auf dich.
+
+\textbf{Ende.}
+
+\block{dornyBushesAgain}{Ich bin voller Kratzer}
+
+Du bist vielleicht unverletzt wieder auf den Boden gekommen, aber der Blick zurück ruft dir die Dornenbüsche wieder ins Gedächtnis. Dir bleibt nichts anderes übrig, als diese Tortur erneut über dich ergehen zu lassen. Erneut steckst du tief in den Dornenbüschen. Es ist genauso schmerzhaft wie beim ersten Mal, wieder verlierst du 2 Lebenspunkte und eine Menge neuer Kratzer bleiben als Andenken.
+
+Wenn du zum Tor gehen willst, gehe zu [\ref{invadeTheDoor}].
+Wenn du deine Reise abbrechen und aufgeben willst, gehe zu [\ref{letsquitnow}].
+
+\block{icutthedornyBushesWithSword}{Ich wandle auf alten Pfaden}
+
+Da du die Dornenbüsche bereits so zerhackt hast, dass ein bequemer Weg frei wurde, kannst du problemlos wieder hindurchlaufen.
+Wenn du zum Tor gehen willst, gehe zu [\ref{invadeTheDoor}].
+Wenn du deine Reise abbrechen und aufgeben willst, gehe zu [\ref{letsquitnow}].
 
 \block{letsquitnow}{Ich habe es mir anders überlegt}
 
@@ -229,6 +272,8 @@ Keine überraschende Wendung. Kein Happy End. Immerhin nimmt dir das Gift der Sp
 Du schaffst es die Spinne zu erschlagen! Mit einem jämmerlichen Quieken weicht das Tier zurück, doch seine Wunden sind zu schwer. Es zuckt noch ein paar Mal, bevor es die hässlichen, behaarten Beine an den mächtigen Leib zieht und zusammensackt. Dieses Vieh wird niemandem mehr Probleme machen!
 
 Während du schwer atmest siehst du dich im Raum um. Nach einigen Sekunden ist klar, dass du allein bist. Du kannst nur die Holztür gegenüber des Eingangstors erkennen, ansonsten ist der Raum leer. Dein Abenteurerinstinkt sagt dir außerdem, dass du dir keine Hoffnung machen musst bei dem Kadaver irgendetwas wertvolles zu finden.
+
+Markiere Ereignis \setEvent{ikilledthedamnspiderMarker}.
 
 Wenn du den Turm verlassen und nach Hause gehen möchtest, gehe zu [\ref{spidersmakemequit}].
 \\Wenn du durch die Tür gehen willst, gehe zu [\ref{TheCrossroom}].
@@ -359,8 +404,8 @@ Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
 
 \block{doorToLobby}{Ich nehme die Tür}
 
-Ohne zu Zögern gehst du zur Holztür und öffnest sie. Vor dir liegt die Eingangshalle des Turms, direkt gegenüber befindet sich das große Eingangstor, das geschlossen ist. Wenn Ereignis \getEvent{SpiderAttacks} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpider}].
-Wenn nicht, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
+Ohne zu Zögern gehst du zur Holztür und öffnest sie. Vor dir liegt die Eingangshalle des Turms, direkt gegenüber befindet sich das große Eingangstor, das geschlossen ist. Wenn Ereignis \getEvent{SpiderAttacks} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpider}]. Wenn das Ereignis \getEvent{ikilledthedamnspiderMarker} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpiderBecauseIKilledIt}].
+Wenn beides nicht zutrifft, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
 
 \block{iHaveNoIdeaAboutTheSpider}{Ich gehe zum Tor}
 
@@ -376,6 +421,14 @@ Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
 
 Natürlich hast du die riesige Spinne noch nicht vergessen. Doch du kannst kein Zeichen des riesigen Monsters an der spinnwebenverhangenen Decke erkennen. Vorsichtig versuchst du am Rand des Raums entlang zu schleichen, um einer zweiten Konfrontation aus dem Weg zu gehen. Wirf eine Schleichenprobe mit DC 16. Wenn du erfolgreich bist, gehe zu [\ref{stealthToTheMainDoor}].
 Wenn du es nicht schaffst, gehe zu [\ref{theSpiderKnowsWhereIAm}].
+
+\block{iKnowAboutTheSpiderBecauseIKilledIt}{Acht Beine zum Himmel}
+
+Vor dir liegt der monströse Kadaver der Wolfsspinne, deren Leben du so grausam beendet hast. Allerdings ist das keine Situation für Mitleid, sie hätte dich mit Sicherheit ohne Zögern gefresse wenn du ihr die Chance gegeben hättest. Zumindest musst du dir jetzt keine Gedanken mehr um das Untier machen.
+
+Du gehst ungehindert zum geschlossenen Tor und ziehst mit aller Kraft. Zentimeter um Zentimeter öffnet sich der Weg in die Freiheit. Als der Spalt groß genug ist um bequem hindurch zu schlüpfen verlässt du den Turm.
+
+Gehe zu [\ref{longRoadHome}].
 
 \block{stealthToTheMainDoor}{Ich schwebe über den Boden}
 
