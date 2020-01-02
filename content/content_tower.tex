@@ -313,15 +313,37 @@ Wenn du dich in die Ecke setzen und warten willst, gehe zu [\ref{waitingForDesti
 \\Der Boden sieht locker aus. Wenn du versuchen willst dich unter den Gitterstäben hindurchzugraben, gehe zu [\ref{schauflerGo}].
 \\Wenn du gegen die Stäbe schlagen willst, gehe zu [\ref{hitYourBars}].
 
+\block{hitYourBars}{Ich halte das nicht aus}
+
+Verzweifelt und wütend schlägst du gegen die schweren Gitterstäbe der Zellentür. Das dumpfe Geräusch hallt für einen Moment durch die Gänge, dann kehrt Ruhe ein. Du versuchst es erneut, diesmal wirfst du dich mit deiner Schulter gegen die Tür, doch vergebens. Seufzend lässt du dich auf den Boden sinken und sitzt mit dem Rücken an der Tür.
+
+Dann hörst du ein Klacken. Du drehst dich um und versuchst ganz still zu sein. Da, da ist es wieder. Es kann nicht der Hall deiner Schläge sein. Als wieder Stille einkehrt, schlägst du erneut gegen deine Zellentür. Und erhälst eine Antwort. Irgendjemand... oder irgendetwas ist hier auch eingesperrt und hat dich gehört. Und schlägt nun selbst gegen die Gitterstäbe.
+
+Bevor du überlegen kannst, wie du das zu deinem Vorteil nutzen kannst, hörst du Schritte, die sich nähern. Zuerst leise, dann immer lauter, bis jemand vor deinem Gefängnis auftaucht. Instinktiv machst du einen Schritt zurück. Mit einer simplen Handbewegung wird das Schloss deiner Tür quietschend geöffnet.
+
+Gehe zu [\ref{meetTheWarlock}].
+
+\block{schauflerGo}{Ich grabe mich frei}
+
+Der Boden der Zelle ist wirklich recht locker. Du fängst an zu graben, in der Hoffnung vielleicht unter der Tür genügend Platz für dich machen zu können. Zu deiner Enttäuschung zeigt sich schnell, dass die Steinwände unter der Erde weiterführen. Und sie sind robust. Dafür machst du eine andere Entdeckung. In der Erde findest du, in einen Stofffetzen gewickelt, einen silbernen Ring \getItem{itemBurialRing}.
+
+Bevor du überlegen kannst, wie du das zu deinem Vorteil nutzen kannst, hörst du Schritte, die sich nähern. Schnell schiebst du dein Erdloch wieder zu und steckst dir den Ring auf den linken Ringfinger. Zuerst nähern sich die Schritte leise, dann immer lauter, bis jemand vor deinem Gefängnis auftaucht. Instinktiv machst du einen Schritt zurück. Mit einer simplen Handbewegung wird das Schloss deiner Tür quietschend geöffnet.
+
+Gehe zu [\ref{meetTheWarlock}].
+
 \block{waitingForDestinyToDoSomething}{Ich übe mich in Geduld}
 
 Du setzt dich in die Ecke und wartest geduldig ab. Das langsame Tropfen des Wassers von der Decke hat beinahe etwas hypnotisches. Irgendwann werden deine Augen schwer und du schläfst ein.
 
-Als du das Quietschen der Tür hörst, schreckst du hoch. Vor der Tür steht ein Mann, für den die Beschreibung ``Hexer'' förmlich erfunden wurde. Das hagere, eingefallene Gesicht ist von tiefen Augenringen gekennzeichnet, die bei der blassen Haut besonders auffallen. Auch die weite Robe kann nicht verbergen, welch knochiger Körper sich unter ihr befindet. Mit langsamen, beinahe etwas wackligen Schritten kommt er auf dich zu. Seine Gestalt und sein Gang stehen im starken Kontrast zu deinem Blick. Die giftgrünen Augen des Hexers scheinen in der Dunkelheit zu leuchten. Du hast das Gefühl, dass er durch dich hindurch sieht, mitten in deine Seele hinein.
+Als du das Quietschen der Tür hörst, schreckst du hoch. Gehe zu [\ref{meetTheWarlock}].
 
-``So, so...'', krächzt er, ``...wie ich sehe hast du dich bereits an dein neues Heim gewöhnt. Doch keine Sorge, das soll nicht von Dauer sein.''. In seiner Hand erkennst du einen kleinen Zauberstab, der anfängt gelblich zu leuchten. Langsam spürst du eine Kraft auf dich einwirken, die deinen Körper bewegen will.
+\block{meetTheWarlock}{Ich treffe meinen Gastgeber}
 
-Wirf einen Rettungswurf auf Charisma mit DC 18. Wenn du erfolgreich bist, gehe zu [\ref{youShallNotControlMe}]. Wenn du es nicht schaffst, gehe zu [\ref{yesMasterControlMe}].
+In der Zellentür steht ein Mann, für den die Beschreibung ``Hexer'' förmlich erfunden wurde. Das hagere, eingefallene Gesicht ist von tiefen Augenringen gekennzeichnet, die bei der blassen Haut besonders auffallen. Auch die weite Robe kann nicht verbergen, welch knochiger Körper sich unter ihr befindet. Mit langsamen, beinahe etwas wackligen Schritten kommt er auf dich zu. Seine Gestalt und sein Gang stehen im starken Kontrast zu seinem Blick. Die giftgrünen Augen des Hexers scheinen in der Dunkelheit zu leuchten. Du hast das Gefühl, dass er durch dich hindurch sieht, mitten in deine Seele hinein.
+
+``So, so...'', krächzt er, ``...wie ich sehe hast du dich bereits an dein neues Heim gewöhnt. Doch keine Sorge, das soll nicht von Dauer sein. Ich wäre ein schlechter Gastgeber, wenn ich mich nicht um meine Gäste... kümmern würde, nicht wahr?''. In seiner Hand erkennst du einen kleinen Zauberstab, der anfängt gelblich zu leuchten. Langsam spürst du eine Kraft auf dich einwirken, die deinen Körper bewegen will.
+
+Wirf einen Rettungswurf auf Charisma mit DC 18 oder mit DC 17, wenn du \getItem{itemBurialRing} besitzt. Wenn du erfolgreich bist, gehe zu [\ref{youShallNotControlMe}]. Wenn du es nicht schaffst, gehe zu [\ref{yesMasterControlMe}].
 
 \block{yesMasterControlMe}{Ich habe keine Kontrolle}
 
@@ -354,6 +376,29 @@ Der Hexer öffnet den Mund um zu schreien, doch es ist zu spät. Mit aller Gewal
 
 Die Stille in der Zelle wird nur das Tropfen des Wassers von der Decke durchbrochen. Wenn du den Kerker auf schnellstem Weg verlassen willst, gehe zu [\ref{letsLeaveTheDungeon}].
 \\Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlock}].
+\\Wenn du dich im Kerker umsehen willst, gehe zu [\ref{inspectTheDungeon}].
+
+\block{crackTheLockWithBones}{Das wird ein Knochenjob}
+
+Du schnappst dir den Knochen und einen zweiten, kleineren Knochen und fängst an dich an dem Schloss zu versuchen. Normalerweise wärst du ohne Chance gewesen, aber das Schloss an der Tür ist so alt und grobschlächtig, dass dein Plan tatsächlich Früchte tragen könnte! Du kannst den Riegel, den du umschieben musst, mit bloßem Auge erkennen. Die Frage ist nur, ob du es schaffst ihn mit den spröden Knochen zu verschieben, bevor sie brechen.
+
+Wirf eine Probe auf Fingerfertigkeit mit DC 15. Wenn du erfolgreich bist, gehe zu [\ref{ipickedthelock}]. Wenn du es nicht schaffst, gehe zu [\ref{thelockbrokethebones}].
+
+\block{thelockbrokethebones}{Meine Knochen brechen}
+
+Du bist mehrmals kurz davor, doch irgendwie fehlt dir immer der letzte Zentimeter um den Riegel endlich aufzuschieben. Wenn du die Knochen noch weiter in das Schloss schiebst, könnten sie brechen, aber so fehlt dir einfach ein Stück. Ein kurzer Blick zu den anderen Knochen zeigt dir, dass diese völlig unbrauchbar sind für diese Aufgabe. Also setzt du alles in deinen nächsten Versuch und drückst den großen Knochen noch etwas tiefer in das Schloss.
+
+Du verfehlst dein Ziel. Als wärst du mit deiner aktuellen Situation nicht schon gestraft genug, bricht der Knochen auch noch und du hast einen Haufen kleiner Splitter in der Hand, die dir nichts mehr Nützen.
+
+Während du überlegst, ob du noch einen anderen aus dieser Lage findest, hörst du Schritte, die sich nähern. Zuerst leise, dann immer lauter, bis jemand vor deinem Gefängnis auftaucht. Instinktiv machst du einen Schritt zurück. Mit einer simplen Handbewegung wird das Schloss deiner Tür quietschend geöffnet.
+
+Gehe zu [\ref{meetTheWarlock}].
+
+\block{ipickedthelock}{Ich höre den Riegel umschlagen}
+
+Du hast bereits einige Minuten und Fehlversuche hinter dir, als du endlich das Klacken des Riegels hören kannst, der zurückschwingt. Und das keinen Versuch zu früh, als du die Knochen wieder aus dem Schloss ziehst, zerbrechen sie in kleine Splitter. Doch das ist jetzt unwichtig, denn die Tür ist offen und deiner Flucht steht nichts mehr im Weg.
+
+Wenn du den Kerker auf schnellstem Weg verlassen willst, gehe zu [\ref{letsLeaveTheDungeon}].
 \\Wenn du dich im Kerker umsehen willst, gehe zu [\ref{inspectTheDungeon}].
 
 \block{yesMasterControlMeButInTruthYouDont}{Ich bin euch zu Diensten}
@@ -516,3 +561,41 @@ Du hast bei diesem Abenteuer vielleicht nicht viel gewonnen, aber das wichtigste
 Vor dir liegt ein beschwerlicher Fußmarsch zurück nach Greifenheim. Doch angetrieben vom Gedanken an ein gemütliches Bett und eine warme Mahlzeit machst du dich auf den Weg. Du hast dir Ruhe und Erholung verdient.
 
 \textbf{Ende.}
+
+\block{inspectTheDungeon}{Ich bleibe im Kerker}
+%Immer von meiner Zelle aus
+Du willst deine Chance nutzen und dich im Kerker noch etwas genauer umsehen. Gegenüber deiner Zelle befindet sich die Treppe nach oben, auf der linken Seite geht es tiefer in den dunklen Raum. Du folgst dem Gang und kommst bald zu einer weiteren leeren Zelle. Ein flüchtiger Blick offenbart nichts von Interesse und du so biegst du nach links ab. Am Ende des Gangs befinden sich zwei weitere Zellen, von denen die linke offen steht. Die Tür der rechten Zelle ist verschlossen.
+
+Im Dunkel des kleinen Raums kannst du eine kauernde Gestalt erkennen, kaum größer als ein Kind.
+Als du näher an die Gitterstäbe gehst, kannst du ein leises Knurren hören.
+
+Wenn du mit dem Wesen reden willst, gehe zu [\ref{talkToTheCreature}].
+Wenn du weitergehen willst, gehe zu [\ref{nothingLeftInTheDungeon}].
+Wenn du versuchen willst die Zellentür zu öffnen, gehe zu [\ref{openGoblinsDoor}].
+
+\block{talkToTheCreature}{Ich versuche zu reden}
+
+Du sprichst die Kreatur an, doch bekommst keine Reaktion außer einem leisen Wimmern und dem gelegentlichen Knurren. Vielleicht will sie nicht antworten, vielleicht kann sie nicht antworten, das kannst du nicht sagen.
+
+Wenn du \getItem{itemSimplePotato} hast, gehe zu [\ref{givePotato}].
+Wenn du weitergehen willst, gehe zu [\ref{nothingLeftInTheDungeon}].
+Wenn du versuchen willst die Zellentür zu öffnen, gehe zu [\ref{openGoblinsDoor}].
+
+\block{givePotato}{Ich kann dir das geben}
+
+%TODO
+
+
+\block{nothingLeftInTheDungeon}{Ich kann nichts tun}
+
+Du bist leider nicht in der Position deine Zeit zu verschwenden wie es dir beliebt. Du musst weiter. Du siehst dich noch einmal gründlicher um, doch kannst nichts von Bedeutung finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
+
+Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
+\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+
+\block{openGoblinsDoor}{Ich würde gern helfen}
+
+Du würdest die verschlossene Zellentür gern öffnen, doch du hast weder einen Schlüssel noch die passende Ausrüstung um das zu tun. Nein, du kannst hier leider nicht helfen. Du musst weiter, zur Treppe. Kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
+
+Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
+\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
