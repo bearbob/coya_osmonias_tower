@@ -306,7 +306,7 @@ Wenn du den Knochen als Waffe benutzen willst, gehe zu [\ref{boneDagger}].
 
 \block{boneDagger}{Ich habe spitze Knochen}
 
-Die reibst den Knochen an der Wand, bis eine Seite eine Spitze bildet. Du kannst zufrieden mit dir sein, im Zweifelsfall ist der Knochen eine passable Waffe.
+Du reibst den Knochen an der Wand, bis eine Seite eine Spitze bildet. Du kannst zufrieden mit dir sein, im Zweifelsfall ist der Knochen eine passable Waffe.
 Du erhälst einen Knochendolch \getItem{itemBoneDagger}.
 
 Wenn du dich in die Ecke setzen und warten willst, gehe zu [\ref{waitingForDestinyToDoSomething}].
@@ -562,6 +562,48 @@ Vor dir liegt ein beschwerlicher Fußmarsch zurück nach Greifenheim. Doch anget
 
 \textbf{Ende.}
 
+\block{stairsToTheDungeon}{Ich gehe hinab}
+
+Du gehst die Treppe hinab und bist kurze Zeit später in einem Kerker. Es riecht nach feuchter, muffliger Erde. Gelegentlich ist das Tropfen von Wasser zu hören und die Wände sind mit Feuchtigkeit überzogen. Dir gegenüber befindet sich eine offene Zellentür und nach rechts geht ein Gang ab.
+
+Wenn du die Zelle vor dir erkunden willst, gehe zu [\ref{inspectOpenCell}].
+Wenn du den Gang weitergehen willst, gehe zu [\ref{exploreDungeon}].
+Wenn du den Kerker verlassen willst, gehe zu [\ref{leaveTheDungeon}].
+
+\block{inspectOpenCell}{Ich untersuche die Zelle}
+
+Es dauert einen Moment, bis sich deine Augen an die schlechten Lichtverhältnisse gewöhnt haben. Du befindest dich in einem kleinen Raum, ohne Fenster. Von der Decke tropft Wasser und hat auf dem weichen Erdboden eine kleine Pfütze gebildet. An der Wand findest du einige kleine Knochen, von denen du nicht sagen kannst zu welchem Lebewesen sie vorher gehörten.
+
+Wenn du dir die Knochen genauer ansehen willst, gehe zu [\ref{craftingBonesWithoutBeingRestrained}].
+Wenn du den Gang weitergehen willst, gehe zu [\ref{exploreDungeon}].
+Wenn du den Kerker verlassen willst, gehe zu [\ref{leaveTheDungeon}].
+
+\block{craftingBonesWithoutBeingRestrained}{Das Schlüsselbein}
+
+Du durchsuchst die Knochen erneut und findest ein Exemplar, der mit etwas Hilfe vermutlich eine passable Waffe abgeben würde. Du reibst den Knochen an der Wand, bis eine Seite eine Spitze bildet. Du kannst zufrieden mit dir sein, im Zweifelsfall ist der Knochen eine passable Waffe.
+Du erhälst einen Knochendolch \getItem{itemBoneDagger}.
+
+Wenn du den Gang weitergehen willst, gehe zu [\ref{exploreDungeon}].
+Wenn du den Kerker verlassen willst, gehe zu [\ref{leaveTheDungeon}].
+
+\block{exploreDungeon}{Ich gehe weiter}
+
+Du folgst dem Gang und kommst bald zu einer weiteren leeren Zelle. Ein flüchtiger Blick offenbart nichts von Interesse und du so biegst du nach links ab. Am Ende des Gangs befinden sich zwei weitere Zellen, von denen die linke offen steht. Die Tür der rechten Zelle ist verschlossen.
+
+Im Dunkel des kleinen Raums kannst du eine kauernde Gestalt erkennen, kaum größer als ein Kind.
+Als du näher an die Gitterstäbe gehst, kannst du ein leises Knurren hören.
+
+Wenn du mit dem Wesen reden willst, gehe zu [\ref{talkToTheCreature}].
+Wenn du weitergehen willst, gehe zu [\ref{nothingLeftInTheDungeon}].
+Wenn du versuchen willst die Zellentür zu öffnen, gehe zu [\ref{openGoblinsDoor}].
+
+\block{leaveTheDungeon}{Ich gehe wieder}
+
+Du glaubst nicht hier noch etwas von Wert oder Bedeutung zu finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
+
+Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
+\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+
 \block{inspectTheDungeon}{Ich bleibe im Kerker}
 %Immer von meiner Zelle aus
 Du willst deine Chance nutzen und dich im Kerker noch etwas genauer umsehen. Gegenüber deiner Zelle befindet sich die Treppe nach oben, auf der linken Seite geht es tiefer in den dunklen Raum. Du folgst dem Gang und kommst bald zu einer weiteren leeren Zelle. Ein flüchtiger Blick offenbart nichts von Interesse und du so biegst du nach links ab. Am Ende des Gangs befinden sich zwei weitere Zellen, von denen die linke offen steht. Die Tür der rechten Zelle ist verschlossen.
@@ -585,7 +627,7 @@ Wenn du versuchen willst die Zellentür zu öffnen, gehe zu [\ref{openGoblinsDoo
 
 Als du das Knurren erneut hörst, erinnerst du dich an die Kartoffel. Schnell prüfst du deine Tasche und tatsächlich, du hast das gute Stück noch. Zögerlich steckst du die Knolle durch die Gitterstäbe und legst sie auf den Zellenboden.
 
-Die Kreatur hört auf zu wimmern und beäugt die Kartoffel aus sicherer Entfernung. Schlussendlich ist der Hunger stärker als die Vorsicht und eine grüne Hand greift aus dem Schatten nach der Knolle. Vor dir befindet sich ein kleiner, abgemagerter Goblin. Mit seinen spitzen Zähnen nagt er auf der Kartoffel herum, bis nichts mehr von ihr übrig ist. Zögerlich sagt er gebrochen: ``Du Hilfe?''
+Die Kreatur hört auf zu wimmern und beäugt die Kartoffel aus sicherer Entfernung. Schlussendlich ist der Hunger stärker als die Vorsicht und eine grüne Hand greift aus dem Schatten nach der Knolle. Vor dir befindet sich ein kleiner, abgemagerter Goblin. Mit seinen spitzen Zähnen nagt er auf der Kartoffel herum, bis nichts mehr von ihr übrig ist. Zögerlich sagt er gebrochen: ``Du, Hilfe?''
 
 Wenn du deine Hilfe anbieten willst, gehe zu [\ref{helpingTheGoblin}].
 Wenn du deine Pflicht als getan siehst und weiterziehen willst, gehe zu [\ref{notHelpingTheGoblin}].
@@ -595,6 +637,19 @@ Wenn du deine Pflicht als getan siehst und weiterziehen willst, gehe zu [\ref{no
 Vermutlich will der kleine Kerl deine Hilfe, aber du ahnst schon, dass es einiges an Zeit kosten wird bis du verstehst worum es geht. Und du hast leider ohnehin keine Möglichkeit ihn aus der Zelle zu holen, was er zweifelsohne möchte. Du ersparst euch beiden viel Leid, schüttelst den Kopf und gehst weiter.
 
 Gehe zu [\ref{nothingLeftInTheDungeon}].
+
+\block{helpingTheGoblin}{Ich helfe wo ich kann}
+
+Du nickst dem kleinen Kerl zu und sagst: ``Ja, ich Hilfe.''. Ein schwaches Lächeln huscht über das Gesicht des Goblins. Er hebt die Hand um dir zu bedeuten zu warten und steckt sich dann zwei Finger in den Mund. Dir ist nicht klar, was er da macht, aber dem Zucken nach ist es sehr schmerzhaft. Kurz darauf zieht er die Finger wieder aus seinem Rachen und atmet erschöpft. Er streckt dir seine zitternde Hand entgegen. ``Hilfe''.
+
+Zögerlich hälst du deine Hand unter seine und er lässt einen kleinen Gegenstand in deine Handfläche fallen. Du hälst das Objekt näher in das Licht einer Fackel und erkennst einen kleinen Stein \getItem{itemGoblinStone}, kaum größer als dein Daumen. Zuerst erscheint der Stein klar wie Glas, doch je länger du ihn betrachtest, desto mehr Farben kannst du erkennen.
+
+Du wirst aus deinen Gedanken gerissen, als der Goblin mit ausgestrecktem Finger nach oben zeigt und stammelt: ``Hilfe... Alba retten!'' bevor sich seine Augen verdrehen und er nach hinten wegkippt. Er ist außer Reichweite und du kannst nicht beurteilen, ob er nur bewusstlos geworden ist, oder ob das seine letzten Atemzüge waren. Du wartest noch einen Moment, doch dir wird klar, dass du hier nicht mehr tun kannst.
+
+Du musst weiter. Du siehst dich noch einmal gründlicher um, doch kannst nichts von Bedeutung finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
+
+Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
+\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
 
 \block{nothingLeftInTheDungeon}{Ich kann nichts tun}
 
