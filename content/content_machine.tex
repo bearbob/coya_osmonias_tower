@@ -63,9 +63,52 @@ Als du den Blick zur Decke schweifen lässt, erkennst du eine Frau, eine Elfe, d
 ``Nur keine Scheu, fass den Stein an.'', sagt er Hexer mit einem verräterischen Unterton.
 Wenn Ereignis \getEvent{deceivedTheWarlock} eingetreten ist, gehe zu [\ref{idonthavetotouchthegem}]. Wenn nicht, gehe zu [\ref{hewantsmetotouchthegem}].
 
+\block{idonthavetotouchthegem}{Die Scharade hat ein Ende}
+
+Es reicht, das Schauspiel endet jetzt! Ruckartig drehst du dich um und gehst auf den Hexer los. Der Ausdruck der Überraschung in seinen Augen weicht schnell dem Schock, als er realisiert, dass er keine Macht über dich hat.
+
+\monsterWarlock
+
+Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInTheHighTower}].
+Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+
+\block{ikilledthewarlockInTheHighTower}{Nur einer von uns wird leben}
+
+Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem feuchten Erdboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
+
+Markiere Ereignis \getEvent{theWarlockDiedinAtTheTop}.
+
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlock}].
+%TODO more options
+
+\block{lootTheWarlockInTheTower}{Was sein war ist mein}
+
+Du zögerst keine Sekunde und durchsuchst den Toten nach Dingen, die dir helfen könnten.
+Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen geschwungenden Dolch \getItem{warlocksDagger}, einen kleinen Kupferschlüssel \getItem{warlocksKey} und einen goldenen Ring \getItem{goldenWarlockRing} dein Eigen nennen.
+
+Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Du erkennst die gleichen Muster auf dem Boden um den Edelstein wieder, offensichtlich besteht ein Zusammenhang. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
+
+%TODO options
+
+\block{hewantsmetotouchthegem}{Ich soll es berühren}
+
+Du stehst noch immer unter dem Zauber des Hexers, der deinen Körper kontrolliert. Gegen deinen Willen bewegen sich deine Füße in Richtung des Edelsteins! Du hörst den Hexer noch sagen: ``Nur keine Scheu, erfülle deinen Zweck!''
+
+Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf eine Charismaprobe mit DC 10. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
+
+\block{noiwillnottouchthisgem}{Ich werde das nicht tun}
+
+Du bist dir sicher, dass es dein Todesurteil ist, wenn du den Stein berührst. Magische Kontrolle oder nicht, du wirst dein Leben nicht ohne einen Kampf opfern! Während sich deine Füße wie von allein weiter bewegen, tobt in dir ein Gefecht mit der dunklen Magie, die dich beherrscht. Schlussendlich kommst du wieder zu Sinnen und hast die volle Kontrolle zurück.
+
+Du bist frei. Und das keinen Moment zu spät, als du nach unten siehst, hast du schon die Hand ausgestreckt um den Edelstein zu berühren. Doch dazu wird es nicht kommen.
+
+Gehe zu [\ref{idonthavetotouchthegem}]
+
 \block{cannotresistthegem}{Ich will es berühren}
 
-Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet. Unterbewusst bemerkst du, dass der Hexer mit dir spricht, doch es ist wie ein unverständliches Rauschen in deinen Ohren. Und du willst ihm nicht zuhören. Du musst ihm nicht zuhören. Nein, du musst gar nichts. Nur zum Edelstein, ja. Du musst den Edelstein berühren.
+Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet. Unterbewusst bemerkst du, dass der Hexer mit dir spricht, doch es ist wie ein unverständliches Rauschen in deinen Ohren. Und du willst ihm nicht zuhören. Du musst ihm nicht zuhören. Nein, du musst gar nichts. Nur zum Edelstein, ja. Du musst den Edelstein berühren. Gehe zu [\ref{deathbyGem}].
+
+\block{deathbyGem}{Ich habe es berührt}
 
 Wie in Trance kommst du dem Stein näher, Schritt um Schritt, bis deine Finger ihn berühren können. Irgendetwas zerrt an dir. Doch niemand wird dich jetzt noch aufhalten! Du streckst die Hand aus und berührst den Stein. Sofort umgibt dich Stille. Das Zerren hört auf. Alles ist schwarz.
 
