@@ -24,6 +24,13 @@ Entschlossen geht der Hexer durch den Raum und du folgst ihm. Als du einigen der
 
 Wirf eine Arkanaprobe mit DC 14. Wenn du es nicht schaffst, gehe zu [\ref{arcanaFailedMe}]. Wenn du Erfolg hast, und das Ereignis \getEvent{oneKidnapperDiedA}, \getEvent{oneKidnapperDiedB} oder \getEvent{bothKidnappersDied} eingetreten ist, gehe zu [\ref{theseAreClonesAndOneIsMissing}]. Wenn keins dieser Ereignisse eingetreten ist, gehe zu [\ref{theseAreClones}].
 
+\block{arcanaFailedMe}{Ich kann das nicht zuordnen}
+
+Du kannst nur vermuten, dass es einen dunklen Zauber oder eine ähnliche Hexerei gibt, mit der das alles zu tun hat. Aber was für Pläne hat der Hexer, wenn er sich offensichtlich eine Schar von Handlangern heranzüchtet?
+
+Während du noch darüber nachdenkst, erreicht ihr die andere Seite des Raums. Hier befindet sich ein Fenster und eine weitere Treppe, die höher führt. Ihr folgt dieser Treppe.
+Gehe zu [\ref{togetherToLevel2}].
+
 \block{theseAreClones}{Ich habe davon gehört}
 
 Du kannst dich düster erinnern, dass es einen Zauber gibt, mit dem man Klone erschaffen kann. Wenn einer der beiden Entführer stirbt, fährt seine Seele in einen der schlafenden Körper. Aber was für Pläne hat der Hexer, wenn er nicht nur einmal, sondern so oft auf den Tod seiner Handlanger vorbereitet sein will?
@@ -76,10 +83,12 @@ Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
 
 Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem feuchten Erdboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
 
-Markiere Ereignis \getEvent{theWarlockDiedinAtTheTop}.
+Markiere Ereignis \getEvent{theWarlockDiedAtTheTop}.
 
 Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlock}].
-%TODO more options
+Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu [\ref{inspectTheGem}].
+Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
+Wenn du den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
 
 \block{lootTheWarlockInTheTower}{Was sein war ist mein}
 
@@ -88,7 +97,9 @@ Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen gesc
 
 Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Du erkennst die gleichen Muster auf dem Boden um den Edelstein wieder, offensichtlich besteht ein Zusammenhang. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
 
-%TODO options
+Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu [\ref{inspectTheGem}].
+Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
+Wenn du den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
 
 \block{hewantsmetotouchthegem}{Ich soll es berühren}
 
@@ -129,3 +140,14 @@ Auf deiner rechten Seite befindet sich eine Treppe, die entlang der Außenwand i
 Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel3Alone}].
 Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPillars}].
 Wenn du zur Tür gegen willst, gehe zu [\ref{theLockedDoorFromTheOtherSide}].
+
+\block{unlockTheDoorWithWarlocksKey}{Jede Tür hat einen Schlüssel}
+
+Wie es das Schicksal will, scheint der Schlüssel, den du dem Hexer genommen hast, genau in das Schloss zu passen. Weder ein Zufall, noch sonderlich überraschend. Du öffnest die Tür.
+
+Vor dir liegt ein großer, kreisrunder Raum, der von einem violetten Schimmer erhellt wird. Knapp ein Dutzend gläserner Säulen sind die Quellen dieses Lichts. In ihnen wabert eine dunkle Flüssigkeit, in der du jeweils ein menschliche Form erkennen kannst. Irgendetwas... oder irgendjemand steckt in diesen Säulen.
+
+Auf der dir gegenüberliegenden Seite, vorbei an diesen Säulen, befindet sich ein Fenster. Links neben dem Fenster kannst du Treppenstufe erkennen, die entlang der Außenwand in ein höheres Stockwerk führen.
+
+Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel3Alone}].
+Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPillars}].
