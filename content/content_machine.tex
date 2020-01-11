@@ -57,9 +57,10 @@ Als ihr am Fenster vorbei kommt, siehst du, dass es inzwischen dunkel geworden i
 
 Euer Weg führt euch die Treppe hinauf in die nächste Etage des Turms. Es geht einen langen Gang entlang, an dessen Ende sich ein kleiner Runde Raum mit 4 Türen befindet, eine in jede Himmelsrichtung. Der Hexer greift nach dem Türgriff der östlichen Tür und öffnet sie. Ihr durchquert ein kleines Lager, du siehst einige Fässer, Säcke und gefüllte Gläser. Am Ende wartet eine weitere Treppe darauf erklommen zu werden. Vom Ende der Treppe strahlt euch bereits ein rötliches Licht entgegen, das wild flackert und furchterregende Schatten an die Wand wirft.
 
-Ihr befindet euch im obersten Zimmer des Turms. Keine weitere Treppe, keine Türen, keine Fenster. Nur ein großer, runder Raum, der ungefähr 10 Meter im Durchmesser misst. An der Außenwand sind in kurzem Abstand hunderte schwarzer Kerzen aufgereiht, deren kleine Flammen sich zuckend hin und her bewegen. Doch die größte Lichtquelle befindet sich mitten im Raum. Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich, in drei kleinen Metallkrallen gefasst, ein kleiner Edelstein. Du hast schon größere Juwelen gesehen, doch das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
+Ihr befindet euch nun im obersten Zimmer des Turms. Keine weitere Treppe, keine Türen, keine Fenster. Nur ein großer, runder Raum, der ungefähr 10 Meter im Durchmesser misst. An der Außenwand sind in kurzem Abstand hunderte schwarzer Kerzen aufgereiht, deren kleine Flammen sich zuckend hin und her bewegen.
+Doch die größte Lichtquelle befindet sich mitten im Raum. Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich in Brusthöhe ein faustgroßer Edelstein. Er ist in eine kleine Metallkralle gefasst, von der Metallfäden verschiedenster Farbe ausgehen. Du hast selten größere Juwelen gesehen, doch besonders das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
 
-Wirf eine Charismaprobe mit DC 16. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegem}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGem}].
+Wirf einen Charismarettungswurf mit DC 16 oder mit DC 15, wenn du \getItem{itemBurialRing} besitzt. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegem}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGem}].
 
 \block{resistingTheGem}{Ich kann mich abwenden}
 
@@ -67,12 +68,12 @@ Für einen Moment bist du wie verzaubert. Als deine Augen den Edelstein erblicke
 
 Als du den Blick zur Decke schweifen lässt, erkennst du eine Frau, eine Elfe, die dort in einigen Metern Höhe kopfüber aufgehangen ist. Sie scheint bewusstlos, ihr blondes Haar ist blutverschmiert und hängt nach unten. Immer wieder fallen kleine Bluttropfen von ihr hinab auf den Edelstein, zweifelsohne absichtlich.
 
-``Nur keine Scheu, fass den Stein an.'', sagt er Hexer mit einem verräterischen Unterton.
+``Nur keine Scheu, fass den Stein an.'', sagt er Hexer mit einem bösartigen Unterton.
 Wenn Ereignis \getEvent{deceivedTheWarlock} eingetreten ist, gehe zu [\ref{idonthavetotouchthegem}]. Wenn nicht, gehe zu [\ref{hewantsmetotouchthegem}].
 
 \block{idonthavetotouchthegem}{Die Scharade hat ein Ende}
 
-Es reicht, das Schauspiel endet jetzt! Ruckartig drehst du dich um und gehst auf den Hexer los. Der Ausdruck der Überraschung in seinen Augen weicht schnell dem Schock, als er realisiert, dass er keine Macht über dich hat.
+Es reicht, das Schauspiel endet jetzt! Ruckartig drehst du dich um und gehst auf den Hexer los. Der Ausdruck der Überraschung in seinen Augen weicht schnell dem Schock, als er realisiert, dass er keine Macht über dich hat!
 
 \monsterWarlock
 
@@ -85,7 +86,7 @@ Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zw
 
 Markiere Ereignis \getEvent{theWarlockDiedAtTheTop}.
 
-Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlock}].
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockInTheTower}].
 Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu [\ref{inspectTheGem}].
 Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
 Wenn du den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
@@ -97,15 +98,22 @@ Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen gesc
 
 Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Du erkennst die gleichen Muster auf dem Boden um den Edelstein wieder, offensichtlich besteht ein Zusammenhang. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
 
-Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu [\ref{inspectTheGem}].
-Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
-Wenn du den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
+Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu \goto{inspectTheGem}.
+Wenn du die Elfe genauer betrachten willst, gehe zu \goto{inspectTheElf}.
+Wenn du den Raum verlassen willst, gehe zu \goto{downToLayer2}.
+
+\block{inspectTheGem}{Ich sehe mir den Edelstein genauer an}
+
+Du widmest deine Aufmerksamkeit dem Edelstein. Als du ihn ansiehst, spürst du sofort wieder das Verlangen ihn zu berühren. Schnell wendest du deine Augen nach unten ab. Dein Blick fällt auf das Podest. Erst jetzt bemerkst du, dass es aus Metall besteht und scheinbar nicht auf dem Boden steht, sondern \textit{durch} den Boden geht. Knapp über dem Boden siehst du eine kleine Platte, auf der die Zeichen ``F.R.E-Y4'' eingraviert sind.
+
+Wirf eine Weisheitsprobe mit DC 12. Wenn du es schaffst, gehe zu \goto{iHaveMachineKnowledge}.
+Wenn nicht, gehe zu \goto{skippingMachineKnowledge}.
 
 \block{hewantsmetotouchthegem}{Ich soll es berühren}
 
 Du stehst noch immer unter dem Zauber des Hexers, der deinen Körper kontrolliert. Gegen deinen Willen bewegen sich deine Füße in Richtung des Edelsteins! Du hörst den Hexer noch sagen: ``Nur keine Scheu, erfülle deinen Zweck!''
 
-Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf eine Charismaprobe mit DC 10. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
+Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf einen Charismarettungswurf mit DC 12 oder mit DC 11, wenn du \getItem{itemBurialRing} besitzt. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
 
 \block{noiwillnottouchthisgem}{Ich werde das nicht tun}
 

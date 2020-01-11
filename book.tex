@@ -49,20 +49,22 @@
 
 \newcommand{\inventory}[1]{
   \refstepcounter{itemmarker}
-  \theitemmarker
+  G\theitemmarker
   \label{#1}
 }
 
-\newcommand{\getItem}[1]{(\ref{#1})}
+\newcommand{\getItem}[1]{(G\ref{#1})}
 
 \newcounter{eventmarker} \setcounter{eventmarker}{0}
-\renewcommand{\theeventmarker}{\Alph{eventmarker}}
+\renewcommand{\theeventmarker}{\arabic{eventmarker}}
 \newcommand{\setEvent}[1]{
-  \refstepcounter{eventmarker}(\theeventmarker)
+  \refstepcounter{eventmarker}(E\theeventmarker)
   \label{#1}
 }
 
-\newcommand{\getEvent}[1]{(\ref{#1})}
+\newcommand{\getEvent}[1]{(E\ref{#1})}
+
+\newcommand{\goto}[1]{[\ref{#1}]}
 
 % Start document
 \begin{document}
