@@ -68,7 +68,7 @@ Für einen Moment bist du wie verzaubert. Als deine Augen den Edelstein erblicke
 
 Als du den Blick zur Decke schweifen lässt, erkennst du eine Frau, eine Elfe, die dort in einigen Metern Höhe kopfüber aufgehangen ist. Sie scheint bewusstlos, ihr blondes Haar ist blutverschmiert und hängt nach unten. Immer wieder fallen kleine Bluttropfen von ihr hinab auf den Edelstein, zweifelsohne absichtlich.
 
-``Nur keine Scheu, fass den Stein an.'', sagt er Hexer mit einem bösartigen Unterton.
+Die krächzende Stimme des Hexers reißt dich aus deinen Gedanken. ``Nur keine Scheu, fass den Stein an.'', sagt er mit einem bösartigen Unterton.
 Wenn Ereignis \getEvent{deceivedTheWarlock} eingetreten ist, gehe zu [\ref{idonthavetotouchthegem}]. Wenn nicht, gehe zu [\ref{hewantsmetotouchthegem}].
 
 \block{idonthavetotouchthegem}{Die Scharade hat ein Ende}
@@ -102,12 +102,41 @@ Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu \goto{inspectTh
 Wenn du die Elfe genauer betrachten willst, gehe zu \goto{inspectTheElf}.
 Wenn du den Raum verlassen willst, gehe zu \goto{downToLayer2}.
 
+\block{inspectTheElf}{Ich sehe mir die Elfe genauer an}
+
+Du betrachtest die Elfe über die genauer. Sie ist mit deinem dicken Seil gefesselt und mit den Füßen nach oben an der Decke aufgehangen. Ihre sonst feinen Gesichtszüge wirken wie von Schmerzen verzerrt und immer wieder tropft Blut von ihr herab auf den Edelstein.
+Du kannst nicht erkennen, wo sie verwundet ist, die Teile ihres blauen Seidengewands, die du durch die Fesseln sehen kannst, wirken sauber und unbeschadet.
+
+Zwischen euch liegen mehr als zwei Körperlängen, sodass du keine Chance hast, sie zu erreichen. Wenn du dir das Podest genauer ansehen willst, gehe zu \goto{inspectTheGem}.
+Wenn du den Raum verlassen willst, gehe zu \goto{downToLayer2}.
+
 \block{inspectTheGem}{Ich sehe mir den Edelstein genauer an}
 
 Du widmest deine Aufmerksamkeit dem Edelstein. Als du ihn ansiehst, spürst du sofort wieder das Verlangen ihn zu berühren. Schnell wendest du deine Augen nach unten ab. Dein Blick fällt auf das Podest. Erst jetzt bemerkst du, dass es aus Metall besteht und scheinbar nicht auf dem Boden steht, sondern \textit{durch} den Boden geht. Knapp über dem Boden siehst du eine kleine Platte, auf der die Zeichen ``F.R.E-Y4'' eingraviert sind.
 
 Wirf eine Weisheitsprobe mit DC 12. Wenn du es schaffst, gehe zu \goto{iHaveMachineKnowledge}.
 Wenn nicht, gehe zu \goto{skippingMachineKnowledge}.
+
+\block{skippingMachineKnowledge}{Ich kann das nicht zuordnen}
+
+Du kannst mit dieser Gravur nicht viel anfangen. Dir ist klar, dass das Gebilde vor dir nicht nur ein einfacher Podest ist, aber wer kann schon sagen, welchem Zweck es wirklich dient. Tatsache ist, dass das Leuchten des Edelsteins noch immer ein mulmiges Gefühl in deiner Magengegend auslöst. Vielleicht ist es besser zu gehen.
+
+Wenn du versuchen willst dir den Edelstein zu nehmen, gehe zu \goto{grabbingTheGem}.
+Wenn du lieber die Finger von der ganzen Sache lassen und den Raum verlassen willst, gehe zu \goto{downToLayer2}.
+
+\block{iHaveMachineKnowledge}{Das kommt mir bekannt vor}
+
+Du kennst diese Art von Gravur. Du hast eine ähnliche Platte am Bauch des Nimmerleer in Greifenheim gesehen! In deinem Kopf fügen sich gerade einige Puzzelteile zusammen - du stehst auf einem Maschinengott! Mit Sicherheit gehört dieses Podest bereits zu dem Konstrukt. Du kannst zwar nicht sagen, was der Hexer vorhatte, aber mit Sicherheit war es nichts Gutes. Und du bist dir genauso sicher, dass dieser Maschinengott keine guten Neuigkeiten bringen wird.
+
+Wenn du den Podest genauer untersuchen willst, gehe zu \goto{inspectingThePodest}.
+Wenn du versuchen willst dir den Edelstein zu nehmen, gehe zu \goto{grabbingTheGem}.
+Wenn du lieber die Finger von der ganzen Sache lassen und den Raum verlassen willst, gehe zu \goto{downToLayer2}.
+
+\block{grabbingTheGem}{Ich nehme den Edelstein}
+
+Du hast zwar kein gutes Gefühl dabei, aber du willst auch sicher gehen, dass niemand das Werk des Hexers fortführen kann. Und dieser Edelstein scheint eine Schlüsselrolle zu spielen. Eilig streckst du die Hand aus und packst den Stein. Sofort umgibt dich Stille. Alles ist schwarz.
+
+Gehe zu \goto{deathStranding}.
 
 \block{hewantsmetotouchthegem}{Ich soll es berühren}
 
@@ -130,6 +159,10 @@ Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du all
 \block{deathbyGem}{Ich habe es berührt}
 
 Wie in Trance kommst du dem Stein näher, Schritt um Schritt, bis deine Finger ihn berühren können. Irgendetwas zerrt an dir. Doch niemand wird dich jetzt noch aufhalten! Du streckst die Hand aus und berührst den Stein. Sofort umgibt dich Stille. Das Zerren hört auf. Alles ist schwarz.
+
+Gehe zu \goto{deathStranding}.
+
+\block{deathStranding}{Ich bin verloren}
 
 Du weißt nicht, wie viel Zeit vergeht. Dein Körper ist wie betäubt, du spürst nichts, siehst nichts und hörst nichts. Dann wird es plötzlich wärmer. Erst jetzt bemerkst du, wie kalt dir war. Doch auch die Kälte ist bald vergessen, als die Wärme nicht mehr abnimmt und sich zu Hitze entwickelt. Und schon bald wird aus der Hitze ein schmerzvolles Brennen. Du kannst das Gefühl nicht beschreiben, doch es will einfach nicht aufhören. Wenn du sterben könntest, wärst du inzwischen gestorben. So viel Schmerz kann keine Seele ertragen. Doch irgendetwas hält dich auf! Du kannst nicht in die nächste Welt, der Weg ist versperrt!
 
@@ -159,3 +192,91 @@ Auf der dir gegenüberliegenden Seite, vorbei an diesen Säulen, befindet sich e
 
 Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel3Alone}].
 Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPillars}].
+
+\block{inspectingThePodest}{Ich sehe mir das ganz genau an}
+
+Wenn es sich wirklich um eine Maschine handelt, dann kannst du vielleicht mit viel Glück... ja, da ist ein kleiner Schalter. Als du mit dem Finger über die kleine Platte fährst, gibt diese leicht nach. Du suchst noch etwas weiter, kannst aber keine anderen Schalter finden. Du könntest natürlich auch an einem der bunten Metalldrähte ziehen.
+
+Wenn du den Schalter drücken willst, gehe zu \goto{pushTheButtonAtTheGem}.
+Wenn du dich an den Drähten versuchen willst, gehe zu \goto{secretMechanic}.
+Wenn du lieber nichts machst und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
+
+\block{secretMechanic}{Ich weiß, was ich tue}
+
+Um das Podest herum sind verschiedene Metalldrähte zu erkennen, die vom Boden zum Podest verlaufen. Du siehst zwei rote, einen schwarzen, vier graue und einen gelben Draht.
+
+Wenn du einen roten Draht herausreißen willst, gehe zu \goto{redHeringCable}.
+Wenn du am schwarzen Draht ziehen willst, gehe zu \goto{pullingBlackCable}.
+Wenn du einen der grauen Drähte auswählen willst, gehe zu \goto{pullinGreyCable}.
+Wenn du dein Glück mit dem gelben Draht versuchen willst, gehe zu \goto{pullingYellowCable}.
+Wenn du doch lieber den Schalter drücken willst, gehe zu \goto{pushTheButtonAtTheGem}.
+Wenn du lieber nichts machst und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
+
+\block{redHeringCable}{Ich sehe rot}
+
+Du zögerst kurz und greifst dann nach einem der roten Drähte. Es erfordert mehr Kraft, als du gedacht hättest, doch als du kräftig an dem Draht ziehst, reißt er aus der Verbindung am Podest. Erwartungsvoll hälst du die Luft an.
+
+Es passiert nichts. Sekunden vergehen und du bist dir nicht sicher, ob das etwas bewirkt hat. Du weißt auch nicht genau, was du erwartet hast. Vielleicht einfach... \textit{irgendetwas}. Doch es passiert nichts. Also greifst du zum zweiten roten Draht und reißt auch diesen aus der Halterung, wieder ohne erkennbaren Effekt.
+
+Wenn du jetzt am schwarzen Draht ziehen willst, gehe zu \goto{pullingBlackCable}.
+Wenn du einen der grauen Drähte herausreißen willst, gehe zu \goto{pullinGreyCable}.
+Wenn du dich am gelben Draht versuchen willst, gehe zu \goto{pullingYellowCable}.
+Wenn du den Schalter drücken willst, gehe zu \goto{pushTheButtonAtTheGemAfterRed}.
+Wenn du es dabei belassen und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
+
+\block{pullingBlackCable}{Ich sehe schwarz}
+
+Du ziehst kräftig am schwarzen Draht. Noch während du das Ende des Drahts ansiehst, nachdem du es aus seiner Halterung gelöst hast, spürst du ein Zittern im Boden. Innerhalb eines Herzschlags wandert dein Blick nach unten und du siehst, wie dir einer der riesigen Steine geradewegs entgegen kommt! Benommen fällts du rückwärts, doch du landest nicht. Unter dir tut sich die Pforte zur Hölle auf, eine sengende Flammenwand schießt nach oben und verwandelt alles in ihrem Weg zu Asche. Auch dich.
+
+\textbf{Ende.}
+
+\block{pullinGreyCable}{Ich sehe grau}
+
+Wahllos nimmst du einen der grauen Drähte und ziehst an ihm, sodass er sich aus der Halterung am Podest löst. Noch während du das Ende des Drahts ansiehst, spürst du ein Zittern im Boden. Kein Zweifel, der ganze Turm bebt!
+
+Du verschwendest keinen Moment und rennst sofort zur Treppe. Wirf einen Geschicklichkeitsrettungswurf mit DC 16. Wenn du Erfolg hast, gehe zu \goto{barelyEscaping}. Ansonsten gehe zu \goto{deathByStones}.
+
+\block{pullingYellowCable}{Ich sehe gelb}
+
+Wie heißt es im Volksmund? ``Alle guten Dinge sind gelb''... oder so ähnlich? Du greifst nach dem gelben Draht und ziehst kräftig, sodass er aus der Halterung am Podest gerissen wird.
+%TODO gem löst sich
+
+\block{deathByStones}{Ich renne um mein Leben}
+
+Du rast die Treppe hinab und durch den kleinen Lagerraum. Um dich herum fallen Steine aus den Wänden, die Decke und der Boden scheinen sich in ihre Einzelteile aufzulösen und du hörst ein ohrenbetäubendes Dröhnen. Im Gang angekommen hast du die nächste Treppe im Blick, als dir plötzlich ein großer Stein vor den Fuß fällt und dich ins Stolpern bringt. Verzweifelt kommst du wieder auf die Beine, doch da trifft dich der nächste Stein, diesmal auf die Schulter. Und noch einer. Dir bleibt keine Zeit, dich zu erholen.
+
+Es dauert einige Minuten, bis sich die gigantische Staubwolke legt. Vom einst bedrohlichen schwarzen Turm ist nur noch ein riesiger Trümmerhaufen geblieben. Für dich gibt es keine Hilfe mehr. Dein lebloser Körper liegt unter mehreren Metern Gestein begraben.
+
+\textbf{Ende.}
+
+\block{barelyEscaping}{Ich fliehe sofort}
+
+Du rast die Treppe hinab und durch den kleinen Lagerraum. Um dich herum fallen Steine aus den Wänden, die Decke und der Boden scheinen sich in ihre Einzelteile aufzulösen und du hörst ein ohrenbetäubendes Dröhnen. Im Gang angekommen hast du die nächste Treppe im Blick, als dir plötzlich ein großer Stein vor den Fuß fällt. Im letzten Moment kannst du ausweichen und rennst weiter. Bei der nächsten Treppe gehst du mehr Risiko ein und nimmst mehrere Stufen auf einmal. Mit Erfolg, du kommst in den Raum mit den leuchtenden Säulen. Von diesen ist nicht mehr viel geblieben, überall liegen große Glassplitter und die reglosen, schleimbedeckten Körper von nackten Männern auf dem Boden in einer riesigen Lache aus der seltsamen Flüssigkeit.
+
+Du siehst durch den Raum und begreifst sofort, dass du den Turm nicht lebend verlassen wirst. Plötzlich gerät das offene Fenster wieder in dein Blickfeld. Du siehst nicht einmal nach, ob der Sprung sicher wäre, du springst einfach. Dir bleibt keine Wahl, jede noch so kleine Chance ist besser als der sichere Tod!
+
+Du landest in einem Dornenbusch und spürst den heftigen Aufprall in jedem Knochen. Wirf 3D6 und zieh dir das Ergebnis von den Lebenspunkten ab. Wenn du den Aufprall überlebst, gehe zu \goto{survivedTheJump}. Andernfalls gehe zu \goto{killedByTheJump}.
+
+\block{killedByTheJump}{Ich bin heftig gestürzt}
+
+Du bist dir nicht sicher, was es am Ende war. Welcher Knochen gebrochen ist und dein Schicksal besiegelt hat. Während der Turm hinter dir in einer riesigen Staubwolke versinkt, die dich komplett umhüllt, kriechst du voller Schmerzen über den Boden und versuchst zu entkommen. Einige Minuten kämpfst du noch qualvoll mit deinem Schicksal, bis deine Kräfte schwinden und du erschöpft die Augen schließt.
+
+\textbf{Ende.}
+
+\block{survivedTheJump}{Ich bin tief gefallen}
+
+Du bist dir sicher, dass du dir einige Knochen gebrochen hast, als du auf dem Boden aufkommst. Mit letzter Kraft zerrst du dich vom Turm weg und kriechst so weit du kommst, als dich die riesige Staubwolke des Zusammenbruchs einhüllt. Es dauert eine Weile, bis sich der Staub legt und der Krach abebbt. Vom vormals furchteinflößenden schwarzen Turm ist nichts als ein gigantiger Schutthaufen geblieben.
+
+Du bist noch nicht außer Gefahr. Hier draußen bist du leichte Beute für Wölfe, besonders in deinem angeschlagenen Zustand. Verzweifelt versuchst du zum nächsten Baum zu kommen, doch dich verlassen vorher die Kräfte. Ohnmächtig sackst du zusammen.
+
+Als du wieder zu dir kommst, starrst du eine Zimmerdecke aus Holz an. Es braucht einen Moment, bis du dir deiner Situation bewusst wirst. Du liegst in einem weichen Bett in einem Zimmer im... ja, im ``Zum Nimmerleer'' in Greifenheim! Deine verletzten Glieder wurden versorgt, du bist in dicke Bandagen gehüllt. Als du den Kopf nach rechts drehst und leicht stöhnst, hörst du plötzlich eine helle Stimme: ``Bei den Göttern, was für ein Glück, ihr lebt!''. Du siehst den Sohn des Wirts, der an gerade durch die Tür kam und dich anstrahlt. ``Vater war sehr besorgt, dass ihr die Nacht nicht überstehen würdet.''
+
+Nach einem kurzen Gespräch bringst du in Erfahrung, dass ein anderer Abenteurer, eine große Schildkröte, dich gefunden und nach Greifenheim gebracht hat. Er hat auch für deine Versorgung und das Zimmer bezahlt für eine ganze Woche bezahlt. Leider weiß niemand, wie dein mysteriöser Retter heißt, denn nachdem er dich ablieferte verschwand er sogleich wieder. Scheinbar ist es wie der junge Wirtssohn gesagt hat, die Götter waren dir gnädig gestimmt. Du hast dieses Abenteuer überlebt und kannst die Geschichte weitererzählen.
+
+\textbf{Ende.}
+
+\block{downToLayer2}{Ich steige die Treppe hinab}
+
+Du gehst zurück zur Treppe und bist kurz darauf ein Stockwerk tiefer. Vor dir liegt der kleine Lagerraum mit der Tür auf der anderen Seite. Rechts von dir befinden sich einige Fässer und braune Leinensäcke. Auf der linken Seite steht ein größeres Regal, in dem sich dutzende Gläser befinden, manche befüllt, manche Leer.
+%TODO continue writing
+%TODO can finde two healing potions \getItem{itemRegularHealingPotion}
