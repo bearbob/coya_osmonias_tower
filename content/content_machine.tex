@@ -82,7 +82,7 @@ Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
 
 \block{ikilledthewarlockInTheHighTower}{Nur einer von uns wird leben}
 
-Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem feuchten Erdboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
+Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem harten Steinboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
 
 Markiere Ereignis \getEvent{theWarlockDiedAtTheTop}.
 
@@ -178,9 +178,16 @@ Du atmest tief ein und ziehst dich nach oben. Vor dir liegt ein großer, kreisru
 
 Auf deiner rechten Seite befindet sich eine Treppe, die entlang der Außenwand in ein höheres Stockwerk führt. Auf der dir gegenüber liegenden Seite des Raums kannst du eine kleine Tür erkennen.
 
-Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel3Alone}].
+Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel2Alone}].
 Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPillars}].
 Wenn du zur Tür gegen willst, gehe zu [\ref{theLockedDoorFromTheOtherSide}].
+
+\block{theLockedDoorFromTheOtherSide}{Ich sehe mir die Tür an}
+
+Du gehst zielorientiert durch den Raum und gelangst zu der Tür. Ein kurzer Griff am Türknauf zeigt dir, dass sie verschlossen ist. Da das gute Stück sehr stabil aussieht, wirst du hier ohne passendes Werkzeug oder den richtigen Schlüssel keine Chance haben.
+
+Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel2Alone}].
+Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPillars}].
 
 \block{unlockTheDoorWithWarlocksKey}{Jede Tür hat einen Schlüssel}
 
@@ -190,8 +197,47 @@ Vor dir liegt ein großer, kreisrunder Raum, der von einem violetten Schimmer er
 
 Auf der dir gegenüberliegenden Seite, vorbei an diesen Säulen, befindet sich ein Fenster. Links neben dem Fenster kannst du Treppenstufe erkennen, die entlang der Außenwand in ein höheres Stockwerk führen.
 
-Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel3Alone}].
+Wenn du der Treppe nach oben folgen willst, gehe zu [\ref{goToLevel2Alone}].
 Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPillars}].
+
+\block{inspectTheVioletPillars}{Ich untersuche die Säulen}
+
+Als du einigen der Säulen näher kommst, erkennst, dass die humanoiden Formen, die du zuvor gesehen hast, Männer mittleren Alters mit breiten Schultern sind. Es ist schwer mehr Details zu erkennen, aber du bist dir völlig sicher: es sind immer wieder die gleichen zwei Gesichter. Die Gesichter deiner Entführer!
+
+Wirf eine Arkanaprobe mit DC 14. Wenn du es nicht schaffst, gehe zu [\ref{arcanaFailedMeAndImAlone}]. Wenn du Erfolg hast, gehe zu [\ref{theseAreClonesAndSomeAreMissing}].
+
+\block{arcanaFailedMeAndImAlone}{Ich kann damit nichts anfangen}
+
+Du kannst nur vermuten, dass es einen dunklen Zauber oder eine ähnliche Hexerei gibt, mit der das alles zu tun hat. Aber um was für einen Plan kann es sich handeln, wenn man dafür offensichtlich eine Schar von Handlangern heranzüchten muss?
+
+Du beschließt, dass es wenig Sinn macht zu lange darüber nachzudenken. Du durchquerst den Raum und gelangst zur Treppe, die nach oben führt.
+Gehe zu [\ref{goToLevel2Alone}].
+
+\block{theseAreClonesAndSomeAreMissing}{Hier fehlt etwas}
+
+Du kannst dich düster erinnern, dass es einen Zauber gibt, mit dem man Klone erschaffen kann. Wenn einer der beiden Entführer stirbt, fährt seine Seele in einen der hier schlafenden Körper. Diese Theorie wird bestätigt, als du zwei Säulen entdeckst, die keinen Inhalt haben. Vermutlich wurden die beiden nach dem Angriff im Wald hier wieder zum Leben erweckt. Aber um was für einen Plan kann es sich handeln, wenn man dafür offensichtlich eine Schar von Handlangern heranzüchten muss?
+
+Du beschließt, dass es wenig Sinn macht zu lange darüber nachzudenken. Du durchquerst den Raum und gelangst zur Treppe, die nach oben führt.
+Gehe zu [\ref{goToLevel2Alone}].
+
+\block{goToLevel2Alone}{Ich steige hinauf}
+
+Ein kurzer Blick aus dem Fenster zeigt dir, dass es inzwischen dunkel geworden ist. Noch immer scheinen die dichten Wolken den Himmel zu bedecken, denn du kannst in diesem flüchtigen Moment keine Sterne oder den Schein des Mondes erkennen.
+Du gehst über die Treppenstufen weiter nach oben, bis du im nächsten Stockwerk angekommen bist.
+
+Vor dir liegt ein langer Gang, an dessen Ende sich ein kleiner Runde Raum mit 4 Türen befindet, eine in jede Himmelsrichtung.
+Wenn du die östliche Tür öffnen willst, gehe zu \goto{stockDoor}.
+Wenn du die südliche Tür öffnen willst, gehe zu \goto{mastersBedroom}.
+Wenn du die westliche Tür öffnen willst, gehe zu \goto{bathRoom}.
+Wenn du die nördliche Tür öffnen willst, gehe zu \goto{libray}.
+
+\block{stockDoor}{Ich gehe nach Osten}
+
+Du versuchst die östliche Tür zu öffnen und kommst in einen kleinen Lagerraum, an dessen Außenwand sich eine weitere Treppe nach oben befindet. Du erkennst links von dir einige Fässer und Leinensäcke, während sich rechts ein Regal mit einer Vielzahl von vollen und leeren Gläsern und Flaschen befindet.
+
+Wenn du der Treppe folgen willst, gehe zu \goto{goToLevel3Alone}.
+Wenn du den Raum durchsuchen willst, gehe zu \goto{searchStockRoom}.
+Wenn du eine der anderen Türen ausprobieren willst, gehe zu \goto{takeAnotherDoor}.
 
 \block{inspectingThePodest}{Ich sehe mir das ganz genau an}
 
@@ -212,6 +258,14 @@ Wenn du dein Glück mit dem gelben Draht versuchen willst, gehe zu \goto{pulling
 Wenn du doch lieber den Schalter drücken willst, gehe zu \goto{pushTheButtonAtTheGem}.
 Wenn du lieber nichts machst und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
 
+\block{pushTheButtonAtTheGem}{Ich drücke zu}
+
+Du siehst nicht viel Sinn darin an den Drähten herumzuspielen. Am Ende richtest du noch größeren Schaden an, als du dir vorstellen kannst. Aber der kleine Schalter scheint dir ein vertretbares Risiko zu sein. Wenn es einen Schalter gibt, wird er dafür gedacht sein, dass man ihn benutzt.
+
+Behutsam legst du deinen Finger auf die kleine Metallplatte und atmest tief ein und aus. Dann drückst du zu. Sofort hörst du ein leichtes Surren, das den Raum erfüllt. Dann beginnt das Podest langsam im Boden zu versinken. Bevor du dich aber genauer damit befassen kannst, hörst du plötzlich ein lautes Knacken über dir. Als du hochsiehst, siehst du, dass dir die gefesselte Elfe entgegenfällt.
+
+Wirf eine Athletikprobe mit DC 14. Wenn du Erfolg hast, gehe zu \goto{catchingTheElf}. Wenn nicht, gehe zu \goto{notCatchingTheElf}.
+
 \block{redHeringCable}{Ich sehe rot}
 
 Du zögerst kurz und greifst dann nach einem der roten Drähte. Es erfordert mehr Kraft, als du gedacht hättest, doch als du kräftig an dem Draht ziehst, reißt er aus der Verbindung am Podest. Erwartungsvoll hälst du die Luft an.
@@ -221,7 +275,7 @@ Es passiert nichts. Sekunden vergehen und du bist dir nicht sicher, ob das etwas
 Wenn du jetzt am schwarzen Draht ziehen willst, gehe zu \goto{pullingBlackCable}.
 Wenn du einen der grauen Drähte herausreißen willst, gehe zu \goto{pullinGreyCable}.
 Wenn du dich am gelben Draht versuchen willst, gehe zu \goto{pullingYellowCable}.
-Wenn du den Schalter drücken willst, gehe zu \goto{pushTheButtonAtTheGemAfterRed}.
+Wenn du jetzt den Schalter drücken willst, gehe zu \goto{pushTheButtonAtTheGem}.
 Wenn du es dabei belassen und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
 
 \block{pullingBlackCable}{Ich sehe schwarz}
@@ -238,8 +292,26 @@ Du verschwendest keinen Moment und rennst sofort zur Treppe. Wirf einen Geschick
 
 \block{pullingYellowCable}{Ich sehe gelb}
 
-Wie heißt es im Volksmund? ``Alle guten Dinge sind gelb''... oder so ähnlich? Du greifst nach dem gelben Draht und ziehst kräftig, sodass er aus der Halterung am Podest gerissen wird.
-%TODO gem löst sich
+Wie heißt es im Volksmund? ``Alle guten Dinge sind gelb''... oder so ähnlich? Du greifst nach dem gelben Draht und ziehst kräftig, sodass er aus der Halterung am Podest gerissen wird. Ein kurzes Zittern geht durch das Podest, dann siehst du, wie sich die Metallkralle um den Edelstein langsam zurückzieht. Der Stein verliert seinen Halt und fällt zu Boden. Du willst instinktiv zugreifen und ihn auffangen, hälst dann aber doch kurz inne. Ein lautes Klirren durchdringt den Raum, als der Edelstein auf dem harten Steinboden auftrifft und mehrmals auf und ab springt. Als er endlich ruhig liegen bleibt, siehst du, wie das rötliche Leuchten langsam verschwindet und der Steine eine weißliche, trübe Färbung annimmt.
+
+Wenn du den Edelstein vorsichtig aufheben willst, gehe zu \goto{pickUpTheGem}.
+Wenn du den Schalter drücken willst, gehe zu \goto{pushTheButtonWithoutGem}.
+Wenn du es dabei belassen und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
+
+\block{pickUpTheGem}{Ich hebe ihn auf}
+
+Du überlegst kurz, ob es eine gute Idee ist den Stein aufzuheben. Allerdings hast du nicht mehr dieses unbändige Verlangen ihn anzufassen, wenn du ihn betrachtest. Und ohne das Leuchten wirkt er auch nicht mehr so bedrohlich. Vorsichtig tippst du den Stein mit dem Finger an und zuckst sofort zurück.
+
+Nachdem eine Weile nichts passiert, atmest du tief ein und greifst nach dem Stein. Es passiert nichts und du steckst da gute Stück ein \getItem{itemGiantGemstone}.
+
+Wenn du den Schalter drücken willst, gehe zu \goto{pushTheButtonWithoutGem}.
+Wenn du es dabei belassen und den Raum verlassen willst, gehe zu [\ref{downToLayer2}].
+
+\block{pushTheButtonWithoutGem}{Ich drücke endlich drauf}
+
+Du siehst nicht viel, was du hier noch tun könntest. Da ist nur noch der Schalter am Podest. Du bist darauf gefasst, dass gleich etwas passiert, als sich dein Finger dem Schalter nähert. Du siehst dich noch einmal im Raum um, dann drückst du den Schalter nach Innen.
+
+Du wartest einen Moment. Doch nichts passiert. Also drückst du erneut. Und nochmal. Und nochmal. Doch das Ergebnis bleibt das gleiche, deine Aktion hat keinen für dich erkennbaren Effekt. Du siehst noch einmal hoch zur Elfe, die noch immer an der Decke aufgehangen ist. Dann wieder zum Podest. Ein wenig enttäuscht machst du dich auf den Weg um den Raum zu verlassen. Gehe zu [\ref{downToLayer2}].
 
 \block{deathByStones}{Ich renne um mein Leben}
 
@@ -275,7 +347,57 @@ Nach einem kurzen Gespräch bringst du in Erfahrung, dass ein anderer Abenteurer
 
 \textbf{Ende.}
 
-\block{downToLayer2}{Ich steige die Treppe hinab}
+\block{notCatchingTheElf}{Ich reagiere nicht schnell genug}
+
+Du fängst die Elfe in letzter Sekunde, allerdings mit deinem vollen Körper. Du verlierst 2 Lebenspunkte, als sie aus mehreren Metern Höhe auf dich fällt. Nachdem du dich davon erholt hast, prüfst du die Atmung der Elfe. Endlich eine gute Nachricht, sie lebt, ist aber bewusstlos. Eilig löst du die Fesseln und entdeckst dabei ein dicke Nadel, die mittig in ihrer Brust steckt. Vorsichtig entfernst du das Werkzeug \getItem{itemBloodyNeedle} und drückst auf die kleine Wunde. Sie ist tief, aber nicht besonders breit, sodass du dir keine großen Sorgen machst. Es ist offensichtlich, dass das Ziel war die Elfe so langsam wie möglich ausbluten zu lassen.
+
+Wenn \getEvent{theWarlockDiedinTheCell} oder \getEvent{theWarlockDiedAtTheTop} bereits eingereten sind, gehe zu \goto{noIntermissionByWarlock}. Wenn keines der Ereignisse eingetreten ist, gehe zu \goto{warlockFoundMe}.
+
+\block{catchingTheElf}{Ich reagiere sofort}
+
+Du kannst gerade noch die Arme ausstrecken und die Elfe abfangen, bevor sie auf dem Boden aufschlägt. Zum Glück ist sie relativ leicht, ansonsten wäre dir dieses Kunststück vermutlich nicht ohne weiteres gelungen. Eilig prüfst du die Atmung der Elfe. Endlich eine gute Nachricht, sie lebt, ist aber bewusstlos. Du löst ihre Fesseln und entdeckst dabei ein dicke Nadel, die mittig in ihrer Brust steckt und aus der frisches Blut tropft. Vorsichtig entfernst du das Werkzeug \getItem{itemBloodyNeedle} und drückst auf die kleine Wunde. Sie ist tief, aber nicht besonders breit, sodass du dir keine großen Sorgen machst. Es ist offensichtlich, dass das Ziel war die Elfe so langsam wie möglich ausbluten zu lassen.
+
+Wenn \getEvent{theWarlockDiedinTheCell} oder \getEvent{theWarlockDiedAtTheTop} bereits eingereten sind, gehe zu \goto{noIntermissionByWarlock}. Wenn keines der Ereignisse eingetreten ist, gehe zu \goto{warlockFoundMe}.
+
+\block{noIntermissionByWarlock}{Wir sollten gehen}
+
+Du siehst dich im Raum um. Hier gibt es nichts mehr, was du noch tun könntest.
+Gehe zu \goto{downToLayer2WithElf}, um die Turmspitze mit der Elfe zu verlassen.
+
+\block{warlockFoundMe}{Ich wurde entdeckt}
+
+Bevor du weiter darüber nachdenken kannst, was du jetzt tun solltest, hörst du plötzlich einen entsetzten Schrei von der Treppe. Du erkennst einen dürren, alten Mann in einer langen, dunklen Robe, der dich wütend anschreit: ``WIE KANNST DU ES WAGEN?''. Das hagere, eingefallene Gesicht ist von tiefen Augenringen gekennzeichnet, die bei der blassen Haut besonders auffallen. Auch die weite Robe kann nicht verbergen, welch knochiger Körper sich unter ihr befindet. Du hast selten einen Mann gesehen, auf den die Beschreibung ``Hexer'' so gut gepasst hat.
+
+Es ist offensichtlich, dass der Hexer nicht einverstanden ist mit dem was du getan hast. Mit wackligen Schritten rennt er auf dich zu und hebt dabei seinen Arm. In seiner Hand hält er einen kleinen Holzstab, dessen Spitze grün zu leuchten beginnt. Doch du lässt dich nicht einfach überraschen, du bist längst aufgestanden und zum Kampf bereit!
+
+\monsterWarlock
+
+Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInTheHighTowerAfterHeSuprisedMe}].
+Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+
+\block{ikilledthewarlockInTheHighTowerAfterHeSuprisedMe}{Ich lasse mich nicht überraschen}
+
+Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst, kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem harten Steinboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
+
+Markiere Ereignis \getEvent{theWarlockDiedAtTheTop}.
+
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockInTheTowerAfterTheSurpise}].
+Wenn du den Raum mit der Elfe verlassen willst, gehe zu [\ref{downToLayer2WithElf}].
+
+\block{lootTheWarlockInTheTowerAfterTheSurpise}{Was sein war soll mir gehören}
+
+Du zögerst keine Sekunde und durchsuchst den Toten nach Dingen, die dir helfen könnten.
+Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen geschwungenden Dolch \getItem{warlocksDagger}, einen kleinen Kupferschlüssel \getItem{warlocksKey} und einen goldenen Ring \getItem{goldenWarlockRing} dein Eigen nennen.
+
+Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Du erkennst die gleichen Muster auf dem Boden wieder, offensichtlich besteht ein Zusammenhang. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
+
+Gehe zu \goto{downToLayer2WithElf}, um den Raum mit der Elfe zu verlassen.
+
+\block{downToLayer2WithElf}{Wir sollten gehen}
+
+Vorsichtig hebst du die Elfe über deine Schulter, sodass du sie einigermaßen tragen kannst. Du kannst so zwar nicht rennen, aber du kannst halbwegs sicher laufen. Du trägst jetzt die Verantwortung für euch beide, wortwörtlich. Markiere Ereignis \getEvent{iGotTheElf} und gehe zu \goto{downToLayer2}.
+
+\block{downToLayer2}{Es geht die Treppe hinab}
 
 Du gehst zurück zur Treppe und bist kurz darauf ein Stockwerk tiefer. Vor dir liegt der kleine Lagerraum mit der Tür auf der anderen Seite. Rechts von dir befinden sich einige Fässer und braune Leinensäcke. Auf der linken Seite steht ein größeres Regal, in dem sich dutzende Gläser befinden, manche befüllt, manche Leer.
 %TODO continue writing
