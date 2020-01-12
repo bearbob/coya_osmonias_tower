@@ -293,9 +293,38 @@ Wenn du versuchen willst die Truhe zu öffnen, gehe zu \goto{openTheDamnChest}. 
 
 \block{openTheDamnChest}{Ich öffne die Truhe}
 
-Es kostet dich einiges an Mühe die schwere Truhe vorzuziehen. Behutsam öffnest du den Deckel, um nicht irgendeinen Sicherheitsmechanismus auszulösen. Doch deine Sorge ist unbegründet, die kannst die Truhe ohne Probleme öffnen.
-%TODO
+Es kostet dich einiges an Mühe die schwere Truhe vorzuziehen. Behutsam öffnest du den Deckel, um nicht irgendeinen Sicherheitsmechanismus auszulösen. Doch deine Sorge ist unbegründet, die kannst die Truhe ohne Probleme öffnen. Darin findest du zwischen einigen Stofffetzen und einer toten Ratte ein kleines Säckchen \getItem{itemGemStones} voller Diamanten.
+
 Gehe zu \goto{leaveTheBedroom}.
+
+\block{leaveTheBedroom}{Ich verlasse den Raum}
+
+Du verlässt das Schlafgemach und stehst wieder in dem kleinen Vorraum. Wenn du nach Osten gehen willst, gehe zu \goto{stockDoor}.
+Wenn du den westlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{bathRoom}.
+Wenn du den nördlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{libray}.
+Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
+
+\block{leaveTheLibrary}{Ich gehe zurück}
+
+Du verlässt die Bibliothek und stehst wieder in dem kleinen Vorraum. Wenn du nach Osten gehen willst, gehe zu \goto{stockDoor}.
+Wenn du den westlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{bathRoom}.
+Wenn du den südlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{mastersBedroom}.
+Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
+
+\block{leaveTheBathroom}{Ich kehre zurück}
+
+Du stehst wieder in dem kleinen Vorraum. Wenn du nach Osten gehen willst, gehe zu \goto{stockDoor}.
+Wenn du den südlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{mastersBedroom}.
+Wenn du den nördlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{libray}.
+Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
+
+\block{takeAnotherDoor}{Ich versuche etwas anderes}
+
+Du verlässt den Lagerraum und stehst wieder in dem kleinen Vorraum. Wenn du zurück gehen willst, gehe zu \goto{stockDoor}.
+Wenn du den südlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{mastersBedroom}.
+Wenn du den nördlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{libray}.
+Wenn du den westlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{bathRoom}.
+Wenn du dem Gang zur Treppe nach unten folgen willst, gehe zu \goto{downToLayer1}.
 
 \block{stockDoor}{Ich gehe nach Osten}
 
@@ -305,6 +334,90 @@ Du erkennst links von dir einige Fässer und Leinensäcke, während sich rechts 
 Wenn du der Treppe folgen willst, gehe zu \goto{goToLevel3Alone}.
 Wenn du den Raum durchsuchen willst, gehe zu \goto{searchStockRoom}.
 Wenn du eine der anderen Türen ausprobieren willst, gehe zu \goto{takeAnotherDoor}.
+
+\block{libray}{Ich gehe nach Norden}
+
+%TODO
+%Gehe zu \goto{leaveTheLibrary}.
+
+\block{bathRoom}{Ich gehe nach Westen}
+
+Du versuchst dich an der westlichen Tür. Doch die Tür rührt sich nach den ersten paar Zentimetern nicht mehr, sie klemmt. Und zwar ziemlich fest. Vielleicht könntest du sie mit etwas Gewalt dazu bewegen dir den Weg freizugeben.
+
+Wenn du es lieber nicht versuchen willst, gehe zu \goto{leaveTheBathroom}.
+Wenn du versuchen willst die Tür gewaltsam zu öffnen, gehe zu \goto{forceOpenBathroom}.
+
+\block{forceOpenBathroom}{Ich breche durch}
+
+Du versuchst die Tür mit Gewalt zu öffnen und wirfst dich mit der Schulter dagegen. Langsam bewegt sich die Tür und knallt beim dritten Versuch weit auf. Ein modriger Geruch steigt dir in die Nase, wie von abgestandenem Wasser. Wenig überraschend, denn vor dir siehst du eine Art Badezimmer. In der Mitte steht eine randvolle große Wanne aus weißem Stein, auf der sich eine grüne Decke aus kleinen Wasserpflanzen ausgebreitet hat. Am Stein entlang ranken sich Schlingpflanzen und die Wände sind mit Moos und mehrfarbigem Schimmel bedeckt. Aus einem goldenen Wasserhahn tropft gemächlich Wasser in die Wanne und schickt leichte Wellen durch die grünliche Suppe.
+
+Nicht nur die klemmende Tür, auch die unbändige Vegetation und der mordige Geruch schreien danach, dass dieser Raum seit Jahren von niemandem mehr betreten wurde. Du kannst dir vorstellen, dass er einst sehr prunkvoll und ansprechend war, doch davon ist nicht mehr als eine Ahnung geblieben.
+
+Wenn du dich hier genauer umsehen willst, gehe zu \goto{inspectBathroom}.
+Wenn nicht, gehe zu \goto{nothingToDoInTheBath}.
+
+\block{inspectBathroom}{Wenn die Tür schon offen ist, kann ich mich auch umsehen}
+
+Vorsichtig trittst du in den Raum. Unter deinen Füßen spürst du, wie das weiche Moos nachgibt und du ein kleines Stück versinkst. Der große Spiegel an der Wand ist komplett beschlagen und lässt dich nichts erkennen. Ohne groß darüber nachzudenken wischst du mit der Handfläche darüber, um ein kleines Stück freizugeben. Als du dein Spiegelbild siehst, erschrickst du und taumelst einen Schritt zurück. Die verzerrte, von Maden zerfressene Fratze die dich im Spiegel ansieht ähnelt dir zwar und macht deine Bewegungen nach, sieht aber aus wie eine über Jahre vergessene Leiche.
+
+Als du versuchst dir das Bild etwas genauer anzusehen, fühlt es sich an, als würde sich dein Magen umdrehen. Das sollst defintiv du sein, selbst die zerissene Kleidung ähnelt deiner. Sicherlich nur eine Illusion, doch eine finstere! Angewiedert wendest du dich ab.
+
+Wenn du den Wasserhahn zudrehen möchtest, gehe zu \goto{closeFaucet}.
+Wenn du den Raum lieber verlassen willst, gehe zu \goto{nothingLeftToDoInTheBath}.
+
+\block{closeFaucet}{Ich halte das nicht aus}
+
+Das beständige Tropfen des Wasserhahns fängt an dich zu nerven. Du beugst dich über die Wanne und drehst den Hahn zu. Du wartest kurz ab, ob weitere Tropfen ihren Weg finden, doch du hast den Wasserhahn zum schweigen gebracht. Zufrieden drehst du dich um, als du plötzlich hinter dir ein lautes Platschen hörst. Wasser läuft in einem Schwall über den Rand der Wanne und noch bevor du dich umdrehen kannst packen dich zwei kräftige Arme und ziehen dich nach hinten!
+
+Du wirst in die Wanne gezogen und warmes Wasser umhüllt deinen Körper. Die Wanne muss magisch sein, denn das Innenleben ist größer, viel, viel größer - du fühlst dich wie in einem See. Du windest und wehrst dich, noch immer umklammern dich die kräftigen Arme und reißen dich unerbittlich Meter um Meter in die Tiefe!
+
+Du windest dich und trittst nach hinten, bis dein Fuß etwas Hartes trifft. Sofort trittst du erneut zu und kannst den Griff ausreichend lockern, um dich umzudrehen. Dein Verstand braucht einen Moment, um zu verarbeiten, was du siehst. Eine nackte Frau, mit langen, schwarzen Haaren starrt dich mit leeren, weißen Augen an. Ihre Haut ist selbst in dem grünlichen Licht des dreckigen Wassers bleich und ihr Griff fühlt sich an, als würde dich ein großer Ork packen!
+
+Wir einen Stärkerettungswurf mit DC 15. Wenn du es schaffst, gehe zu \goto{sweetEscape}.
+Wenn nicht, gehe zu \goto{deathByWater}.
+
+\block{sweetEscape}{Ich werde nicht ertrinken}
+
+Du kämpfst um dein Leben und stößt dem Weib mehrmals mit deiner Stirn ins Gesicht, bis dunkles Blut herausläuft. Nur für den Bruchteil einer Sekunde lockert sich ihre Umarmung. Sofort schlägst du um dich, bis du frei bist, und schwimmst zur Oberfläche! Als das Weib unter dir nach deinem Fuß packt, trittst du erneut nach ihr und kannst so etwas Abstand zwischen euch bringen. Gerade als dir die Luft ausgeht erreichst du die rettende Oberfläche. Deine Hand packt den Rand der Wanne und mit einem einzigen Schwung ziehst du dich aus dem Wasser und über den Wannenrand!
+
+Du keuchst angestrengt und spuckst mehrmals Wasser aus, dass seinen Weg in deine Lungen gefunden hat. Du hast 8 Lebenspunkte verloren. Schnell krabbelst du weg von der Wanne! Es dauert mehrere Minuten, bis du wieder ruhiger atmen kannst. Erst jetzt fällt dir auf, dass deine Kleidung durch die Wärme schon beinahe wieder trocken ist. Angestrengt richtest du dich auf und beobachtest misstrauisch die Wanne. Der Wasserhahn hat wieder angefangen zu tropfen, aber du wirst den Teufel tun das Ding noch einmal anzufassen.
+
+Gehe zu \goto{nothingLeftToDoInTheBath}.
+
+\block{deathByWater}{Ich will nicht ertrinken}
+
+Du kämpfst um dein Leben und stößt dem Weib mehrmals mit deiner Stirn ins Gesicht, bis dunkles Blut herausläuft. Nur für den Bruchteil einer Sekunde lockert sich ihre Umarmung. Sofort schlägst du um dich, bis du frei bist, und schwimmst zur Oberfläche! Als das Weib unter dir nach deinem Fuß packt, trittst du erneut nach ihr doch du kannst sie nicht abschütteln. Mit unerbitterlicher Kraft zieht sie dich wieder in die Tiefe!
+
+Verzweifelt greifst du nach der rettenden Oberfläche, als sie ihre kalten Lippen auf deine presst. Sofort spürst du, wie die Luft aus deinen Lungen gesaugt wird und deine Kraft schwindet.
+Das grausame Weib lässt von dir ab, denn es ist hoffnungslos.
+Langsam sinkst du hinab in dein feuchtes Grab.
+
+\textbf{Ende.}
+
+\block{nothingLeftToDoInTheBath}{Ich muss mich nicht weiter umsehen}
+
+Du hast nicht das Bedürfnis länger als nötig in diesem Raum zu bleiben. Wenn hier so lange niemand war, wird es vermutlich ohnehin nichts wertvolles zu holen geben.
+
+Wenn Ereignis \getEvent{theWarlockDied} bereits eingetreten ist, gehe zu \goto{leaveTheBathroom}.
+Ansonsten gehe zu \goto{warlockSupriseAttack}.
+
+\block{nothingToDoInTheBath}{Ich muss mich nicht umsehen}
+
+Du hast nicht das Bedürfnis dich durch die blühende Fauna dieses Raums zu kämpfen. Wenn hier so lange niemand war, wird es vermutlich auch nichts wertvolles zu holen geben.
+
+Wenn Ereignis \getEvent{theWarlockDied} bereits eingetreten ist, gehe zu \goto{leaveTheBathroom}.
+Ansonsten gehe zu \goto{warlockSupriseAttack}.
+
+\block{warlockSupriseAttack}{Ich war zu laut}
+
+Offensichtlich ist nicht unbemerkt geblieben, dass du die Tür eingerammt hast. Die südliche Tür ist offen und ein blasser, dünner Mann in schwarzer Robe blickt dich verbissen an. Wenn du jemals jemanden gesehen hast, auf den die Beschreibung ``Hexer'' gepasst hat, dann muss es dieser alte Mann sein. Bevor du reagieren kannst, hebt er seinen Arm, in der Hand einen Zauberstab, und wirft dir mit einem Schrei ein magisches Geschoss entgegen!
+
+\textit{Der Hexer hat dich überrascht und greift zuerst mit einem Eldritch Blast an. Er hat dabei Vorteil. Anschließend wird wie gewohnt die Initiative berechnet.}
+
+\monsterWarlock
+
+Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInHisRoom}].
+Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
 
 \block{goToLevel3Alone}{Ich gehe weiter}
 
