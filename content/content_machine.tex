@@ -84,7 +84,7 @@ Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
 
 Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem harten Steinboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
 
-Markiere Ereignis \getEvent{theWarlockDiedAtTheTop}.
+Markiere Ereignis \getEvent{theWarlockDied}.
 
 Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockInTheTower}].
 Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu [\ref{inspectTheGem}].
@@ -152,13 +152,19 @@ Du bist frei. Und das keinen Moment zu spät, als du nach unten siehst, hast du 
 
 Gehe zu [\ref{idonthavetotouchthegem}]
 
+\block{cannotresistthegemAlone}{Ich sollte es berühren}
+
+Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet.
+In deinen Gedanken ist nur dieser riesige, wunderschöne Edelstein.
+Du musst ihn haben, du sollst ihn haben! Das Schicksal hat dich hier her geführt, damit du dir diesen Stein nimmst. Dein ganzes Leben lief auf diesen Moment zu. Und gleich gehört er dir. Du musst nur noch zupacken. Ja, du musst den Edelstein berühren. Dann hast du es geschafft. Gehe zu [\ref{deathbyGem}].
+
 \block{cannotresistthegem}{Ich will es berühren}
 
 Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet. Unterbewusst bemerkst du, dass der Hexer mit dir spricht, doch es ist wie ein unverständliches Rauschen in deinen Ohren. Und du willst ihm nicht zuhören. Du musst ihm nicht zuhören. Nein, du musst gar nichts. Nur zum Edelstein, ja. Du musst den Edelstein berühren. Gehe zu [\ref{deathbyGem}].
 
 \block{deathbyGem}{Ich habe es berührt}
 
-Wie in Trance kommst du dem Stein näher, Schritt um Schritt, bis deine Finger ihn berühren können. Irgendetwas zerrt an dir. Doch niemand wird dich jetzt noch aufhalten! Du streckst die Hand aus und berührst den Stein. Sofort umgibt dich Stille. Das Zerren hört auf. Alles ist schwarz.
+Wie in Trance kommst du dem Stein näher, Schritt um Schritt, bis deine Finger ihn berühren können. Irgendetwas in dir wehrt sich, ist unruhig. Doch niemand wird dich jetzt noch aufhalten, nicht einmal du selbst! Du streckst die Hand aus und berührst den Stein. Sofort umgibt dich Stille. Die Unruhe hört auf. Alles ist schwarz.
 
 Gehe zu \goto{deathStranding}.
 
@@ -231,13 +237,91 @@ Wenn du die südliche Tür öffnen willst, gehe zu \goto{mastersBedroom}.
 Wenn du die westliche Tür öffnen willst, gehe zu \goto{bathRoom}.
 Wenn du die nördliche Tür öffnen willst, gehe zu \goto{libray}.
 
+\block{mastersBedroom}{Ich gehe nach Süden}
+
+Du entschließt dich dazu die südliche Tür zu öffnen.
+Wenn Ereignis \getEvent{theWarlockDied} bereits eingetreten ist, gehe zu \goto{emptyMastersBedroom}. Ansonsten gehe zu \goto{dangerMastersBedroom}.
+
+\block{dangerMastersBedroom}{Ich zögere}
+
+Du streckst die Hand aus, um den Türknauf der südlichen Tür zu drehen, als du plötzlich ein kurzes Klappern hinter der Tür hörst. Unter dem Türschlitz leuchtet der Boden kurz grünlich auf und deine Nackenhaare stellen sich auf. Du hast plötzlich wieder dieses Gefühl, das dir im Laufe deines Lebens schon ein paar Mal die Haut gerettet hat. Wer oder was auch immer sich hinter dieser Tür verbirgt, wenn du sie jetzt öffnest, würde es vermutlich kein gutes Ende nehmen. Du hast gelernt, in solchen Momenten auf dein Bauchgefühl zu hören.
+
+Wenn du die Tür trotzdem öffnen willst, gehe zu \goto{openDoorToWarlock}.
+Wenn du lieber die östliche Tür öffnen willst, gehe zu \goto{stockDoor}.
+Wenn du lieber die westliche Tür öffnen willst, gehe zu \goto{bathRoom}.
+Wenn du lieber die nördliche Tür öffnen willst, gehe zu \goto{libray}.
+
+\block{openDoorToWarlock}{Ich komme unangekündigt}
+
+Du öffnest die Tür und siehst sofort den alten Mann in der dunklen Robe vor dir. Alles an ihm schreit nach ``Hexer''. Die knochigen Arme, die schwarze, lange Robe, die trotzdem nicht die jämmerliche Statur verbergen kann, die eingefallene, blasse Haut und der grünlich leuchtende Zauberstab in seiner Hand. Er hat sofort bemerkt, dass du eingetreten bist und sagt krächzend: ``Ich hatte euch doch befohlen...''
+
+Als er sich umsieht, realisiert er erschrocken, dass du nicht die Person bist, mit der er gerechnet hatte. Du spürst sofort, dass ein Kampf unvermeidbar ist und nutzt diese Überraschung, um zuerst anzugreifen!
+
+\monsterWarlock
+
+Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInHisRoom}].
+Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+
+\block{ikilledthewarlockInHisRoom}{Ich sterbe hier nicht}
+
+Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst, kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem harten Steinboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
+
+Markiere Ereignis \getEvent{theWarlockDied}.
+
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockInHisRoom}].
+Wenn du dich in dem Raum umsehen willst, gehe zu [\ref{emptyMastersBedroom}].
+
+\block{lootTheWarlockInHisRoom}{Er braucht das nicht mehr}
+
+Du zögerst keine Sekunde und durchsuchst den Toten nach Dingen, die dir helfen könnten.
+Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen geschwungenden Dolch \getItem{warlocksDagger}, einen kleinen Kupferschlüssel \getItem{warlocksKey} und einen goldenen Ring \getItem{goldenWarlockRing} dein Eigen nennen.
+
+Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
+
+Gehe zu [\ref{emptyMastersBedroom}].
+
+\block{emptyMastersBedroom}{Ich sehe mich um}
+
+Vor dir liegt ein kleiner Raum, der sowohl als Schlafgemach, als auch als Labor zu dienen scheint.
+Das ausladende Bett mit hölzernem Baldachin war einst sicher ein kostbares Stück, doch es ist in die Jahre gekommen und wurde nicht gepflegt. Viele kleine Löcher weisen auf Holzwürmer hin und die Tücher sind von Motten zerfressen. Daneben steht ein langer, robuster Holztisch, auf dem dutzende Phiolen und Gläser mit Tränken in verschiedensten Farben aufgestellt sind. Eine kleine Kerze erhitzt eines der Gläser, in dem eine blaue Flüssigkeit vor sich hinblubbert.
+
+All das ist zwar interessant, für dich aber nicht von sonderlich großer Bedeutung. Spannender sind die Papierfetzen, die auf dem Boden verstreut liegen. Du bist dir nicht sicher, was du dort siehst, denn das Gekrakel wirkt wirr und ist mit unleserlichen Runen übersäht. Doch auf fast jedem der Blätter kannst du den Schriftzug ``F.R.E-Y4'' erkennen. Auf einem der Blätter ist eine Art Tier abgebildet, mit harten Kanten. Wenn du raten müsstest, würdest du vermuten, dass dies die Abbildung eines Maschinengottes ist. Auch die Karte von Greifenheim, auf der einige Gebäude mit einem X markiert sind, lässt dich nichts Gutes vermuten.
+
+Während du dich bückst um die Karte aufzuheben, bemerkst du eine große Truhe direkt unter dem Labortisch. Sie sieht alt und schwer aus, hat aber kein Schloss.
+
+Wenn du versuchen willst die Truhe zu öffnen, gehe zu \goto{openTheDamnChest}. Wenn nicht, gehe zu \goto{leaveTheBedroom}.
+
+\block{openTheDamnChest}{Ich öffne die Truhe}
+
+Es kostet dich einiges an Mühe die schwere Truhe vorzuziehen. Behutsam öffnest du den Deckel, um nicht irgendeinen Sicherheitsmechanismus auszulösen. Doch deine Sorge ist unbegründet, die kannst die Truhe ohne Probleme öffnen.
+%TODO
+Gehe zu \goto{leaveTheBedroom}.
+
 \block{stockDoor}{Ich gehe nach Osten}
 
-Du versuchst die östliche Tür zu öffnen und kommst in einen kleinen Lagerraum, an dessen Außenwand sich eine weitere Treppe nach oben befindet. Du erkennst links von dir einige Fässer und Leinensäcke, während sich rechts ein Regal mit einer Vielzahl von vollen und leeren Gläsern und Flaschen befindet.
+Du versuchst die östliche Tür zu öffnen und kommst in einen kleinen Lagerraum, an dessen Außenwand sich eine weitere Treppe nach oben befindet. Vom Ende der Treppe strahlt dir bereits ein rötliches Licht entgegen, das wild flackert und furchterregende Schatten an die Wand wirft.
+Du erkennst links von dir einige Fässer und Leinensäcke, während sich rechts ein Regal mit einer Vielzahl von vollen und leeren Gläsern und Flaschen befindet.
 
 Wenn du der Treppe folgen willst, gehe zu \goto{goToLevel3Alone}.
 Wenn du den Raum durchsuchen willst, gehe zu \goto{searchStockRoom}.
 Wenn du eine der anderen Türen ausprobieren willst, gehe zu \goto{takeAnotherDoor}.
+
+\block{goToLevel3Alone}{Ich gehe weiter}
+
+Du gehst die Treppe hinauf und befindest dich nun im obersten Zimmer des Turms. Keine weitere Treppe, keine Türen, keine Fenster. Nur ein großer, runder Raum, der ungefähr 10 Meter im Durchmesser misst. An der Außenwand sind in kurzem Abstand hunderte schwarzer Kerzen aufgereiht, deren kleine Flammen sich zuckend hin und her bewegen.
+Doch die größte Lichtquelle befindet sich mitten im Raum. Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich in Brusthöhe ein faustgroßer Edelstein. Er ist in eine kleine Metallkralle gefasst, von der Metallfäden verschiedenster Farbe ausgehen. Du hast selten größere Juwelen gesehen, doch besonders das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
+
+Wirf einen Charismarettungswurf mit DC 16 oder mit DC 15, wenn du \getItem{itemBurialRing} besitzt. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegemAlone}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGemAllAlone}].
+
+\block{resistingTheGemAllAlone}{Ich muss mich abwenden}
+
+Für einen Moment bist du wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du die Welt um dich herum. Doch dann schaffst du es, deine Gedanken wegzulenken und abwärts zu sehen. Der Zwang wird schwächer und du bekommst langsam wieder einen klaren Kopf. Erst jetzt fällt dir auf, dass sich am Podest und auf dem Boden schwarze Flecken befinden. Unter den Flecken, über den gesamten Boden verteilt, befindet sich ein riesiger Runenkreis mit merkwürdigen Symbolen, die mit Sicherheit keinem guten Zweck gewidmet sind.
+
+Als du den Blick zur Decke schweifen lässt, erkennst du eine Frau, eine Elfe, die dort in einigen Metern Höhe kopfüber aufgehangen ist. Sie scheint bewusstlos, ihr blondes Haar ist blutverschmiert und hängt nach unten. Immer wieder fallen kleine Bluttropfen von ihr hinab auf den Edelstein, zweifelsohne absichtlich.
+
+Wenn du das Podest mit dem Edelstein genauer untersuchen willst, gehe zu [\ref{inspectTheGem}].
+Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
+Wenn du den Raum lieber wieder verlassen willst, gehe zu [\ref{downToLayer2}].
 
 \block{inspectingThePodest}{Ich sehe mir das ganz genau an}
 
@@ -351,13 +435,13 @@ Nach einem kurzen Gespräch bringst du in Erfahrung, dass ein anderer Abenteurer
 
 Du fängst die Elfe in letzter Sekunde, allerdings mit deinem vollen Körper. Du verlierst 2 Lebenspunkte, als sie aus mehreren Metern Höhe auf dich fällt. Nachdem du dich davon erholt hast, prüfst du die Atmung der Elfe. Endlich eine gute Nachricht, sie lebt, ist aber bewusstlos. Eilig löst du die Fesseln und entdeckst dabei ein dicke Nadel, die mittig in ihrer Brust steckt. Vorsichtig entfernst du das Werkzeug \getItem{itemBloodyNeedle} und drückst auf die kleine Wunde. Sie ist tief, aber nicht besonders breit, sodass du dir keine großen Sorgen machst. Es ist offensichtlich, dass das Ziel war die Elfe so langsam wie möglich ausbluten zu lassen.
 
-Wenn \getEvent{theWarlockDiedinTheCell} oder \getEvent{theWarlockDiedAtTheTop} bereits eingereten sind, gehe zu \goto{noIntermissionByWarlock}. Wenn keines der Ereignisse eingetreten ist, gehe zu \goto{warlockFoundMe}.
+Wenn \getEvent{theWarlockDied} bereits eingereten ist, gehe zu \goto{noIntermissionByWarlock}. Wenn keines der Ereignisse eingetreten ist, gehe zu \goto{warlockFoundMe}.
 
 \block{catchingTheElf}{Ich reagiere sofort}
 
 Du kannst gerade noch die Arme ausstrecken und die Elfe abfangen, bevor sie auf dem Boden aufschlägt. Zum Glück ist sie relativ leicht, ansonsten wäre dir dieses Kunststück vermutlich nicht ohne weiteres gelungen. Eilig prüfst du die Atmung der Elfe. Endlich eine gute Nachricht, sie lebt, ist aber bewusstlos. Du löst ihre Fesseln und entdeckst dabei ein dicke Nadel, die mittig in ihrer Brust steckt und aus der frisches Blut tropft. Vorsichtig entfernst du das Werkzeug \getItem{itemBloodyNeedle} und drückst auf die kleine Wunde. Sie ist tief, aber nicht besonders breit, sodass du dir keine großen Sorgen machst. Es ist offensichtlich, dass das Ziel war die Elfe so langsam wie möglich ausbluten zu lassen.
 
-Wenn \getEvent{theWarlockDiedinTheCell} oder \getEvent{theWarlockDiedAtTheTop} bereits eingereten sind, gehe zu \goto{noIntermissionByWarlock}. Wenn keines der Ereignisse eingetreten ist, gehe zu \goto{warlockFoundMe}.
+Wenn \getEvent{theWarlockDied} bereits eingereten ist, gehe zu \goto{noIntermissionByWarlock}. Wenn keines der Ereignisse eingetreten ist, gehe zu \goto{warlockFoundMe}.
 
 \block{noIntermissionByWarlock}{Wir sollten gehen}
 
@@ -379,7 +463,7 @@ Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
 
 Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst, kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem harten Steinboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
 
-Markiere Ereignis \getEvent{theWarlockDiedAtTheTop}.
+Markiere Ereignis \getEvent{theWarlockDied}.
 
 Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockInTheTowerAfterTheSurpise}].
 Wenn du den Raum mit der Elfe verlassen willst, gehe zu [\ref{downToLayer2WithElf}].
