@@ -302,21 +302,21 @@ Gehe zu \goto{leaveTheBedroom}.
 Du verlässt das Schlafgemach und stehst wieder in dem kleinen Vorraum. Wenn du nach Osten gehen willst, gehe zu \goto{stockDoor}.
 Wenn du den westlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{bathRoom}.
 Wenn du den nördlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{libray}.
-Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
+%Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
 
 \block{leaveTheLibrary}{Ich gehe zurück}
 
 Du verlässt die Bibliothek und stehst wieder in dem kleinen Vorraum. Wenn du nach Osten gehen willst, gehe zu \goto{stockDoor}.
 Wenn du den westlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{bathRoom}.
 Wenn du den südlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{mastersBedroom}.
-Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
+%Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
 
 \block{leaveTheBathroom}{Ich kehre zurück}
 
 Du stehst wieder in dem kleinen Vorraum. Wenn du nach Osten gehen willst, gehe zu \goto{stockDoor}.
 Wenn du den südlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{mastersBedroom}.
 Wenn du den nördlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{libray}.
-Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
+%Wenn du dem Gang zur Treppe folgen willst, gehe zu \goto{downToLayer1}.
 
 \block{takeAnotherDoor}{Ich versuche etwas anderes}
 
@@ -324,7 +324,13 @@ Du verlässt den Lagerraum und stehst wieder in dem kleinen Vorraum. Wenn du zur
 Wenn du den südlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{mastersBedroom}.
 Wenn du den nördlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{libray}.
 Wenn du den westlichen Raum noch nicht erkundet hast und diese Tür nutzen willst, gehe zu \goto{bathRoom}.
-Wenn du dem Gang zur Treppe nach unten folgen willst, gehe zu \goto{downToLayer1}.
+%Wenn du dem Gang zur Treppe nach unten folgen willst, gehe zu \goto{downToLayer1}.
+
+%\block{downToLayer1}{Ich kehre um}
+
+%Nach einem kurzen Moment, in dem du überlegst, was du hier eigentlich suchst, schüttelst du den Kopf %und gehst zurück zur Treppe nach unten.
+%TODO continue
+% MEMO: excluded from current story because it leaves to many options
 
 \block{stockDoor}{Ich gehe nach Osten}
 
@@ -333,6 +339,15 @@ Du erkennst links von dir einige Fässer und Leinensäcke, während sich rechts 
 
 Wenn du der Treppe folgen willst, gehe zu \goto{goToLevel3Alone}.
 Wenn du den Raum durchsuchen willst, gehe zu \goto{searchStockRoom}.
+Wenn du eine der anderen Türen ausprobieren willst, gehe zu \goto{takeAnotherDoor}.
+
+\block{searchStockRoom}{Ich durchwühle das Lager}
+
+Du siehst dir den Inhalt des Raums genauer an. Nachdem du die Deckel von drei Fässern abgenommen hast, vermutest du, dass auch die restlichen Fässer den gleichen Inhalt haben - säuerlich riechender Wein und leicht abgestandenes Wasser. Beides ist nicht von Interesse für dich. Die Leinensäcke sind ähnlich, du findest Kartoffeln über Kartoffeln. Auch, wenn du gern etwas essen würdest, nützen sie dir im Rohzustand nicht viel.
+
+Mehr Erfolg hast du bei den Gläsern. Bei vielen stellen sich deine Nackenhaare auf, denn du erkennst abgetrennte Finger, Augen irgendwelcher armen Kreaturen und wer weiß was noch für Scheußlichkeiten. Aber auch zwei kleinere Fläschen mit einer rötlich schimmernden Flüssigkeit. Du ziehst bei beiden den Korken und machst eine kurze Geruchs- und Geschmacksprobe, dann ist klar, dass du zwei Heiltränke gefunden hast. Du steckst beide Fläschen (\getItem{itemRegularHealingPotion1} und \getItem{itemRegularHealingPotion2}) in deine Tasche.
+
+Wenn du der Treppe folgen willst, gehe zu \goto{goToLevel3Alone}.
 Wenn du eine der anderen Türen ausprobieren willst, gehe zu \goto{takeAnotherDoor}.
 
 \block{libray}{Ich gehe nach Norden}
@@ -610,10 +625,150 @@ Gehe zu \goto{downToLayer2WithElf}, um den Raum mit der Elfe zu verlassen.
 
 \block{downToLayer2WithElf}{Wir sollten gehen}
 
-Vorsichtig hebst du die Elfe über deine Schulter, sodass du sie einigermaßen tragen kannst. Du kannst so zwar nicht rennen, aber du kannst halbwegs sicher laufen. Du trägst jetzt die Verantwortung für euch beide, wortwörtlich. Markiere Ereignis \getEvent{iGotTheElf} und gehe zu \goto{downToLayer2}.
+Vorsichtig hebst du die Elfe über deine Schulter, sodass du sie einigermaßen tragen kannst. Du kannst so zwar nicht rennen, aber du kannst halbwegs sicher laufen. Du trägst jetzt die Verantwortung für euch beide, wortwörtlich. Markiere das Ereignis \getEvent{iGotTheElf}.
+
+Du gehst zurück zur Treppe und bist kurz darauf ein Stockwerk tiefer. Vor dir liegt der kleine Lagerraum mit der Tür auf der anderen Seite. Rechts von dir befinden sich einige Fässer und braune Leinensäcke. Auf der linken Seite steht ein größeres Regal, in dem sich dutzende Gläser befinden, manche befüllt, andere leer und verstaubt. Da du die Elfe auf der Schulter hast, hast du aber wenig Spielraum um den Raum zu erkunden. Du gehst zur gegenüber liegenden Tür.
+
+Gehe zu \goto{leavingTheStockroomAfterDescentFast}.
+%Wenn Ereignis \getEvent{intoTheTowerAlone} eingetreten ist, gehe zu \goto{leavingTheStockroomAfterDescentFast}.
+%Ansonsten gehe zu \goto{leavingTheStockroomAfterDescent}.
 
 \block{downToLayer2}{Es geht die Treppe hinab}
 
-Du gehst zurück zur Treppe und bist kurz darauf ein Stockwerk tiefer. Vor dir liegt der kleine Lagerraum mit der Tür auf der anderen Seite. Rechts von dir befinden sich einige Fässer und braune Leinensäcke. Auf der linken Seite steht ein größeres Regal, in dem sich dutzende Gläser befinden, manche befüllt, manche Leer.
-%TODO continue writing
-%TODO can finde two healing potions \getItem{itemRegularHealingPotion}
+Du gehst zurück zur Treppe und bist kurz darauf ein Stockwerk tiefer.
+
+Wenn Ereignis \getEvent{intoTheTowerAlone} eingetreten ist, gehe zu \goto{inTheStockroomAfterDescentFast}.
+Ansonsten kannst gehe zu \goto{inTheStockroomAfterDescent}.
+
+\block{inTheStockroomAfterDescentFast}{Ich wieder im Lager}
+
+Du befindest dich wieder in dem kleinen Lagerraum, den du auf dem Weg in das obere Stockwerk durchqueren musstest. Ohne lange zu zögern machst du ein paar große Schritte durch den Raum zur gegenüberliegenden Tür. Die Fässer und Säcke sind für dich nicht interessant.
+
+Gehe zu \goto{leavingTheStockroomAfterDescentFast}.
+
+\block{inTheStockroomAfterDescent}{Ich bin in einem Lager}
+
+Vor dir liegt der kleine Lagerraum mit der Tür auf der anderen Seite. Rechts von dir befinden sich einige Fässer und braune Leinensäcke. Auf der linken Seite steht ein größeres Regal, in dem sich dutzende Gläser befinden, manche befüllt, andere leer und verstaubt.
+
+%Wenn du zur Tür gehen willst, gehe zu \goto{leavingTheStockroomAfterDescent}. %currently to many options. This path is considered to give the option to search the other rooms, we skip this for the time being
+Wenn du zur Tür gehen willst, gehe zu \goto{leavingTheStockroomAfterDescentFast}.
+Wenn du dich im Raum umsehen willst, gehe zu \goto{searchStockRoomAfterDescent}.
+
+\block{searchStockRoomAfterDescent}{Ich durchsuche den Raum}
+
+Du nimmst dir einen Moment Zeit und siehst dir den Raum genauer an. Nachdem du die Deckel von drei Fässern abgenommen hast, vermutest du, dass auch die restlichen Fässer den gleichen Inhalt haben - säuerlich riechender Wein und leicht abgestandenes Wasser. Beides ist nicht von Interesse für dich. Die Leinensäcke sind ähnlich, du findest Kartoffeln über Kartoffeln. Auch, wenn du gern etwas essen würdest, nützen sie dir im Rohzustand nicht viel.
+
+Mehr Erfolg hast du bei den Gläsern. Bei vielen stellen sich deine Nackenhaare auf, denn du erkennst abgetrennte Finger, Augen irgendwelcher armen Kreaturen und wer weiß was noch für Scheußlichkeiten. Aber auch zwei kleinere Fläschen mit einer rötlich schimmernden Flüssigkeit. Du ziehst bei beiden den Korken und machst eine kurze Geruchs- und Geschmacksprobe, dann ist klar, dass du zwei Heiltränke gefunden hast. Du steckst beide Fläschen (\getItem{itemRegularHealingPotion1} und \getItem{itemRegularHealingPotion2}) in deine Tasche. Danach gehst du zur Tür.
+
+%Gehe zu \goto{leavingTheStockroomAfterDescent}. %currently to many options. This path is considered to give the option to search the other rooms, we skip this for the time being
+Gehe zu \goto{leavingTheStockroomAfterDescentFast}.
+
+\block{leavingTheStockroomAfterDescentFast}{Ich kenne den Weg}
+
+Du bist wieder im kleinen Vorraum mit den vier Türen und dem Gang. Da dein Bauchgefühl dir sagt, dass du nicht mehr Zeit als nötig an diesem Ort verbringen solltest, gehst du direkt den Gang entlang und die anschließende Treppe hinab.
+
+Am Fuß der Treppe siehst du durch das Fenster kurz nach draußen. Inzwischen ist finstere Nacht und du kannst nur mit Mühe den Boden am Fuß des Turms erkennen. Nein, bei dieser Dunkelheit ist der Weg durch das Fenster keine Option. Du wendest dich ab und läufst durch den Raum, vorbei an den schimmernden Säulen, die ein Gefühl des Unbehagens in dir auslösen. Glücklicherweise lässt sich die nächste Tür von dieser Seite ganz einfach öffnen. Wieder führt dich dein Weg über deine Treppe und wenig später bist du im Treppenzimmer des Erdgeschosses.
+
+Wenige Schritte vor dir führt eine weitere Treppe tiefer hinab, doch du wendest dich der Tür zu und öffnest sie. Vor dir liegt die Eingangshalle des Turms. Direkt gegenüber, knapp 10 Meter entfernt, befindet sich das große Eingangstor. Wenn Ereignis \getEvent{SpiderAttacks} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpiderAfterDescent}]. Wenn das Ereignis \getEvent{ikilledthedamnspiderMarker} bereits eingetreten ist, gehe zu [\ref{iKnowAboutTheSpiderBecauseIKilledItAfterDescent}].
+Wenn beides nicht zutrifft, gehe zu [\ref{iHaveNoIdeaAboutTheSpiderAfterDescent}].
+
+\block{iHaveNoIdeaAboutTheSpiderAfterDescent}{Ich eile zum Tor}
+
+Mit eiligen Schritten durchquerst du den Raum, um zum Tor zu gelangen. Plötzlich hörst du über dir ein lautes Knacken und das Rasseln einer Metallkette.
+Das Geräusch lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hängt sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
+
+\monsterSpider{26}{poisonedAndDying}
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspiderAfterDescent}].
+Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+
+\block{iKnowAboutTheSpiderAfterDescent}{Mein Spinnensinn warnt mich}
+
+Natürlich hast du die riesige Spinne noch nicht vergessen. Doch du kannst kein Zeichen des riesigen Monsters an der spinnwebenverhangenen Decke erkennen. Vorsichtig versuchst du am Rand des Raums entlang zu schleichen, um einer zweiten Konfrontation aus dem Weg zu gehen. Wirf eine Schleichenprobe mit DC 16 (oder DC 19, wenn Ereignis \getEvent{iGotTheElf} eingetreten ist). Wenn du erfolgreich bist, gehe zu [\ref{stealthToTheMainDoorAfterDescent}].
+Wenn du es nicht schaffst, gehe zu [\ref{theSpiderKnowsWhereIAmAfterDescent}].
+
+\block{iKnowAboutTheSpiderBecauseIKilledItAfterDescent}{Alle Beine zum Himmel}
+
+Vor dir liegt der monströse Kadaver der Wolfsspinne, deren Leben du so grausam beendet hast. Allerdings ist das keine Situation für Mitleid, sie hätte dich mit Sicherheit ohne Zögern gefressen, wenn du ihr die Chance gegeben hättest. Zumindest musst du dir jetzt keine Gedanken mehr um das Untier machen.
+
+Du gehst ungehindert zum geschlossenen Tor und ziehst mit aller Kraft. Zentimeter um Zentimeter öffnet sich der Weg in die Freiheit. Als der Spalt groß genug ist, um bequem hindurch zu schlüpfen, verlässt du den Turm.
+
+Gehe zu [\ref{longRoadHomeAfterDescent}].
+
+\block{ikilledthedamnspiderAfterDescent}{Ab jetzt spinnenfreie Zone}
+
+Du lieferst dir den Kampf deines Lebens mit der Spinne. Du weichst Biss um Biss der Kreatur aus, doch langsam gewinnt die Spinne die Oberhand. Plötzlich erkennst du einen unachtsamen Moment, den du sofort ausnutzt. Du triffst die Spinne schwer und sie taumelt wie benommen zurück. Die haarigen Beine zittern, als sie versucht vor dir zurückzuweichen, doch ihre Kraft reicht nicht mehr aus um die Decke emporzusteigen. Mit einem letzten Kreischen sackt der schwere Leib auf den Boden und die Beine werden angezogen. Dann Ruhe und Regungslosigkeit. Du hast die Spinne getötet.
+
+Wenn Ereignis \getEvent{iGotTheElf} eingetreten ist, gehe zu \goto{leavingTheTowerNowWithElf}. Ansonsten gehe zu \goto{leavingTheTowerNow}
+
+\block{leavingTheTowerNow}{Ich sollte endlich verschwinden}
+
+Du wartest nicht, um zu sehen, was der Turm noch für dich bereit hält. Du gehst zum geschlossenen Tor und ziehst mit aller Kraft. Zentimeter um Zentimeter öffnet sich der Weg in die Freiheit. Als der Spalt groß genug ist, um bequem hindurch zu schlüpfen, verlässt du den Turm.
+
+Gehe zu [\ref{longRoadHomeAfterDescent}].
+
+\block{leavingTheTowerNowWithElf}{Wir sollten endlich verschwinden}
+
+Du wartest nicht, um zu sehen, was der Turm noch für dich bereit hält. Du gehst zum geschlossenen Tor und ziehst mit aller Kraft. Zentimeter um Zentimeter öffnet sich der Weg in die Freiheit, bis die Tür weit genug geöffnet ist. Du nimmst die Elfe wieder auf deine Schulter und trägst sie aus dem Turm in die Freiheit.
+
+Gehe zu [\ref{longRoadHomeAfterDescent}].
+
+\block{stealthToTheMainDoorAfterDescent}{Ich berühre den Boden nichteinmal}
+
+Behutsam bewegst du dich Zentimeter um Zentimeter zur Tür, die Decke des Raums immer im Blick. Dabei übersiehst du fast einen kleinen Kieselstein, kannst aber gerade noch rechtzeitig anhalten. Nervös wandert dein Blick zu den Spinnennetzen, doch du kannst keinerlei Bewegung erkennen.
+Du setzt deinen Weg fort und bist wenig später am Tor angekommen.
+
+Um die Tür zu öffnen wirst du kräftig ziehen müssen. Dir ist klar, dass das unweigerlich Geräusche machen wird.
+Wenn Ereignis \getEvent{iGotTheElf} eingetreten ist, gehe zu \goto{openDoorWithElf}. Ansonsten
+wirf eine Athletikprobe mit DC 14. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpiderEvenWithStealth}].
+
+\block{openDoorWithElf}{Erschütternde Nachrichten}
+%TODO
+Du erkennst sofort, dass es wenig Sinn macht die Tür mit Gewalt aufzuzerren. Da du die Elfe bei dir hast, wirst du niemals rechtzeitig die Tür geöffnet haben und mit ihr entkommen, bevor sich die Spinne auf dich stürzt. Nein, das wäre wie ein Geschenk für diese Bestie und du hast nicht vor jetzt aufzugeben!
+
+Vorsichtig lässt du die Elfe von deiner Schulter auf den Boden sinken und machst dich kampfbereit. Es ist schwer abzuschätzen, wo sich die Bestie in diesem riesigen Netz befindet, doch du versuchst dein Glück und schleichst einige Meter durch den Raum, bis zur nächsten Wand. Du hebst einen der kleinen Steine auf und wirfst ihn gegen die Tür. Sofort danach presst du dich dicht an die Wand!
+
+Du hörst ein Rascheln im Netz und kurz darauf trifft der schwere Leib des Untiers auf dem harten Boden auf. Dein Plan geht auf, der Hinterleib des Untiers ist dir zugewandt und du hast den ersten Angriff!
+
+\textit{Du darfst zuerst angreifen und hast Vorteil auf deinen Angriffswurf. Danach beginnt der Kampf, wobei du jede Runde beginnst. Es muss nicht auf Initiative gewürfelt werden.}
+
+\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspiderAfterDescent}].
+\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+
+\block{theSpiderKnowsWhereIAmAfterDescent}{Erschütternde Nachrichten}
+
+Behutsam bewegst du dich Zentimeter um Zentimeter zur Tür, die Decke des Raums immer im Blick. Dabei übersiehst du leider einen kleinen Kieselstein, auf den du trittst. Das entstehende Schleifgeräusch ist alles andere als laut. Trotzdem sackt dir für einen Moment das Herz zusammen, als du Bewegung im Spinnennetz erkennst. Du wurdest entdeckt!
+
+Wenn Ereignis \getEvent{iGotTheElf} eingetreten ist, gehe zu \goto{haveToFightSpiderBecauseElf}. Ansonsten gehe zu [\ref{sprintToTheMainDoor}], wenn du zum Tor rennen willst, oder zu [\ref{comeAtMeSpiderling}], wenn du dich dem Kampf stellen willst!
+
+\block{haveToFightSpiderBecauseElf}{Nur über deinen Kadaver}
+
+Du erkennst sofort, dass es mit der Elfe keinen Sinn macht zur Tür zu rennen und dem Biest den Rücken zuzuwenden. Nein, das wäre wie ein Geschenk für diese Bestie und du hast nicht vor jetzt aufzugeben!
+
+Schnell lässt du die Elfe von deiner Schulter auf den Boden sinken und machst dich kampfbereit. In diesem Augenblick trifft der schwere Leib des Untiers auf dem harten Boden auf. Mit erhobenen Greifarmen stürmt es kreischend auf dich zu!
+
+\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
+
+Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspiderAfterDescent}].
+\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+
+\block{longRoadHomeAfterDescent}{Ich rieche frische Luft}
+
+Dein Herz macht einen Freudensprung, als dir die feuchte Nachtluft ins Gesicht schlägt. Du bist wieder in Freiheit! Es besteht kein Zweifel, das war ein echtes Abenteuer und du warst mehr als einmal kurz davor dein Leben zu verlieren. Nachdem du ein paar Meter gelaufen bist, siehst du dich noch einmal um. Noch immer ragt der Turm bedrohlich in den Himmel, doch du wirst ihn sicher nicht mehr betreten.
+
+Wenn Ereignis \getEvent{iGotTheElf} eingetreten ist, gehe zu \goto{theEndWithElf}. Ansonsten gehe gehe zu [\ref{theEndAlone}].
+
+\block{theEndAlone}{Heimweg nach Greifenheim}
+
+Vor dir liegt ein langer und beschwerlicher Fußmarsch zurück nach Greifenheim. Doch angetrieben vom Gedanken an ein gemütliches Bett und eine warme Mahlzeit machst du dich auf den Weg. Du hast dir Ruhe und Erholung verdient. Und sicherlich wirst du mit der Geschichte deines Abenteuers das ein oder andere Freigetränk in den Gasthäusern erwerben können. Ganz zu schweigen davon, was du vielleicht noch bei den Händlern verdienen könntest, wenn du deine Beute verkaufst. Doch das sind Aufgaben für einen anderen Tag. Du gehst nach Hause.
+
+\textbf{Ende.}
+
+\block{theEndWithElf}{Ich habe es geschafft}
+
+Erschöpft schleppst du dich zu einem nahen Baum und lehnst die Elfe behutsam gegen den Stamm. Du setzt dich neben sie und atmest kurz tief durch, bevor du sie beobachtest. Ihr Brustkorb hebt und senkt sich und du hast das Gefühl, dass ihre Wangen wieder etwas rosiger aussehen. Dem ersten Eindruck nach scheint es ihr gut zu gehen und du seufzst erleichtert.
+
+Etwas erschöpft lehnst du dich auch gegen den Baumstamm. Du hast ein ganzes schönes Abenteuer hinter dir. Auch wenn du keine zweihundert Meter vom Turm entfernt bist, hast du das seltsame Gefühl, dass du hier sicher bist. Du versuchst noch einen Moment wach zu bleiben und kämpfst gegen den Schlaf an, doch keine zwei Minuten später sinken deine Augenlieder schwer nach unten.
+Gehe zu \goto{awakenOutsideTower}.
