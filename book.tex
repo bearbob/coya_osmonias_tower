@@ -66,7 +66,7 @@
 
 \newcommand{\goto}[1]{[\ref{#1}]}
 
-% Start document
+%----------------------------- Start document -----------------------------
 \begin{document}
 \fontfamily{ppl}\selectfont % Set text font
 
@@ -90,7 +90,6 @@
 \newpage
 
 \input{content/bestarium}
-
 \input{content/intro}
 
 \input{content/content_forest}
@@ -100,8 +99,18 @@
 
 \onecolumn
 \input{content/appendix}
-
+%\input{content/example_character}
 %add the default character sheet
+\newpage
+\begin{figure}
+  \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{content/silvana-rendered_01.pdf}}%
+\end{figure}
+\begin{figure}
+  \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{content/silvana-rendered_02.pdf}}%
+\end{figure}
+\begin{figure}
+  \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{content/silvana-rendered_03.pdf}}%
+\end{figure}
 %\includepdf[pages=1-3]{content/silvana-rendered.pdf}
 
 % End document
