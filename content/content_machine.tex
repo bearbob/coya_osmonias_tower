@@ -75,10 +75,7 @@ Wenn Ereignis \getEvent{deceivedTheWarlock} eingetreten ist, gehe zu [\ref{idont
 
 Es reicht, das Schauspiel endet jetzt! Ruckartig drehst du dich um und gehst auf den Hexer los. Der Ausdruck der Überraschung in seinen Augen weicht schnell dem Schock, als er realisiert, dass er keine Macht über dich hat!
 
-\monsterWarlock
-
-Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInTheHighTower}].
-Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+\monsterWarlock{ikilledthewarlockInTheHighTower}{anEvilWarlockKilledMe}
 
 \block{ikilledthewarlockInTheHighTower}{Nur einer von uns wird leben}
 
@@ -257,10 +254,7 @@ Du öffnest die Tür und siehst sofort den alten Mann in der dunklen Robe vor di
 
 Als er sich umsieht, realisiert er erschrocken, dass du nicht die Person bist, mit der er gerechnet hatte. Du spürst sofort, dass ein Kampf unvermeidbar ist und nutzt diese Überraschung, um zuerst anzugreifen!
 
-\monsterWarlock
-
-Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInHisRoom}].
-Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+\monsterWarlock{ikilledthewarlockInHisRoom}{anEvilWarlockKilledMe}
 
 \block{ikilledthewarlockInHisRoom}{Ich sterbe hier nicht}
 
@@ -445,12 +439,9 @@ Ansonsten gehe zu \goto{warlockSupriseAttack}.
 
 Offensichtlich ist nicht unbemerkt geblieben, dass du die Tür eingerammt hast. Die südliche Tür ist offen und ein blasser, dünner Mann in schwarzer Robe blickt dich verbissen an. Wenn du jemals jemanden gesehen hast, auf den die Beschreibung ``Hexer'' gepasst hat, dann muss es dieser alte Mann sein. Bevor du reagieren kannst, hebt er seinen Arm, in der Hand einen Zauberstab, und wirft dir mit einem Schrei ein magisches Geschoss entgegen!
 
-\textit{Der Hexer hat dich überrascht und greift zuerst mit einem Eldritch Blast an. Er hat dabei Vorteil. Anschließend wird wie gewohnt die Initiative berechnet.}
+\textit{Der Hexer hat dich überrascht und greift zuerst mit einem Eldritch Blast an. Du hast Nachteil auf deinen Konstitutionswurf.}
 
-\monsterWarlock
-
-Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInHisRoom}].
-Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+\monsterWarlock{ikilledthewarlockInHisRoom}{anEvilWarlockKilledMe}
 
 \block{goToLevel3Alone}{Ich gehe weiter}
 
@@ -604,10 +595,7 @@ Bevor du weiter darüber nachdenken kannst, was du jetzt tun solltest, hörst du
 
 Es ist offensichtlich, dass der Hexer nicht einverstanden ist mit dem was du getan hast. Mit wackligen Schritten rennt er auf dich zu und hebt dabei seinen Arm. In seiner Hand hält er einen kleinen Holzstab, dessen Spitze grün zu leuchten beginnt. Doch du lässt dich nicht einfach überraschen, du bist längst aufgestanden und zum Kampf bereit!
 
-\monsterWarlock
-
-Wenn du den Kampf gewinnst, gehe zu [\ref{ikilledthewarlockInTheHighTowerAfterHeSuprisedMe}].
-Wenn du verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+\monsterWarlock{ikilledthewarlockInTheHighTowerAfterHeSuprisedMe}{anEvilWarlockKilledMe}
 
 \block{ikilledthewarlockInTheHighTowerAfterHeSuprisedMe}{Ich lasse mich nicht überraschen}
 
@@ -681,10 +669,7 @@ Wenn beides nicht zutrifft, gehe zu [\ref{iHaveNoIdeaAboutTheSpiderAfterDescent}
 Mit eiligen Schritten durchquerst du den Raum, um zum Tor zu gelangen. Plötzlich hörst du über dir ein lautes Knacken und das Rasseln einer Metallkette.
 Das Geräusch lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hängt sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
 
-\monsterSpider{26}{poisonedAndDying}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspiderAfterDescent}].
-Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{ikilledthedamnspiderAfterDescent}{poisonedAndDying}{theSpiderKilledMe}
 
 \block{iKnowAboutTheSpiderAfterDescent}{Mein Spinnensinn warnt mich}
 
@@ -734,12 +719,9 @@ Vorsichtig lässt du die Elfe von deiner Schulter auf den Boden sinken und machs
 
 Du hörst ein Rascheln im Netz und kurz darauf trifft der schwere Leib des Untiers auf dem harten Boden auf. Dein Plan geht auf, der Hinterleib des Untiers ist dir zugewandt und du hast den ersten Angriff!
 
-\textit{Du darfst zuerst angreifen und hast Vorteil auf deinen Angriffswurf. Danach beginnt der Kampf, wobei du jede Runde beginnst. Es muss nicht auf Initiative gewürfelt werden.}
+\textit{Du hast Vorteil auf deinen Geschicklichkeitswurf.}
 
-\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspiderAfterDescent}].
-\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{ikilledthedamnspiderAfterDescent}{poisonedAndDying}{theSpiderKilledMe}
 
 \block{theSpiderKnowsWhereIAmAfterDescent}{Erschütternde Nachrichten}
 
@@ -753,10 +735,7 @@ Du erkennst sofort, dass es mit der Elfe keinen Sinn macht zur Tür zu rennen un
 
 Schnell lässt du die Elfe von deiner Schulter auf den Boden sinken und machst dich kampfbereit. In diesem Augenblick trifft der schwere Leib des Untiers auf dem harten Boden auf. Mit erhobenen Greifarmen stürmt es kreischend auf dich zu!
 
-\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspiderAfterDescent}].
-\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{ikilledthedamnspiderAfterDescent}{poisonedAndDying}{theSpiderKilledMe}
 
 \block{longRoadHomeAfterDescent}{Ich rieche frische Luft}
 

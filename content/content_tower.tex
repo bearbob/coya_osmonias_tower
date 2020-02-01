@@ -233,10 +233,7 @@ Das macht keinen Sinn und du hast im Laufe der Jahre gelernt Situationen zu verm
 
 Markiere Ereignis \getEvent{SpiderAttacks}. \\Das Rasseln der Kette lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hing sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
 
-\monsterSpider{26}{poisonedAndOut}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{diespiderdie}].
-\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{diespiderdie}{poisonedAndOut}{theSpiderKilledMe}
 
 \block{poisonedAndOut}{Ich spüre meine Finger nicht mehr}
 
@@ -276,7 +273,7 @@ Während du schwer atmest siehst du dich im Raum um. Nach einigen Sekunden ist k
 Markiere Ereignis \getEvent{ikilledthedamnspiderMarker}.
 
 Wenn du den Turm verlassen und nach Hause gehen möchtest, gehe zu [\ref{spidersmakemequit}].
-\\Wenn du durch die Tür gehen willst, gehe zu [\ref{TheCrossroom}].
+Wenn du durch die Tür gehen willst, gehe zu [\ref{TheCrossroom}].
 
 \block{spidersmakemequit}{Ich bin ziemlich kaputt}
 
@@ -435,10 +432,7 @@ Kurz bevor du dem Schurken den Knochen in die Brust rammen kannst, stolpert dies
 
 Der Hexer mag deinem Angriff entgangen sein, doch das heißt nicht, dass du verloren hast! Sofort setzt du zum nächsten Angriff an. Leider ist dein Gegner nun gewarnt. In der kleinen Zelle kann keiner von euch beiden wegrennen und sein wütender Blick verrät dir, dass das auch ihm klar ist. Mit der freien Hand zieht er einen Dolch. Nur einer von euch beiden wird diesen Raum lebend verlassen.
 
-\monsterWarlock
-
-Wenn du den Hexer umbringen kannst, gehe zu [\ref{dieWarlockDie}].
-Wenn du den Kampf verlierst, gehe zu [\ref{anEvilWarlockKilledMe}].
+\monsterWarlock{dieWarlockDie}{anEvilWarlockKilledMe}
 
 \block{anEvilWarlockKilledMe}{Ich habe keine Chance}
 
@@ -465,10 +459,7 @@ Wenn beides nicht zutrifft, gehe zu [\ref{iHaveNoIdeaAboutTheSpider}].
 Mit eiligen Schritten durchquerst du den Raum, um zum Tor zu gelangen. Plötzlich hörst du über dir ein lautes Knacken und das Rasseln einer Metallkette.
 Das Geräusch lässt dich nach oben blicken. Dein Magen zieht sich zusammen als du erkennst, dass dort gar kein Kronleuchter hängt sondern eine \textbf{riesige Wolfspinne}, die sich gerade zu dir herablässt! Ein Kampf ist unvermeidbar...
 
-\monsterSpider{26}{poisonedAndDying}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
-\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{ikilledthedamnspider}{poisonedAndDying}{theSpiderKilledMe}
 
 \block{iKnowAboutTheSpider}{Mein Spinnensinn meldet sich}
 
@@ -522,10 +513,7 @@ Gehe zu [\ref{theSpiderAgain}].
 
 Noch bevor du dich umdrehen kannst hörst du die Greifarme des Ungetüms hinter dir zuschnappen.
 Unabhängig von der Iniative darf die Spinne zuerst angreifen und hat beim ersten Angriff Vorteil, da sie dir in den Rücken fällt.
-\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
-\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{ikilledthedamnspider}{poisonedAndDying}{theSpiderKilledMe}
 
 \block{escapeTroughTheMainDoor}{Das muss reichen}
 
@@ -539,10 +527,7 @@ Du erkennst sofort, dass es keinen Sinn macht zur Tür zu rennen und dem Biest d
 
 Einen Augenblick später trifft der schwere Leib des Untiers auf dem harten Boden auf. Mit erhobenen Greifarmen stürmt es kreischend auf dich zu!
 
-\monsterSpider{letzte Lebenspunkte +2 (max. 26)}{poisonedAndDying}
-
-Wenn du die Spinne getötet hast, gehe zu [\ref{ikilledthedamnspider}].
-\\Wenn die Spinne dich tötet, gehe zu [\ref{theSpiderKilledMe}].
+\monsterSpider{ikilledthedamnspider}{poisonedAndDying}{theSpiderKilledMe}
 
 \block{poisonedAndDying}{Sechs Arme zu viel}
 

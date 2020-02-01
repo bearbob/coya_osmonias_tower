@@ -7,107 +7,32 @@
   \normalsize
 }
 
-\newcommand{\monsterSpider}[2]{
+\newcommand{\monsterSpider}[3]{
   \setMonsterText
   \begin{monsterbox}{\normalsize Riesige Wolfsspinne}
     \begin{hangingpar}
-      \textit{Initiative +3}
+      \textit{Auch wenn Wolfsspinnen kleiner als die großen Netzspinnen sind, ist ihre Länge von fast 2 Metern furchteinflößend! Sie nutzen ihre Netze nur als Versteck und jagen ihre Beute selbst.}
     \end{hangingpar}
     \dndline%
-    \basics[%
-    armorclass = 14,
-    hitpoints  = #1,
-    speed      = {30 ft.}
-    ]
-    \dndline\stats[
-      STR = \stat{14}, % This stat command will autocomplete the modifier for you
-      DEX = \stat{16},
-      CON = \stat{12},
-      INT = \stat{2},
-      WIS = \stat{11},
-      CHA = \stat{4},
-    ]
-    \dndline%
-    \monsterattack[
-      name=Biss,
-      type={melee},
-      mod=+3,%mod=+0,
-      %reach=5,
-      %range=20/60,
-      %targets=one target,
-      dmg=\dice{1d8+3},
-      dmgtype=piercing,
-      %plusdmg=,
-      %plusdmgtype=,
-      %ordmg=,
-      %ordmgwhen=,
-      %extra=,
-    ]
-    \dndline
-    \begin{monsteraction}[Giftig]
-      Die Angriffe der Spinne sind giftig. Wirf jedes Mal einen Konstitutionsrettungswurf mit
-      DC 14, wenn du getroffen wirst. Bist du erfolgreich, wird der Kampf fortgesetzt.
-      Wenn nicht, gehe zu [\ref{#2}].
-    \end{monsteraction}
+    Die Spinne versucht immer wieder dich mit ihren Greifarmen zu packen und zu beißen!
+    Wirf je eine Probe auf Stärke, Geschicklichkeit und Konstitution mit DC 16.
+    Wenn du mindestens zwei der drei Proben bestehst, gehe zu \goto{#1}.
+    Wenn du nur eine Probe bestehst, gehe zu \goto{#2} und wenn du keine Probe bestehst, gehe zu \goto{#3}.
   \end{monsterbox}
   \resetMonsterText
 }
 
-\newcommand{\monsterWarlock}{
+\newcommand{\monsterWarlock}[2]{
   \setMonsterText
   \begin{monsterbox}{\normalsize Der Hexer}
     \begin{hangingpar}
-      \textit{Initiative +1}
+      \textit{Der alte Hexer hat einen irren Blick - er ist niemand, mit dem man reden kann. Du bist dir sicher, dass er mit aller Kraft versuchen wird dich umzubringen!}
     \end{hangingpar}
     \dndline%
-    \basics[%
-    armorclass = 12,
-    hitpoints  = 29,
-    speed      = {30 ft.}
-    ]
-    \dndline\stats[
-      STR = \stat{9}, % This stat command will autocomplete the modifier for you
-      DEX = \stat{9},
-      CON = \stat{11},
-      INT = \stat{14},
-      WIS = \stat{12},
-      CHA = \stat{17},
-    ]
-    \dndline%
-    \monsterattack[
-      name=Dolch,
-      type={melee},
-      mod=+4,%mod=+0,
-      %reach=5,
-      %range=20/60,
-      %targets=one target,
-      dmg=\dice{1d6},
-      dmgtype=piercing,
-      %plusdmg=,
-      %plusdmgtype=,
-      %ordmg=,
-      %ordmgwhen=,
-      %extra=,
-    ]
-    \monsterattack[
-      name=Eldritch Blast,
-      type={ranged},
-      mod=+6,%mod=+0,
-      %reach=5,
-      %range=20/60,
-      %targets=one target,
-      dmg=\dice{2d10},
-      dmgtype=necrotic,
-      %plusdmg=,
-      %plusdmgtype=,
-      %ordmg=,
-      %ordmgwhen=,
-      %extra=,
-    ]
-    \dndline
-    \begin{monsteraction}[Unentschlossen]
-      Der Hexer wirft zu Beginn seiner Runde 1d6, um zu entscheiden welchen Angriff er benutzt. Bei einer ungeraden Ziffer greift er mit seinem Dolch an, bei einer geraden Ziffer zaubert er.
-    \end{monsteraction}
+    Immer wieder wirft der Hexer Blitze aus grünem Licht nach dir und zückt seinen Dolch, wenn du ihm zu nahe kommst.
+    Wirf je eine Probe auf Stärke (DC 14), Geschicklichkeit (DC 16) und Konstitution (DC 15).
+    Wenn du mindestens zwei der drei Proben bestehst, gehe zu \goto{#1}.
+    Wenn du nur eine Probe oder weniger bestehst, gehe zu \goto{#2}.
   \end{monsterbox}
   \resetMonsterText
 }
