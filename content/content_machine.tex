@@ -2,10 +2,12 @@
 %im obersten Zimmer des Turms verbirgt sich ein Maschinengott, der dem Hexer Befehle erteilt
 %die maschine ist eine magische kriegsmaschine und benötigt seelenenergie um wieder zu funktionieren
 
-
 \block{theUpperLevelWithWarlock}{Die oberen Stockwerke}
 
-Irgendwann kommt ihr an einer weiteren Tür an, vor der ihr stehen bleibt. Dein neuer Meister wühlt in seinem Umhang herum und zückt schließlich einen kleinen Schlüssel, mit dem er die Tür öffnet. Du hörst, wie sich ein schwerer Riegel hinter dem Holz bewegt.
+Irgendwann kommt ihr an einer weiteren Tür an, vor der ihr stehen bleibt. Dein neuer Meister wühlt in seinem Umhang herum und zückt schließlich einen kleinen Schlüssel, den er in das Schloss der Tür steckt. Du hörst, wie sich ein schwerer Riegel hinter dem Holz bewegt und die Tür sich mit überraschender Leichtigkeit öffnet.
+Gehe zu \goto{roomWithPillars}.
+
+\block{roomWithPillars}{Ich sehe Säulen}
 
 Der nachfolgende Raum ist kreisrund und muss ungefähr so groß sein wie die Eingangshalle. Allerdings ist er nicht leer, sondern gefüllt mit knapp einem Dutzend gläsernern Säulen. Im Inneren dieser Säulen wabert eine vioelette Flüssigkeit, die den Raum in ein bedrohliches Licht taucht. Als der Hexer den Raum betritt, flammen an den Wänden Fackeln auf und erhellen die Szenerie. Du kannst nun deutlich erkennen, dass sich in der violetten Flüssigkeit humanoide Formen befinden, die in ihr zu schweben scheinen.
 
@@ -15,7 +17,7 @@ Wenn Ereignis \getEvent{ihaveseentheirfaces} eingetreten ist, gehe zu [\ref{iKno
 
 Entschlossen geht der Hexer durch den Raum und du folgst ihm. Als du einigen der Säulen näher kommst, erkennst du, dass die humanoiden Formen, die du zuvor gesehen hast, Männer mittleren Alters mit breiten Schultern sind. Es ist schwer mehr Details zu erkennen, aber du glaubst, dass die Männer sich alle sehr stark ähneln. Beinahe als wären sie Brüder. Allerdings glaubst du nicht, dass du eine große Familie vor dir hast. Vielmehr muss hier Magie im Spiel sein.
 
-Auf der anderen Seitedes Raums befindet sich ein Fenster und daneben eine weitere Treppe, die höher führt. Ihr folgt dieser Treppe.
+Auf der anderen Seite des Raums befindet sich ein Fenster und daneben eine weitere Treppe, die höher führt. Ihr folgt dieser Treppe.
 Gehe zu [\ref{togetherToLevel2}].
 
 \block{iKnowTheseFaces}{Ich kenne diese Gesichter}
@@ -49,7 +51,15 @@ Gehe zu [\ref{togetherToLevel2}].
 
 Du folgst den Treppenstufen nach oben. Wenig später kommst du zu einer kleinen Tür, die deinen Weg blockiert. Ein kurzer Versuch am Türgriff zeigt, dass die Tür verschlossen ist.
 
-Wenn du \getItem{warlocksKey} besitzt, kannst du zu [\ref{unlockTheDoorWithWarlocksKey}] gehen. Ansonsten musst du umkehren. Gehe zu [\ref{goToCrossroom}].
+Wenn du \getItem{warlocksKey} besitzt, kannst du zu [\ref{unlockTheDoorWithWarlocksKey}] gehen.
+Ansonsten kannst du vor der Tür warten und zu \goto{campingInFrontOfDoor} gehen, oder du musst umkehren und zu [\ref{goToCrossroom}] gehen.
+
+\block{campingInFrontOfDoor}{Ich warte ab}
+
+Du beschließt vor der Tür zu warten. Nach einigen Minuten setzt du dich auf die Treppenstufen und starrst die Wand an. Als dein Blick über die großen Steine wandert, denkst du darüber nach, wie lange dieser Turm hier wohl schon steht. Nach weiteren Minuten legst du vorsichtig dein Ohr an die Tür, doch du kannst nichts hören.
+
+Wenn du weiter warten möchtest, gehe zu \goto{waitingLonger}.
+Wenn du nicht noch mehr Zeit verschwenden und die Treppe wieder hinabgehen willst, gehe zu \goto{goToCrossroom}.
 
 \block{togetherToLevel2}{Höher hinauf}
 
@@ -60,7 +70,7 @@ Euer Weg führt euch die Treppe hinauf in die nächste Etage des Turms. Es geht 
 Ihr befindet euch nun im obersten Zimmer des Turms. Keine weitere Treppe, keine Türen, keine Fenster. Nur ein großer, runder Raum, der ungefähr 10 Meter im Durchmesser misst. An der Außenwand sind in kurzem Abstand hunderte schwarzer Kerzen aufgereiht, deren kleine Flammen sich zuckend hin und her bewegen.
 Doch die größte Lichtquelle befindet sich mitten im Raum. Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich in Brusthöhe ein faustgroßer Edelstein. Er ist in eine kleine Metallkralle gefasst, von der Metallfäden verschiedenster Farbe ausgehen. Du hast selten größere Juwelen gesehen, doch besonders das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
 
-Wirf einen Charismarettungswurf mit DC 16 oder mit DC 15, wenn du \getItem{itemBurialRing} besitzt. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegem}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGem}].
+Wirf einen Charismarettungswurf mit DC 16. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegem}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGem}].
 
 \block{resistingTheGem}{Ich kann mich abwenden}
 
@@ -81,8 +91,7 @@ Es reicht, das Schauspiel endet jetzt! Ruckartig drehst du dich um und gehst auf
 
 Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst kehrt sich das Weiße in seinen Augen nach oben und er sinkt auf die Knie. Noch bevor sein Gesicht auf dem harten Steinboden aufschlägt, hört er auf zu zucken. Reglos bleibt er liegen. Er ist tot.
 
-Markiere Ereignis \getEvent{theWarlockDied}.
-
+Markiere das Ereignis \getEvent{theWarlockDied}.
 Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockInTheTower}].
 Wenn du das Podest mit dem Edelstein untersuchen willst, gehe zu [\ref{inspectTheGem}].
 Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
@@ -106,6 +115,134 @@ Du kannst nicht erkennen, wo sie verwundet ist, die Teile ihres blauen Seidengew
 
 Zwischen euch liegen mehr als zwei Körperlängen, sodass du keine Chance hast, sie zu erreichen. Wenn du dir das Podest genauer ansehen willst, gehe zu \goto{inspectTheGem}.
 Wenn du den Raum verlassen willst, gehe zu \goto{downToLayer2}.
+
+\block{waitingLonger}{Ich warte weiter ab}
+
+Du weißt nicht, wie lange du schon auf der Treppe sitzt, aber es erscheint dir noch nicht sinnvoll, jetzt zu gehen. Also harrst du weiter aus. Und weiter. Für einen Moment merkst du, wie deine Gedanken abschweifen und du an den Abend in Greifenheim denken musst, bevor die ganzen Ereignisse ihren Lauf nahmen, die dich hier her geführt haben.
+
+Ein leichter Schmerz im Nacken lässt dich hochschrecken. Dein Kopf ist nach vorne gekippt, als du eingeschlafen bist. Du atmest tief ein und aus und reibst dir die Augen. Plötzlich hörst du das knackende Geräusch des Türschlosses und springst hoch. Die Tür wird aufgezogen und auf der anderen Seite starrt dich ein bleiches, eingefallenes Gesicht erstaunt an. Alles an dem Mann schreit nach ``Hexer''. Die knochigen Arme, die schwarze, lange Robe, die trotzdem nicht die jämmerliche Statur verbergen kann, die eingefallene, blasse Haut und der grünlich leuchtende Zauberstab in seiner Hand.
+
+Der Moment der Überraschung ist eindeutig auf deiner Seite, der Hexer ist mit der Situation völlig überfordert.
+Wenn du mit ihm reden willst, gehe zu \goto{talkingWithWarlock}.
+Wenn du ihn die Treppe hinabreißen willst, gehe zu \goto{pullinWarlock}.
+Wenn du ihn angreifen willst, gehe zu \goto{attackingWarlock}.
+Wenn du wegrennen willst, gehe zu \goto{escapingWarlock}.
+
+\block{attackingWarlock}{Ich greife ihn an}
+
+Du nutzt deinen Vorteil und springst die letzten beiden Stufen hinauf, um den Hexer anzugreifen bevor er die Chance hat das gleiche mit dir zu machen.
+
+\textit{Durch den Überraschungsmoment kannst du zuerst angreifen. Du hast Vorteil auf deinen Geschicklichkeitswurf.}
+
+\monsterWarlock{ikilledthewarlockOnTheStairs}{anEvilWarlockKilledMe}
+
+\block{ikilledthewarlockOnTheStairs}{Einer muss fallen}
+
+Der Hexer ist dem Tode geweiht, daran besteht für keinen von euch beiden ein Zweifel. Ein atemloser Schrei versucht sich aus seinem Mund zu quälen, doch er bringt nicht mehr als ein Keuchen hervor. Während du zusiehst, kehrt sich das Weiße in seinen Augen nach oben und er fällt vorwärts. Du machst einen Schritt zur Seite und lässt ihn an dir vorbei die Stufen hinab fallen.
+Sein Körper fällt über einige Stufen hinweg und lautes Knacken sagt dir, dass mehrere seiner Knochen gerade gebrochen sind. Reglos bleibt er einige Meter unter dir liegen. Er ist tot.
+
+Markiere Ereignis \getEvent{theWarlockDied}.
+Wenn du in den Raum gehen willst, gehe zu \goto{roomWithPillarsAlone}.
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockOnStairs}].
+
+\block{pullinWarlock}{Ich packe zu}
+
+Du verschwendest keinen Herzschlag! So schnell du kannst packst du die dunkle Robe des Mannes und ziehst ihn die Treppe hinab. Du hörst ihn überrascht schreien und spürst, wie sich seine knochigen Finger an dir festkrallen.
+
+Wirf eine Akrobatikprobe mit DC 13. Wenn du erfolgreich bist, gehe zu \goto{surpisePullinWarlock}.
+Wenn du es nicht schaffst, gehe zu \goto{bothgetpulled}.
+
+\block{bothgetpulled}{Wir fallen}
+
+Der Hexer hat keine Chance seinem Schicksal zu entgehen. Als du nach ihm greifst und ihn die Treppe hinabreißt, finden seine Hände leider für einen kurzen Moment Halt an deinem Arm, bevor ihn die Schwerkraft hinabreißt. Der Schwung, den er hatte, reicht, um dich aus dem Gleichgewicht zu bringen. Du kämpfst dagegen an, doch schlussendlich zieht es auch dich nur wenige Herzschläge später hinab in die Tiefe!
+
+Als der Hexer auf der ersten Stufe aufschlägt, gibt er noch einen grellen, schmerzerfüllten Schrei von sich. Beim zweiten, tieferen Aufprall kannst du schon keine Laute mehr hören.
+Mit einem dumpfen Poltern wird sein Leib noch weitere Stufen hinabgerissen, Meter um Meter.
+Reglos und mit verdrehten Gliedern bleibt er auf dem kalten Stein liegen. Du schaffst es zum Glück den ersten Aufprall besser abzufedern. Trotzdem brichst du dir den Arm. Dann die Rippen und das linke Schienbein. Dein letzter Aufschlag wäre sicher tödlich, würde nicht der Hexer bereits tot am Boden liegen und deinen Fall bremsen. Stechender Schmerz durchfährt dich, als du auf dem harten Stein aufkommst. Stöhnend schaffst du es dich abzurollen und aufrecht zu setzen.
+
+Wenn du \getItem{GreaterHealingPotion} hast, kannst du zu \goto{healingAfterFalling} gehen.
+Ansonsten gehe zu \goto{myEndAfterFalling}.
+
+\block{myEndAfterFalling}{Ich stehe das nicht durch}
+
+Mit zitternder Hand wischst du dir Blut aus den Mundwinkeln. Jeder Atemzug schmerzt furchtbar und du findest nicht die Kraft um aufzustehen. Vermutlich würden deine gebrochenen Beine sofort nachgeben. Plötzlich musst du husten und würgst hellrotes Blut hervor.
+
+Während du überlegst, wie du aus dieser Situation entkommen kannst, verschwimmt deine Sicht und deine Hand wird schwerer und schwerer. Keuchend drehst du deinen Kopf zu dem traurigen Haufen, der mal der Hexer war. Für ihn ist jede Hoffnung vergebens. So wie es aussieht, musst du ihm leider in Kürze folgen. Deine Brust hebt und senkt sich immer weniger. Ein letztes Zucken geht durch deine Finger, bevor dein Kopf schwer zur Seite sackt. Leider wird der schwarze Turm dein düsteres Grab.
+
+\textit{Ende.}
+
+\block{healingAfterFalling}{Ich stehe das durch}
+
+Mit zitternder Hand greifst du nach dem Heiltrank und betest zu den Göttern, dass er nicht zerbrochen ist. Scheinbar wurdest du erhöhrt, denn die Flasche ist beinahe unbeschädigt. Du versuchst den Schmerz zu ignorieren und die Flasche zu öffnen. Eilig trinkst du den Trank und lehnst dich stöhnend zurück.
+
+Es vergehen einige Minuten, bis dich eine wohlige Wärme erfüllt. Du spürst deinen Herzschlag stärker werden und hörst deine Knochen knacken. Dann überkommt dich eine Welle noch größeren Schmerzes, bevor alles abebbt und du dich wieder besser fühlst. Keuchend drehst du deinen Kopf zu dem traurigen Haufen, der mal der Hexer war. Für ihn ist jede Hoffnung vergebens.
+Markiere Ereignis \getEvent{theWarlockDied}.
+
+Wenn du die Treppe hinauf in den Raum gehen willst, gehe zu \goto{roomWithPillarsAlone}.
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockOnStairs}].
+
+\block{surpisePullinWarlock}{Er fällt}
+
+Der Hexer hat keine Chance. Als du nach ihm greifst und ihn die Treppe hinabreißt, suchen seine Hände verzweifelt nach Halt an dir, doch die Schwerkraft arbeitet gegen ihn - und schnell.
+Als er auf der ersten Stufe aufschlägt, gibt er noch einen grellen, schmerzerfüllten Schrei von sich. Beim zweiten, tieferen Aufprall kannst du schon keine Laute mehr hören.
+Mit einem dumpfen Poltern wird sein Leib noch weitere Stufen hinabgerissen, Meter um Meter.
+Reglos und mit verdrehten Gliedern bleibt er auf dem kalten Stein liegen.
+Für ihn ist jede Hoffnung vergebens.
+Markiere Ereignis \getEvent{theWarlockDied}.
+
+Wenn du die Treppe hinauf in den Raum gehen willst, gehe zu \goto{roomWithPillarsAlone}.
+Wenn du den Hexer durchsuchen willst, gehe zu [\ref{lootTheWarlockOnStairs}].
+
+\block{lootTheWarlockOnStairs}{Ich sollte das behalten}
+
+Du zögerst keine Sekunde und durchsuchst den Toten nach Dingen, die dir helfen könnten.
+Du versuchst dabei zu ignorieren, dass der Sturz einige Spitze Knochen durch die Haut des Hexers gejagt hat und dickes, rotes Blut auf die Treppenstufen läuft.
+Kurze Zeit später kannst du einen Zauberstab \getItem{warlockStaff}, einen geschwungenden Dolch \getItem{warlocksDagger}, einen kleinen Kupferschlüssel \getItem{warlocksKey} und einen goldenen Ring \getItem{goldenWarlockRing} dein Eigen nennen.
+
+Außerdem ist dir aufgefallen, dass der linke Arm des Mannes von seltsamen Tätowierungen übersät ist, die dir wie Runen vorkommen. Viele kleine Narben und Schnitte durchbrechen die Muster, einige scheinen noch recht frisch und gerade erst verheilt zu sein.
+
+Deine Neugier ist geweckt und du blickst die Treppe hinauf zu der Tür, aus der der Hexer kam. Ohne zu zögern läufst du die Stufen wieder hinauf. Gehe zu \goto{roomWithPillarsAlone}.
+
+\block{talkingWithWarlock}{Ich will nur reden}
+
+Aus irgendeinem Grund hälst du es für sinnvoll, ein Gespräch mit dem Mann zu suchen. Als du den Mund öffnest, um etwas zu sagen, reißt er seinen Zauberstab empor.
+Sofort spürst du eine Kraft auf dich einwirken, die deinen Körper gegen deinen Willen bewegen will.
+Du vergisst, was du sagen wolltest und versuchst dich dem Angriff auf deinen Geist mit aller Mühe zu erwehren.
+
+Wirf einen Rettungswurf auf Charisma mit DC 18. Wenn du erfolgreich bist, gehe zu [\ref{youShallNotControlMeInTower}]. Wenn du es nicht schaffst, gehe zu [\ref{yesMasterControlMeInTower}].
+
+\block{youShallNotControlMeInTower}{Ich bleibe mein eigener Herr}
+
+Keine Fremde Macht soll dich kontrollieren! Angestrengt versuchst du den Angriff auf deinen Geist abzuwehren. Wie in Wellen prallt es auf dich ein und versucht Stück für Stück dir die Sinne zu rauben. Du hast das Gefühl tausende Stimmen zu hören, die direkt in deinem Kopf flüstern und dir befehlen einfach aufzugeben. Zuerst verspürst du ein seltsames Kribbeln in den Fingern, dann verschwimmt für einen Moment deine Sicht. Doch du bist nicht bereit aufzugeben! Endlos scheinende Sekunden drängst du zurück, bis du plötzlich Klarheit verspürst. Das Wispern hört auf. Du bist wieder allein in deinem Kopf.
+
+Der Hexer scheint nicht bemerkt zu haben, dass sein Zauber fehlgeschlagen ist.
+Er fängt an höhnisch zu gackern: ``Sieh an, sieh an, ist das Lamm allein zur Schlachtbank gelaufen!''.
+Als er sich umdreht und sagt ``Folge mir.'' überlegst du, ob das deine große Chance ist.
+
+Wenn du so tun willst als hätte der Zauber Erfolg gehabt, gehe zu [\ref{yesMasterControlMeButInTruthYouDontInTower}].
+Wenn du den Hexer von hinten angreifen willst, gehe zu [\ref{surpisePullinWarlock}].
+
+\block{yesMasterControlMeButInTruthYouDontInTower}{Ich täusche ihn}
+
+Du beschließt das Spiel weiter mitzuspielen. Schweigend setzt du einen Fuß vor den anderen und folgst dem Hexer.
+Markiere Ereignis \getEvent{deceivedTheWarlock} und gehe zu \goto{roomWithPillars}.
+
+\block{yesMasterControlMeInTower}{Ich bin nicht mein eigener Herr}
+
+Keine Fremde Macht soll dich kontrollieren! Angestrengt versuchst du den Angriff abzuwehren. Wie in Wellen prallt es auf dich ein und versucht Stück für Stück dir die Sinne zu rauben. Du hast das Gefühl tausende Stimmen zu hören, die direkt in deinem Kopf flüstern und dir befehlen einfach aufzugeben. Zuerst verspürst du ein seltsames Kribbeln in den Fingern, dann verschwimmt für einen Moment deine Sicht. Du versuchst die Stimmen aus deinem Kopf zu verbannen, doch vergebens.
+
+Deine Muskeln entspannen sich. Der Hexer fängt an höhnisch zu gackern: ``Sieh an, sieh an, ist das Lamm allein zur Schlachtbank gelaufen!''.
+Als er sich umdreht und sagt ``Folge mir.'' hast du keine Wahl. Du fühlst dich wie ein Passagier in deinem eigenen Körper, der anfängt sich zu bewegen und dem Mann folgt.
+Gehe zu \goto{roomWithPillars}.
+
+\block{escapingWarlock}{Ich nehme die Beine in die Hand}
+
+Du weißt nicht genau, was du erwartet hast, aber dein Bauchgefühl schreit dich förmlich an, dass du aus dieser Situation entkommen musst. Du willst nichts mit diesem Mann zu tun haben! Eilig drehst du dich um und versuchst die Treppe hinabzurennen. Doch noch bevor du den ersten Schritt machen kannst, hälst du plötzlich inne. Deine Beine gehorchen dir nicht!
+
+Der Hexer fängt an höhnisch zu gackern: ``Sieh an, sieh an, ist das Lamm allein zur Schlachtbank gelaufen!''. Gegen deinen Willen drehst du dich um und starrst in die zufrieden grinsende Fratze des Mannes, der seinen Zauberstab auf Augenhöhe hält. ``Na dann, wenn du es schon nicht erwarten kannst, dann lass uns gehen!''
+
+Er dreht sich ohne ein weiteres Wort wieder um und läuft zurück in den Raum, aus dem er kam. Obwohl du dich mit aller Mühe dagegen wehrst, ergreift eine unsichtbare Macht wieder Besitz von deinem Körper und zwingt dich ihm zu folgen.
+Gehe zu \goto{roomWithPillars}.
 
 \block{inspectTheGem}{Ich sehe mir den Edelstein genauer an}
 
@@ -139,7 +276,7 @@ Gehe zu \goto{deathStranding}.
 
 Du stehst noch immer unter dem Zauber des Hexers, der deinen Körper kontrolliert. Gegen deinen Willen bewegen sich deine Füße in Richtung des Edelsteins! Du hörst den Hexer noch sagen: ``Nur keine Scheu, erfülle deinen Zweck!''
 
-Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf einen Charismarettungswurf mit DC 12 oder mit DC 11, wenn du \getItem{itemBurialRing} besitzt. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
+Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf einen Charismarettungswurf mit DC 12 besitzt. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
 
 \block{noiwillnottouchthisgem}{Ich werde das nicht tun}
 
@@ -194,7 +331,9 @@ Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPil
 
 \block{unlockTheDoorWithWarlocksKey}{Jede Tür hat einen Schlüssel}
 
-Wie es das Schicksal will, scheint der Schlüssel, den du dem Hexer genommen hast, genau in das Schloss zu passen. Weder ein Zufall, noch sonderlich überraschend. Du öffnest die Tür.
+Wie es das Schicksal will, scheint der Schlüssel, den du dem Hexer genommen hast, genau in das Schloss zu passen. Weder ein Zufall, noch sonderlich überraschend. Du öffnest die Tür. Gehe zu \goto{roomWithPillarsAlone}.
+
+\block{roomWithPillarsAlone}{Ich bin nicht allein}
 
 Vor dir liegt ein großer, kreisrunder Raum, der von einem violetten Schimmer erhellt wird. Knapp ein Dutzend gläserner Säulen sind die Quellen dieses Lichts. In ihnen wabert eine dunkle Flüssigkeit, in der du jeweils ein menschliche Form erkennen kannst. Irgendetwas... oder irgendjemand steckt in diesen Säulen.
 
@@ -250,9 +389,11 @@ Wenn du lieber die nördliche Tür öffnen willst, gehe zu \goto{libray}.
 
 \block{openDoorToWarlock}{Ich komme unangekündigt}
 
-Du öffnest die Tür und siehst sofort den alten Mann in der dunklen Robe vor dir. Alles an ihm schreit nach ``Hexer''. Die knochigen Arme, die schwarze, lange Robe, die trotzdem nicht die jämmerliche Statur verbergen kann, die eingefallene, blasse Haut und der grünlich leuchtende Zauberstab in seiner Hand. Er hat sofort bemerkt, dass du eingetreten bist und sagt krächzend: ``Ich hatte euch doch befohlen...''
+Du öffnest die Tür und siehst sofort einen alten Mann in einer dunklen Robe vor dir. Alles an ihm schreit nach ``Hexer''. Die knochigen Arme, die schwarze, lange Robe, die trotzdem nicht die jämmerliche Statur verbergen kann, die eingefallene, blasse Haut und der grünlich leuchtende Zauberstab in seiner Hand. Er hat sofort bemerkt, dass jemand eingetreten ist und sagt krächzend: ``Ich hatte euch doch befohlen...''
 
-Als er sich umsieht, realisiert er erschrocken, dass du nicht die Person bist, mit der er gerechnet hatte. Du spürst sofort, dass ein Kampf unvermeidbar ist und nutzt diese Überraschung, um zuerst anzugreifen!
+Als er sich umsieht, realisiert er erschrocken, dass du nicht die Person bist, mit der er gerechnet hatte. Du spürst sofort, dass er dich angreifen wird, sobald er die Chance dazu bekommt. Ein Kampf ist unvermeidbar!
+
+\textit{Du nutzt diesen Moment der Überraschung, um zuerst anzugreifen. Du hast Vorteil auf deinen Geschicklichkeitswurf.}
 
 \monsterWarlock{ikilledthewarlockInHisRoom}{anEvilWarlockKilledMe}
 
@@ -448,7 +589,7 @@ Offensichtlich ist nicht unbemerkt geblieben, dass du die Tür eingerammt hast. 
 Du gehst die Treppe hinauf und befindest dich nun im obersten Zimmer des Turms. Keine weitere Treppe, keine Türen, keine Fenster. Nur ein großer, runder Raum, der ungefähr 10 Meter im Durchmesser misst. An der Außenwand sind in kurzem Abstand hunderte schwarzer Kerzen aufgereiht, deren kleine Flammen sich zuckend hin und her bewegen.
 Doch die größte Lichtquelle befindet sich mitten im Raum. Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich in Brusthöhe ein faustgroßer Edelstein. Er ist in eine kleine Metallkralle gefasst, von der Metallfäden verschiedenster Farbe ausgehen. Du hast selten größere Juwelen gesehen, doch besonders das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
 
-Wirf einen Charismarettungswurf mit DC 16 oder mit DC 15, wenn du \getItem{itemBurialRing} besitzt. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegemAlone}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGemAllAlone}].
+Wirf einen Charismarettungswurf mit DC 16. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegemAlone}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGemAllAlone}].
 
 \block{resistingTheGemAllAlone}{Ich muss mich abwenden}
 
@@ -712,7 +853,7 @@ Wenn Ereignis \getEvent{iGotTheElf} eingetreten ist, gehe zu \goto{openDoorWithE
 wirf eine Athletikprobe mit DC 14. Wenn du Erfolg hast, gehe zu [\ref{escapeTroughTheMainDoor}]. Schaffst du es nicht, gehe zu [\ref{noEscapeFromSpiderEvenWithStealth}].
 
 \block{openDoorWithElf}{Ich laufe nicht mehr weg}
-%TODO
+
 Du erkennst sofort, dass es wenig Sinn macht die Tür mit Gewalt aufzuzerren. Da du die Elfe bei dir hast, wirst du niemals rechtzeitig die Tür geöffnet haben und mit ihr entkommen, bevor sich die Spinne auf dich stürzt. Nein, das wäre wie ein Geschenk für diese Bestie und du hast nicht vor jetzt aufzugeben!
 
 Vorsichtig lässt du die Elfe von deiner Schulter auf den Boden sinken und machst dich kampfbereit. Es ist schwer abzuschätzen, wo sich die Bestie in diesem riesigen Netz befindet, doch du versuchst dein Glück und schleichst einige Meter durch den Raum, bis zur nächsten Wand. Du hebst einen der kleinen Steine auf und wirfst ihn gegen die Tür. Sofort danach presst du dich dicht an die Wand!

@@ -122,7 +122,7 @@ Gehe zu [\ref{TheCrossroom}].
 
 \block{TheCrossroom}{Ich sehe Treppen}
 
-Du betrittst einen kleinen, kreisrunden Raum, von dem zwei Treppen abgehen. Die rechte Treppe führt nach unten und die linke in die oberen Stockwerke. An der Decke hängt eine kleine Öllampe, die den sonst so kargen Raum spärlich beleuchtet.
+Du betrittst einen kleinen, kreisrunden Raum, von dem zwei Treppen abgehen. Die rechte Treppe führt nach unten und die linke in die oberen Stockwerke. An der Decke hängt eine kleine Öllampe, die den sonst so kargen Raum spärlich beleuchtet. Es dauert einen Moment, bis du die kleine Nische in der gegenüber liegenden Wand erkennst, die vermutlich gerade groß genug ist, damit du dich hineinquetschen kannst.
 
 Wenn du der Treppe nach unten folgen willst, gehe zu [\ref{stairsToTheDungeon}]. Wenn du die oberen Stockwerke betreten willst, gehe zu [\ref{stairsToTheUpperLevels}].
 
@@ -138,9 +138,9 @@ Gehe zu [\ref{welcomeToTheCell}].
 
 \block{goToCrossroom}{Richtungswechsel}
 
-Da du keinen Weg siehst die verschlossene Tür zu öffnen, läufst du die Treppe wieder hinunter. Du kommst wieder in den kleinen Zwischenraum neben der Eingangshalle.
+Da du aktuell keinen Weg siehst, um die verschlossene Tür zu öffnen, läufst du die Treppe wieder hinunter. Du kommst zurück in den kleinen Zwischenraum.
 
-Wenn du in die unteren Stockwerke gehen möchtest, gehe zu [\ref{stairsToTheDungeon}]. Wenn du zurück in die Eingangshalle willst, um den Turm zu verlassen, gehe zu [\ref{doorToLobby}].
+Wenn du in die unteren Stockwerke gehen möchtest, gehe zu [\ref{stairsToTheDungeon}]. Wenn du durch die Tür auf der rechten Seite gehen willst, gehe zu [\ref{doorToLobby}].
 
 \block{noSleepTillBrooklyn}{Keine Zeit für Schlaf}
 
@@ -340,7 +340,7 @@ In der Zellentür steht ein Mann, für den die Beschreibung ``Hexer'' förmlich 
 
 ``So, so...'', krächzt er, ``...wie ich sehe hast du dich bereits an dein neues Heim gewöhnt. Doch keine Sorge, das soll nicht von Dauer sein. Ich wäre ein schlechter Gastgeber, wenn ich mich nicht um meine Gäste... kümmern würde, nicht wahr?''. In seiner Hand erkennst du einen kleinen Zauberstab, der anfängt gelblich zu leuchten. Langsam spürst du eine Kraft auf dich einwirken, die deinen Körper bewegen will.
 
-Wirf einen Rettungswurf auf Charisma mit DC 18 oder mit DC 17, wenn du \getItem{itemBurialRing} besitzt. Wenn du erfolgreich bist, gehe zu [\ref{youShallNotControlMe}]. Wenn du es nicht schaffst, gehe zu [\ref{yesMasterControlMe}].
+Wirf einen Rettungswurf auf Charisma mit DC 18. Wenn du erfolgreich bist, gehe zu [\ref{youShallNotControlMe}]. Wenn du es nicht schaffst, gehe zu [\ref{yesMasterControlMe}].
 
 \block{yesMasterControlMe}{Ich habe keine Kontrolle}
 
@@ -408,7 +408,7 @@ Wenn du den Kerker auf schnellstem Weg verlassen willst, gehe zu [\ref{letsLeave
 
 \block{yesMasterControlMeButInTruthYouDont}{Ich bin euch zu Diensten}
 
-Deine Muskeln entspannen sich. Du überlegst kurz, was für eine Art Zauber der Hexer wohl auf dich angewandt hast und was du tun sollst. Als du jedoch das zufriedene Gesicht des Mannes siehst, bist du dir sicher, dass du ihn täuschen konntest. Er dreht sich um und sagt ``Folge mir.''. Du beschließt das Spiel weiter mitzuspielen. Schweigend setzt du einen Fuß vor den anderen und folgst den Hexer.
+Deine Muskeln entspannen sich. Du überlegst kurz, was für eine Art Zauber der Hexer wohl auf dich angewandt hast und was du tun sollst. Als du jedoch das zufriedene Gesicht des Mannes siehst, bist du dir sicher, dass du ihn täuschen konntest. Er dreht sich um und sagt ``Folge mir.''. Du beschließt das Spiel weiter mitzuspielen. Schweigend setzt du einen Fuß vor den anderen und folgst dem Hexer.
 
 Ihr verlasst die Zelle und nehmt eine Treppe um den Kerker zu verlassen. Einige Stufen später kommt ihr an einer Tür vorbei, die der Hexer jedoch ignoriert und die Treppe weiter emportsteigt. Du folgst ihm weiter, Stufe um Stufe.
 
@@ -444,10 +444,8 @@ Als das grüne Licht durch deinen Körper fährt, verkrampfen deine Muskeln und 
 
 \block{letsLeaveTheDungeon}{Ich verschwinde so schnell es geht}
 
-Du verschwendest keinen zweiten Gedanken an den Hexer und rennst aus deiner Zelle, vorbei an einigen anderen Zellen, die du dir nicht ansiehst. Es ist nicht schwer die Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
-
-Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
-\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+Du verschwendest keinen zweiten Gedanken an den Hexer und rennst aus deiner Zelle, vorbei an einigen anderen Zellen, die du dir nicht ansiehst. Es ist nicht schwer die Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher.
+Gehe zu \goto{theIntersectionRoomFromDungeon}.
 
 \block{doorToLobby}{Ich nehme die Tür}
 
@@ -593,10 +591,8 @@ Wenn du versuchen willst die Zellentür zu öffnen, gehe zu [\ref{openGoblinsDoo
 
 \block{leaveTheDungeon}{Ich gehe wieder}
 
-Du glaubst nicht hier noch etwas von Wert oder Bedeutung zu finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
-
-Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
-\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+Du glaubst nicht hier noch etwas von Wert oder Bedeutung zu finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher.
+Gehe zu \goto{theIntersectionRoomFromDungeon}.
 
 \block{inspectTheDungeon}{Ich bleibe im Kerker}
 %Immer von meiner Zelle aus
@@ -640,21 +636,21 @@ Zögerlich hälst du deine Hand unter seine und er lässt einen kleinen Gegensta
 
 Du wirst aus deinen Gedanken gerissen, als der Goblin mit ausgestrecktem Finger nach oben zeigt und stammelt: ``Hilfe... Alba retten!'' bevor sich seine Augen verdrehen und er nach hinten wegkippt. Er ist außer Reichweite und du kannst nicht beurteilen, ob er nur bewusstlos geworden ist, oder ob das seine letzten Atemzüge waren. Du wartest noch einen Moment, doch dir wird klar, dass du hier nicht mehr tun kannst.
 
-Du musst weiter. Du siehst dich noch einmal gründlicher um, doch kannst nichts von Bedeutung finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
-
-Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
-\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+Du musst weiter. Du siehst dich noch einmal gründlicher um, doch kannst nichts von Bedeutung finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Gehe zu \goto{theIntersectionRoomFromDungeon}.
 
 \block{nothingLeftInTheDungeon}{Ich kann nichts tun}
 
-Du bist leider nicht in der Position deine Zeit zu verschwenden wie es dir beliebt. Du musst weiter. Du siehst dich noch einmal gründlicher um, doch kannst nichts von Bedeutung finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
-
-Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
-\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+Du bist leider nicht in der Position deine Zeit zu verschwenden wie es dir beliebt. Du musst weiter. Du siehst dich noch einmal gründlicher um, doch kannst nichts von Bedeutung finden. Es ist nicht schwer zurück zur Treppe zu finden und kurze Zeit später bist du ein Stockwerk höher.
+Gehe zu \goto{theIntersectionRoomFromDungeon}.
 
 \block{openGoblinsDoor}{Ich würde gern helfen}
 
-Du würdest die verschlossene Zellentür gern öffnen, doch du hast weder einen Schlüssel noch die passende Ausrüstung um das zu tun. Nein, du kannst hier leider nicht helfen. Du musst weiter, zur Treppe. Kurze Zeit später bist du ein Stockwerk höher. Du befindest dich einem kleinen Raum. Hinter dir befindet sich die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür.
+Du würdest die verschlossene Zellentür gern öffnen, doch du hast weder einen Schlüssel noch die passende Ausrüstung um das zu tun. Nein, du kannst hier leider nicht helfen. Du musst weiter, zur Treppe. Kurze Zeit später bist du ein Stockwerk höher.
+Gehe zu \goto{theIntersectionRoomFromDungeon}.
+
+\block{theIntersectionRoomFromDungeon}{Ich habe die Wahl}
+
+Du befindest dich einem kleinen Raum. Hinter dir ist die Treppe hinab in den Kerker, vor dir eine weitere Treppe, die höher führt. Auf der linken Seite siehst du eine Holztür. An der Decke hängt eine kleine Öllampe, die den sonst so kargen Raum spärlich beleuchtet. Es dauert einen Moment, bis du die kleine Nische in der rechten Wand erkennst, die vermutlich gerade groß genug ist, damit du dich hineinquetschen kannst.
 
 Wenn du der Treppe folgen willst, gehe zu [\ref{stairsToTheUpperLevels}].
-\\Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
+Wenn du durch die Tür gehen willst, gehe zu [\ref{doorToLobby}].
