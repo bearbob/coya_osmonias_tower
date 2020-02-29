@@ -277,7 +277,7 @@ Gehe zu \goto{deathStranding}.
 
 Du stehst noch immer unter dem Zauber des Hexers, der deinen Körper kontrolliert. Gegen deinen Willen bewegen sich deine Füße in Richtung des Edelsteins! Du hörst den Hexer noch sagen: ``Nur keine Scheu, erfülle deinen Zweck!''
 
-Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf einen Charismarettungswurf mit DC 12 besitzt. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
+Nenn es Todesahnung, nenn es schlechtes Bauchgefühl, doch dein Geist sträubt sich vehement gegen den Befehl! Wirf einen Charismarettungswurf mit DC 12. Wenn du erfolgreich bist, gehe zu [\ref{noiwillnottouchthisgem}]. Wenn du versagst, gehe zu [\ref{deathbyGem}].
 
 \block{noiwillnottouchthisgem}{Ich werde das nicht tun}
 
@@ -291,11 +291,36 @@ Gehe zu [\ref{idonthavetotouchthegem}]
 
 Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet.
 In deinen Gedanken ist nur dieser riesige, wunderschöne Edelstein.
-Du musst ihn haben, du sollst ihn haben! Das Schicksal hat dich hier her geführt, damit du dir diesen Stein nimmst. Dein ganzes Leben lief auf diesen Moment zu. Und gleich gehört er dir. Du musst nur noch zupacken. Ja, du musst den Edelstein berühren. Dann hast du es geschafft. Gehe zu [\ref{deathbyGem}].
+
+Wenn du deinem Gefühl folgen und den Stein nehmen willst, gehe zu \goto{whyfightagainstthegem}.
+Wenn du stattdessen versuchen willst an etwas anderes zu denken, gehe zu \goto{thinkaboztsomethinelse}.
+
+\block{thinkaboztsomethinelse}{Ich muss den Kopf frei bekommen}
+
+Du bemerkst, dass dein Körper nicht mehr dir gehört und ein dunkler Zauber seine Macht auf dich ausübt! Du siehst dir selbst dabei zu, wie du die Hand ausstreckst und ein schreckliches Gefühl überkommt dich.
+Du bist dir sicher, dass es dein Todesurteil ist, wenn du den Stein berührst! Magische Kontrolle oder nicht, du wirst dein Leben nicht ohne einen Kampf opfern! Während sich deine Füße wie von allein weiter bewegen, tobt in dir ein Gefecht mit der dunklen Magie, die dich beherrscht.
+Voller Verzweiflung beißt du dir auf die Zunge, bis dickes rotes Blut deinen Mund füllt und der stechende Schmerz deinen Körper zusammenkrümmt. In dem Moment, in dem sich deine Augen von dem Stein abwenden, kommst du wieder zu Sinnen und hast die volle Kontrolle zurück.
+
+Du verlierst 13 Lebenspunkte.
+
+Es dauert einige Minuten, bis der Schmerz abebbt und die Blutung abnimmt. Der Geschmack deines eigenen Blutes ist widerlich, doch ein geringer Preis für dein Leben.
+Erst jetzt fällt dir auf, dass sich am Podest und auf dem Boden schwarze, krustige Flecken befinden. Unter den Flecken und über den gesamten Boden verteilt, befindet sich ein riesiger Runenkreis mit merkwürdigen Symbolen, die mit Sicherheit keinem guten Zweck gewidmet sind.
+
+Als du den Blick zur Decke schweifen lässt, erkennst du eine Frau, eine Elfe, die dort in einigen Metern Höhe kopfüber aufgehangen ist. Sie scheint bewusstlos, ihr blondes Haar ist blutverschmiert und hängt nach unten. Immer wieder fallen kleine Bluttropfen von ihr hinab auf den Edelstein, zweifelsohne absichtlich.
+
+Wenn du das Podest mit dem Edelstein genauer untersuchen willst, gehe zu [\ref{inspectTheGem}].
+Wenn du die Elfe genauer betrachten willst, gehe zu [\ref{inspectTheElf}].
+Wenn du den Raum lieber wieder verlassen willst, gehe zu [\ref{downToLayer2}].
+
+\block{whyfightagainstthegem}{Es ist mein gutes Recht}
+
+Du musst ihn haben, du sollst ihn haben! Das Schicksal hat dich hier her geführt, damit du dir diesen Stein nimmst. Dein ganzes Leben lief auf diesen Moment zu. Und gleich gehört er dir. Du musst nur noch zupacken. Ja, du musst den Edelstein berühren. Dann hast du es geschafft.
+Gehe zu [\ref{deathbyGem}].
 
 \block{cannotresistthegem}{Ich will es berühren}
 
-Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet. Unterbewusst bemerkst du, dass der Hexer mit dir spricht, doch es ist wie ein unverständliches Rauschen in deinen Ohren. Und du willst ihm nicht zuhören. Du musst ihm nicht zuhören. Nein, du musst gar nichts. Nur zum Edelstein, ja. Du musst den Edelstein berühren. Gehe zu [\ref{deathbyGem}].
+Du bist wie verzaubert. Als deine Augen den Edelstein erblicken, vergisst du alles um dich herum. Du achtest gar nicht darauf, was sich noch im Raum befindet. Unterbewusst bemerkst du, dass der Hexer mit dir spricht, doch es ist wie ein unverständliches Rauschen in deinen Ohren. Und du willst ihm nicht zuhören. Du musst ihm nicht zuhören. Nein, du musst gar nichts. Nur zum Edelstein, ja. Du musst den Edelstein berühren.
+Gehe zu [\ref{deathbyGem}].
 
 \block{deathbyGem}{Ich habe es berührt}
 
@@ -347,7 +372,7 @@ Wenn du die Säulen genauer betrachten willst, gehe zu [\ref{inspectTheVioletPil
 
 Als du einigen der Säulen näher kommst, erkennst, dass die humanoiden Formen, die du zuvor gesehen hast, Männer mittleren Alters mit breiten Schultern sind. Es ist schwer mehr Details zu erkennen, aber du bist dir völlig sicher: es sind immer wieder die gleichen zwei Gesichter. Die Gesichter deiner Entführer!
 
-Wirf eine Arkanaprobe mit DC 14. Wenn du es nicht schaffst, gehe zu [\ref{arcanaFailedMeAndImAlone}]. Wenn du Erfolg hast, gehe zu [\ref{theseAreClonesAndSomeAreMissing}].
+Wirf eine Arkanaprobe mit DC 14. Wenn du es nicht schaffst, gehe zu [\ref{arcanaFailedMeAndImAlone}]. Wenn du Erfolg hast, gehe zu \goto{theseAreClonesAndSomeAreMissingAndIKnowWhy} wenn \getEvent{bothKidnappersDied} eingetreten ist, sonst gehe zu [\ref{theseAreClonesAndSomeAreMissing}].
 
 \block{arcanaFailedMeAndImAlone}{Ich kann damit nichts anfangen}
 
@@ -356,9 +381,22 @@ Du kannst nur vermuten, dass es einen dunklen Zauber oder eine ähnliche Hexerei
 Du beschließt, dass es wenig Sinn macht zu lange darüber nachzudenken. Du durchquerst den Raum und gelangst zur Treppe, die nach oben führt.
 Gehe zu [\ref{goToLevel2Alone}].
 
+\block{theseAreClonesAndSomeAreMissingAndIKnowWhy}{Hier fehlen zwei}
+
+Du kannst dich düster erinnern, dass es einen Zauber gibt, mit dem man Klone erschaffen kann. Wenn einer der beiden Männer stirbt, fährt seine Seele in einen der hier schlafenden Körper.
+Diese Theorie wird bestätigt, als du zwei Säulen entdeckst, die keinen Inhalt haben.
+Vermutlich wurden die beiden nach dem Angriff im Wald hier wieder zum Leben erweckt.
+Aber um was für einen Plan kann es sich handeln, wenn man dafür offensichtlich eine Schar von Handlangern heranzüchten muss?
+
+Du beschließt, dass es wenig Sinn macht zu lange darüber nachzudenken. Du durchquerst den Raum und gelangst zur Treppe, die nach oben führt.
+Gehe zu [\ref{goToLevel2Alone}].
+
 \block{theseAreClonesAndSomeAreMissing}{Hier fehlt etwas}
 
-Du kannst dich düster erinnern, dass es einen Zauber gibt, mit dem man Klone erschaffen kann. Wenn einer der beiden Entführer stirbt, fährt seine Seele in einen der hier schlafenden Körper. Diese Theorie wird bestätigt, als du zwei Säulen entdeckst, die keinen Inhalt haben. Vermutlich wurden die beiden nach dem Angriff im Wald hier wieder zum Leben erweckt. Aber um was für einen Plan kann es sich handeln, wenn man dafür offensichtlich eine Schar von Handlangern heranzüchten muss?
+Du kannst dich düster erinnern, dass es einen Zauber gibt, mit dem man Klone erschaffen kann. Wenn einer der beiden Männer stirbt, fährt seine Seele in einen der hier schlafenden Körper.
+Du siehst deine Theorie als bestätigt an, als du zwei leere Säulen entdeckst.
+Direkt vor den Säulen befindet sich eine dickliche, schleimige Flüssigkeit am Boden.
+Vermutlich wurden zwei der Kreaturen hier vor kurzem wieder zum Leben erweckt. Aber um was für einen Plan kann es sich handeln, wenn man dafür offensichtlich eine Schar von Handlangern heranzüchten muss?
 
 Du beschließt, dass es wenig Sinn macht zu lange darüber nachzudenken. Du durchquerst den Raum und gelangst zur Treppe, die nach oben führt.
 Gehe zu [\ref{goToLevel2Alone}].
@@ -588,7 +626,9 @@ Offensichtlich ist nicht unbemerkt geblieben, dass du die Tür eingerammt hast. 
 \block{goToLevel3Alone}{Ich gehe weiter}
 
 Du gehst die Treppe hinauf und befindest dich nun im obersten Zimmer des Turms. Keine weitere Treppe, keine Türen, keine Fenster. Nur ein großer, runder Raum, der ungefähr 10 Meter im Durchmesser misst. An der Außenwand sind in kurzem Abstand hunderte schwarzer Kerzen aufgereiht, deren kleine Flammen sich zuckend hin und her bewegen.
-Doch die größte Lichtquelle befindet sich mitten im Raum. Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich in Brusthöhe ein faustgroßer Edelstein. Er ist in eine kleine Metallkralle gefasst, von der Metallfäden verschiedenster Farbe ausgehen. Du hast selten größere Juwelen gesehen, doch besonders das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
+Doch die größte Lichtquelle befindet sich mitten im Raum.
+Instinktiv siehst du dir an, wovon das Licht ausgeht.
+Auf einem Podest, dass sich wie eine Pyramide zuspitzt, befindet sich in Brusthöhe ein faustgroßer Edelstein. Er ist in eine kleine Metallkralle gefasst, von der Metallfäden verschiedenster Farbe ausgehen. Du hast selten größere Juwelen gesehen, doch besonders das rote Licht, welches dieser Stein ausstrahlt, zieht dich in seinen Bann.
 
 Wirf einen Charismarettungswurf mit DC 16. Wenn du es nicht schaffst, gehe zu [\ref{cannotresistthegemAlone}]. Wenn du Erfolg hast, gehe zu [\ref{resistingTheGemAllAlone}].
 
