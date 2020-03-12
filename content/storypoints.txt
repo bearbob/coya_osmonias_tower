@@ -1,9 +1,0 @@
-* Held(in) (MC) wird in Taverne entführt
-* kann entweder aus Wagen flüchten (Ende) oder wird zu einem Turm gebracht
-* auf dem Weg zum Turm kann der Wagen überfallen werden -> MC wird gerettet oder gefangen genommen, je nach Charisma-Proben
-** bei Banditen: Banditen sind in Wahrheit Dorfbewohner, die sich gegen den bösen Magier auflehnen
-
-* Turm: böser Magier hat MC entführen lassen, nicht gezielt, sondern Anweisung war nur irgendjemand
-* wird für Experimente gebraucht
-* im Kerker sind auch der Hexenmeister und ein Goblin (die sich noch nicht kennen)
-* 
